@@ -7,30 +7,137 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://use.typekit.net/c/c86843/chaparral-pro:i4:i7:n4:n7,proxima-nova:i4:i7:n4:n7.XXw:J:2,XXn:J:2,XY8:J:2,XXk:J:2,W0W:H:2,W0Z:H:2,W0V:H:2,W0Y:H:2/d?3bb2a6e53c9684ffdc9a9bfe125b2a62a6d4bf07b8d71d309ed9288ac321dc817b0f8b1b1219a5ea5721da78797b3e2d9f3acfae6bf6877705963acc410219140e496a3c1578febedb2fd7c0c2aa937669d5b30e44ed081754e9c4c25f72c298eeea83f3240fef3df7aefa43496e6535215ab6c0c637b97f807638e3b20b622e97c4a091c2d10655334f2643f3edf917c1d3627f5a4703489e7ec52893a453f2cf99b39f48ae0948472c983e127da8ef2a984e2e9b0fb61b561ea468">
+    <script type="text/javascript" src="jwplayer/jwplayer.js"></script>
   </head>
   <body>
-    <div class="header">
+    <div class="header container">
       <div id="logo"></div>
+      <img id="search" src="images/search.png">
       <ul>
-        <li>Home</li>
-        <li>Library</li>
-        <li>Blog</li>
-        <li>Pricing</li>
-        <li>Sign In</li>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Library</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
       </ul>
     </div>
 
     <div class="hero">
+      <div class="container">
+        <div class="hero-shadow">
+          <div class="video-player">
+            <div class="video-wrapper">
+              <div id="video">
+                Loading the player...
+              </div>
+              <script type="text/javascript">
+                jwplayer("video").setup({
+                  file : "jwplayer/bunny.mp4",
+                  image : "jwplayer/bunny.png",
+                  width : 760,
+                  height : 428
+                });
+              </script>
+            </div>
+          </div>
+          <div class="video-toggle"></div>
 
+          <div class="playlist">
+            <div class="playlist-header">
+              <h2>Using Drupal Chapter 4: Media Management</h2>
+            </div>
+            <div class="playlist-content">
+              <ul>
+                <li>
+                  <a href="#" class="active"><span class="count">1</span>Case Study: Band Wagon<span class="duration">6:27</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">2</span>Spotlight: Image Styles<span class="duration">2:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">3</span>Hands-On: Image Styles<span class="duration">12:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">4</span>Spotlight: Media Module<span class="duration">1:30</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">5</span>Hands-On: Music Review Content Type<span class="duration">9:13</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">6</span>Case Study: Band Wagon<span class="duration">6:27</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">7</span>Spotlight: Image Styles<span class="duration">2:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">8</span>Hands-On: Image Styles<span class="duration">12:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">9</span>Spotlight: Media Module<span class="duration">1:30</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">10</span>Hands-On: Music Review Content Type<span class="duration">9:13</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">11</span>Case Study: Band Wagon<span class="duration">6:27</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">12</span>Spotlight: Image Styles<span class="duration">2:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">13</span>Hands-On: Image Styles<span class="duration">12:47</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">14</span>Spotlight: Media Module<span class="duration">1:30</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="count">15</span>Hands-On: Music Review Content Type<span class="duration">9:13</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul class="js-tabs">
+          <li>
+            <a class="description active" href="">Description</a>
+          </li>
+          <li>
+            <a class="reviews" href="">Reviews</a>
+          </li>
+          <li>
+            <a class="quiz" href="">Quiz</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="content-wrapper">
+    <div class="content-wrapper container">
       <div class="content">
-
+        <h1>Case Study: Band Wagon</h1>
+        <div class="add-to-queue"><a href="#">Add to Queue</a></div>
+        <div class="meta"><span class="length">6 minutes 27 seconds</span> // <span class="tags"><a href="#">Site Building</a>, <a href="#">Drupal 7</a></span> // <span class="features"><img src=""> <img src=""></span></div>
+        <div class="body">
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <img src="images/overview.png">
+        </div>
       </div>
 
       <div class="sidebar">
-
+        Test
       </div>
 
       <div class="bottom">
