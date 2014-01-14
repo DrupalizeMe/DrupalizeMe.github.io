@@ -1,0 +1,74 @@
+/**
+ * @file
+ * Component: action links.
+ * Used to style links which look like blue/orange buttons throughout the site.
+ */
+
+/**
+ * Standard call to action button/link. Blue by default changes to orange on
+ * :hover or :focus.
+ */
+.action-link,
+.action-link--wrapper a {
+  -webkit-font-smoothing: antialiased;
+  background: $button-background;
+  border: 1px solid $button-background;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 19em;
+  padding: .75em 2em;
+  text-align: center;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background: $orange;
+    border: 1px solid $orange;
+    color: white;
+  }
+}
+
+/**
+ * Orange button, changes to blue on hover.
+ */
+.action-link--secondary {
+  @extend .action-link;
+}
+.action-link--secondary,
+input[type="submit"].action-link--secondary {
+  background: $orange;
+  border-color: $orange;
+
+  &:hover,
+  &:focus {
+    background: $button-background;
+    border: 1px solid $button-background;
+  }
+}
+
+/**
+ * Tertiary button.
+ */
+.action-link--tertiary {
+  @extend .action-link;
+}
+.action-link--tertiary,
+input[type="submit"].action-link--tertiary {
+  background: $light-background;
+  border-color: $light-border;
+  color: $headline-light;
+
+  &:hover,
+  &:focus {
+    color: $headline;
+    border-color: silver;
+  }
+}

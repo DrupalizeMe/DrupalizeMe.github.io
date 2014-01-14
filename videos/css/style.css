@@ -600,6 +600,80 @@ textarea {
 
 /**
  * @file
+ * Component: action links.
+ * Used to style links which look like blue/orange buttons throughout the site.
+ */
+/**
+ * Standard call to action button/link. Blue by default changes to orange on
+ * :hover or :focus.
+ */
+/* line 12, ../scss/_action-links.scss */
+.action-link, .action-link--secondary, .action-link--tertiary,
+.action-link--wrapper a {
+  -webkit-font-smoothing: antialiased;
+  background: #137cc1;
+  border: 1px solid #137cc1;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 19em;
+  padding: .75em 2em;
+  text-align: center;
+  white-space: nowrap;
+}
+/* line 32, ../scss/_action-links.scss */
+.action-link:hover, .action-link--secondary:hover, .action-link--tertiary:hover, .action-link:focus, .action-link--secondary:focus, .action-link--tertiary:focus,
+.action-link--wrapper a:hover,
+.action-link--wrapper a:focus {
+  background: #fd7037;
+  border: 1px solid #fd7037;
+  color: white;
+}
+
+/**
+ * Orange button, changes to blue on hover.
+ */
+/* line 46, ../scss/_action-links.scss */
+.action-link--secondary,
+input[type="submit"].action-link--secondary {
+  background: #fd7037;
+  border-color: #fd7037;
+}
+/* line 51, ../scss/_action-links.scss */
+.action-link--secondary:hover, .action-link--secondary:focus,
+input[type="submit"].action-link--secondary:hover,
+input[type="submit"].action-link--secondary:focus {
+  background: #137cc1;
+  border: 1px solid #137cc1;
+}
+
+/**
+ * Tertiary button.
+ */
+/* line 64, ../scss/_action-links.scss */
+.action-link--tertiary,
+input[type="submit"].action-link--tertiary {
+  background: whitesmoke;
+  border-color: #e6e6e6;
+  color: #4f4f4f;
+}
+/* line 70, ../scss/_action-links.scss */
+.action-link--tertiary:hover, .action-link--tertiary:focus,
+input[type="submit"].action-link--tertiary:hover,
+input[type="submit"].action-link--tertiary:focus {
+  color: #333333;
+  border-color: silver;
+}
+
+/**
+ * @file
  * Global typography styles.
  */
 /* line 6, ../scss/_typography.scss */
@@ -913,7 +987,7 @@ blockquote {
 /* line 146, ../scss/_videos.scss */
 .js-tabs {
   padding: 0;
-  margin: 2em 0 0;
+  margin: 2em 0 0 -2em;
 }
 /* line 150, ../scss/_videos.scss */
 .js-tabs li {
@@ -936,26 +1010,55 @@ blockquote {
 }
 
 /* line 170, ../scss/_videos.scss */
+.content-wrapper {
+  overflow: hidden;
+}
+
+/* line 174, ../scss/_videos.scss */
 .content {
   float: left;
   width: 730px;
   padding-right: 30px;
   position: relative;
+  padding-bottom: 3em;
 }
-/* line 176, ../scss/_videos.scss */
+/* line 181, ../scss/_videos.scss */
 .content h1 {
   margin-top: 1em;
 }
 
-/* line 181, ../scss/_videos.scss */
+/* line 186, ../scss/_videos.scss */
 .add-to-queue {
   position: absolute;
   top: 2em;
   right: 30px;
   background: #00be4c;
   border-radius: 5px;
+  opacity: 0.9;
+  border: 1px solid transparent;
 }
-/* line 188, ../scss/_videos.scss */
+/* line 195, ../scss/_videos.scss */
+.add-to-queue:hover {
+  opacity: 1.0;
+}
+/* line 199, ../scss/_videos.scss */
+.add-to-queue.active {
+  background: whitesmoke;
+  border: 1px solid #e6e6e6;
+}
+/* line 203, ../scss/_videos.scss */
+.add-to-queue.active:hover {
+  background: #c60e00;
+}
+/* line 206, ../scss/_videos.scss */
+.add-to-queue.active:hover a {
+  color: white;
+}
+/* line 211, ../scss/_videos.scss */
+.add-to-queue.active a {
+  color: #555555;
+}
+/* line 216, ../scss/_videos.scss */
 .add-to-queue a {
   display: block;
   padding: .5em 2em;
@@ -964,30 +1067,188 @@ blockquote {
   font-size: .875em;
 }
 
-/* line 197, ../scss/_videos.scss */
+/* line 225, ../scss/_videos.scss */
 .meta {
   color: #c7c7c7;
   font-size: .8em;
   font-weight: bold;
 }
-/* line 202, ../scss/_videos.scss */
+/* line 230, ../scss/_videos.scss */
 .meta .length {
   color: #555555;
   padding-right: .5em;
 }
-/* line 207, ../scss/_videos.scss */
+/* line 235, ../scss/_videos.scss */
 .meta .tags {
   padding: 0 .5em;
 }
-/* line 211, ../scss/_videos.scss */
+/* line 239, ../scss/_videos.scss */
 .meta .features {
   padding-left: .5em;
 }
+/* line 242, ../scss/_videos.scss */
+.meta .features img {
+  vertical-align: middle;
+  margin-top: -2px;
+}
 
-/* line 216, ../scss/_videos.scss */
+/* line 251, ../scss/_videos.scss */
+.loading,
+.comments,
+.quiz {
+  display: none;
+}
+
+/* line 255, ../scss/_videos.scss */
+.comment {
+  position: relative;
+  margin: 2em 0;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 261, ../scss/_videos.scss */
+.comment:last-child {
+  border-bottom: none;
+}
+/* line 265, ../scss/_videos.scss */
+.comment > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 272, ../scss/_videos.scss */
+.empty-stars {
+  vertical-align: middle;
+}
+
+/* line 276, ../scss/_videos.scss */
+textarea {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  margin-top: 1em;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: .875em;
+  box-sizing: border-box;
+}
+
+/* line 286, ../scss/_videos.scss */
 .sidebar {
-  background: #f5f5f5;
+  background: whitesmoke;
+  border-left: 1px solid #e6e6e6;
+  box-sizing: border-box;
   width: 320px;
-  height: 400px;
   float: right;
+}
+
+/* line 294, ../scss/_videos.scss */
+.block {
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 2em 2.5em;
+  padding-bottom: 2.5em;
+  overflow: hidden;
+}
+/* line 300, ../scss/_videos.scss */
+.block:first-child {
+  margin-top: 2.5em;
+}
+/* line 304, ../scss/_videos.scss */
+.block:last-child {
+  border-bottom: none;
+}
+
+/* line 309, ../scss/_videos.scss */
+.block-title {
+  font-size: 1em;
+  line-height: 1.125;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.5em 0 1em;
+}
+
+/* line 313, ../scss/_videos.scss */
+.series-progress {
+  float: left;
+  height: 100px;
+  width: 100px;
+}
+/* line 318, ../scss/_videos.scss */
+.series-progress .drop {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 325, ../scss/_videos.scss */
+.remaining {
+  float: left;
+  margin: 2em 0 0 1em;
+}
+/* line 329, ../scss/_videos.scss */
+.remaining h3 {
+  color: #137cc1;
+  margin: 0;
+}
+
+/* line 335, ../scss/_videos.scss */
+.resources {
+  margin: 0;
+  padding: 0;
+}
+/* line 339, ../scss/_videos.scss */
+.resources li {
+  list-style: none;
+}
+/* line 342, ../scss/_videos.scss */
+.resources li a {
+  font-weight: bold;
+}
+
+/* line 348, ../scss/_videos.scss */
+.trainer {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+/* line 352, ../scss/_videos.scss */
+.trainer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  float: left;
+}
+
+/* line 360, ../scss/_videos.scss */
+.trainer-name {
+  float: left;
+  line-height: 1.3em;
+  margin: 1em;
+}
+/* line 365, ../scss/_videos.scss */
+.trainer-name a {
+  display: block;
+  font-weight: bold;
+}
+/* line 370, ../scss/_videos.scss */
+.trainer-name span {
+  font-size: 0.9em;
+}
+
+/* line 375, ../scss/_videos.scss */
+.bottom {
+  width: 100%;
+  background: #fd7037;
+}
+
+/* line 380, ../scss/_videos.scss */
+.cover-image {
+  width: 100%;
+  display: block;
+}
+
+/* line 385, ../scss/_videos.scss */
+.footer {
+  width: 100%;
+  background: whitesmoke;
+  text-align: center;
+  padding: 2em 0;
 }
