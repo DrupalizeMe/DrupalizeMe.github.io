@@ -33,6 +33,10 @@
       }
     }
   }
+
+  .responsive-nav {
+    display: none;
+  }
 }
 
 .hero {
@@ -53,12 +57,14 @@
 
 .video-player {
   width: 760px;
+  height: 428px;
   -webkit-box-shadow: rgba(0,0,0, 0.2) 8px 0 0;
   -moz-box-shadow: rgba(0,0,0,0.2) 8px 0 0;
   box-shadow: rgba(0,0,0,0.2) 8px 0 0;
   position: relative;
   z-index: 2;
   float: left;
+  background: #00293f;
 }
 .video-wrapper {
   padding-top: 0;
@@ -88,11 +94,11 @@
 
 .playlist-content {
   background: white;
-  width: 320px;
   height: 344px;
   overflow-y: auto;
   font-weight: bold;
   font-size: .85em;
+  @include scrollbar;
 
   ul {
     margin: 0;
@@ -146,6 +152,7 @@
 .js-tabs {
   padding: 0;
   margin: 2em 0 0 -2em;
+  overflow: hidden;
 
   li {
     list-style: none;
@@ -191,34 +198,26 @@
   border-radius: 5px;
   opacity: 0.9;
   border: 1px solid transparent;
+  display: block;
+  padding: .5em 2em;
+  color: white;
+  font-weight: bold;
+  font-size: .875em;
 
   &:hover {
     opacity: 1.0;
+    color: white;
   }
 
   &.active {
     background: $light-background;
     border: 1px solid $light-border;
+    color: $text;
 
     &:hover {
       background: $red;
-
-      a {
-        color: white;
-      }
+      color: white;
     }
-
-    a {
-      color: $text;
-    }
-  }
-
-  a {
-    display: block;
-    padding: .5em 2em;
-    color: white;
-    font-weight: bold;
-    font-size: .875em;
   }
 }
 
@@ -276,17 +275,19 @@
 textarea {
   width: 100%;
   border: 1px solid $light-border;
-  margin-top: 1em;
+  margin: 1em 0;
   border-radius: 5px;
   padding: 1em;
   font-size: .875em;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .sidebar {
   background: $light-background;
   border-left: 1px solid $light-border;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   width: 320px;
   float: right;
 }
@@ -387,4 +388,112 @@ textarea {
   background: $light-background;
   text-align: center;
   padding: 2em 0;
+}
+
+// Quick and dirty desktop-first responsive design, just for this prototype ;)
+@media screen and (max-width: 1095px) {
+  img {
+    max-width: 100%;
+  }
+
+  .playlist,
+  .playlist-header,
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    ul,
+    #search {
+      display: none;
+    }
+
+    .responsive-nav {
+      display: block;
+      float: right;
+      margin-top: 1.3em;
+    }
+  }
+
+  .hero {
+    background: none;
+    padding-top: 0;
+  }
+
+  .hero-shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .video-player {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    font-size: 0;
+  }
+
+  .playlist-header {
+    display: block;
+    vertical-align: middle;
+    height: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .playlist-content {
+    height: auto;
+    border-bottom: 1px solid $light-border;
+  }
+
+  .js-tabs {
+    margin-left: 0;
+    padding-left: 2em;
+
+    li {
+      a {
+        color: $text;
+        border-top: none;
+        border-bottom: 5px solid transparent;
+        padding: .5em 1em;
+
+        &.active {
+          border-top: none;
+          border-bottom: 5px solid #137cc1;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 0 2em 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .add-to-queue {
+    position: static;
+    float: left;
+    margin-bottom: 2em;
+  }
+
+  .loading,
+  .node,
+  .comments,
+  .quiz {
+    clear: left;
+  }
+
+  .sidebar {
+    border-left: 0;
+    border-top: 1px solid $light-border;
+  }
 }

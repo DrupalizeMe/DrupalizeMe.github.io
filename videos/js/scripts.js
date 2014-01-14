@@ -46,10 +46,10 @@ $(function() {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $(this).find('a').html('In your Queue');
+      $(this).html('In your Queue');
     }
     else {
-      $(this).find('a').html('Add to Queue');
+      $(this).html('Add to Queue');
     }
 
     return false;
