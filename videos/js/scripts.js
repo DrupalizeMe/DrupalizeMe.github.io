@@ -55,10 +55,21 @@ $(function() {
     return false;
   });
 
-  // Animate progress
+  // Animate series progress water
   var percent = $('.series-progress').attr('data-percent');
-  var total = $('.series-progress').css('height').replace(/[^-\d\.]/g, '');
-  var position = (total / 100) * percent;
-  var position = total - position;
+  var position = (80 / 100) * percent;
+  var position = 80 - position;
   $('.series-progress .water').css('top', position + 'px');
+
+  // Animate series progress percent
+  $({number: 0}).animate({number: percent}, {
+    duration: 2000,
+    easing: 'linear',
+    step: function() {
+      $('.series-progress .percent').text(Math.floor(this.number) + '%');
+    },
+    complete: function() {
+      $('.series-progress .percent').text(this.number + '%');
+    }
+  });
 });
