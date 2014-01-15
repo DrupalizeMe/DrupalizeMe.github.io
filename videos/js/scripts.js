@@ -54,4 +54,11 @@ $(function() {
 
     return false;
   });
+
+  // Animate progress
+  var percent = $('.series-progress').attr('data-percent');
+  var total = $('.series-progress').css('height').replace(/[^-\d\.]/g, '');
+  var position = (total / 100) * percent;
+  var position = total - position;
+  $('.series-progress .water').css('top', position + 'px');
 });
