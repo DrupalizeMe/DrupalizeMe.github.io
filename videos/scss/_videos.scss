@@ -185,7 +185,7 @@
   }
 }
 
-a.description {
+.description {
   background-image: url('../images/icon_description.svg');
 
   &:hover {
@@ -197,7 +197,7 @@ a.description {
   }
 }
 
-a.reviews {
+.reviews {
   background-image: url('../images/icon_reviews.svg');
 
   &:hover {
@@ -209,7 +209,7 @@ a.reviews {
   }
 }
 
-a.quiz {
+.quiz-tab {
   background-image: url('../images/icon_quiz.svg');
 
   &:hover {
@@ -536,13 +536,15 @@ textarea {
 
   .js-tabs {
     padding-left: 2em;
+    margin: 1em 0 0;
 
     li {
       a {
         color: $text;
         border-top: none;
         border-bottom: 5px solid transparent;
-        padding: .5em 1em;
+        padding: .5em 1em .5em 3em;
+        background-position: 1em center;
 
         &.active {
           border-top: none;
@@ -550,6 +552,18 @@ textarea {
         }
       }
     }
+  }
+
+  .description {
+    background-image: url('../images/icon_description_active.svg');
+  }
+
+  .reviews {
+    background-image: url('../images/icon_reviews_active.svg');
+  }
+
+  .quiz-tab {
+    background-image: url('../images/icon_quiz_active.svg');
   }
 
   .content {

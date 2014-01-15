@@ -1065,41 +1065,41 @@ blockquote {
 }
 
 /* line 188, ../scss/_videos.scss */
-a.description {
+.description {
   background-image: url("../images/icon_description.svg");
 }
 /* line 191, ../scss/_videos.scss */
-a.description:hover {
+.description:hover {
   background-image: url("../images/icon_description_hover.svg");
 }
 /* line 195, ../scss/_videos.scss */
-a.description.active {
+.description.active {
   background-image: url("../images/icon_description_active.svg");
 }
 
 /* line 200, ../scss/_videos.scss */
-a.reviews {
+.reviews {
   background-image: url("../images/icon_reviews.svg");
 }
 /* line 203, ../scss/_videos.scss */
-a.reviews:hover {
+.reviews:hover {
   background-image: url("../images/icon_reviews_hover.svg");
 }
 /* line 207, ../scss/_videos.scss */
-a.reviews.active {
+.reviews.active {
   background-image: url("../images/icon_reviews_active.svg");
 }
 
 /* line 212, ../scss/_videos.scss */
-a.quiz {
+.quiz-tab {
   background-image: url("../images/icon_quiz.svg");
 }
 /* line 215, ../scss/_videos.scss */
-a.quiz:hover {
+.quiz-tab:hover {
   background-image: url("../images/icon_quiz_hover.svg");
 }
 /* line 219, ../scss/_videos.scss */
-a.quiz.active {
+.quiz-tab.active {
   background-image: url("../images/icon_quiz_active.svg");
 }
 
@@ -1449,35 +1449,52 @@ textarea {
   /* line 537, ../scss/_videos.scss */
   .js-tabs {
     padding-left: 2em;
+    margin: 1em 0 0;
   }
-  /* line 541, ../scss/_videos.scss */
+  /* line 542, ../scss/_videos.scss */
   .js-tabs li a {
     color: #555555;
     border-top: none;
     border-bottom: 5px solid transparent;
-    padding: .5em 1em;
+    padding: .5em 1em .5em 3em;
+    background-position: 1em center;
   }
-  /* line 547, ../scss/_videos.scss */
+  /* line 549, ../scss/_videos.scss */
   .js-tabs li a.active {
     border-top: none;
     border-bottom: 5px solid #137cc1;
   }
 
-  /* line 555, ../scss/_videos.scss */
+  /* line 557, ../scss/_videos.scss */
+  .description {
+    background-image: url("../images/icon_description_active.svg");
+  }
+
+  /* line 561, ../scss/_videos.scss */
+  .reviews {
+    background-image: url("../images/icon_reviews_active.svg");
+  }
+
+  /* line 565, ../scss/_videos.scss */
+  .quiz-tab {
+    background-image: url("../images/icon_quiz_active.svg");
+  }
+
+  /* line 569, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 561, ../scss/_videos.scss */
+  /* line 575, ../scss/_videos.scss */
   .add-to-queue {
     position: static;
     float: left;
     margin-bottom: 2em;
   }
 
-  /* line 570, ../scss/_videos.scss */
+  /* line 584, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1485,7 +1502,7 @@ textarea {
     clear: left;
   }
 
-  /* line 574, ../scss/_videos.scss */
+  /* line 588, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;
