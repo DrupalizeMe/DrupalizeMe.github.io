@@ -24,8 +24,14 @@ $(function() {
     // Simulates a file load. On production, the file and image uris will be
     // taken from attributes applied to each playlist item DOM element.
     jwplayer().load([{
-      file: "https://archive.org/download/MyLittlePonyFim-Season01/My.Little.Pony.Friendship.Is.Magic.S01E01.Friendship.Is.Magic.Part.1.mp4",
-      image: "images/pony.jpg"
+      image: "images/bg2.jpg",
+      sources: [{
+        file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-300k.mp4",
+        label: "360p SD"
+      },{
+        file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.mp4",
+        label: "720p HD"
+      }]
     }]);
 
     return false;
