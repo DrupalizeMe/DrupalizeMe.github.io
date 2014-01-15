@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="http://use.typekit.net/c/c86843/chaparral-pro:i4:i7:n4:n7,proxima-nova:i4:i7:n4:n7.XXw:J:2,XXn:J:2,XY8:J:2,XXk:J:2,W0W:H:2,W0Z:H:2,W0V:H:2,W0Y:H:2/d?3bb2a6e53c9684ffdc9a9bfe125b2a62a6d4bf07b8d71d309ed9288ac321dc817b0f8b1b1219a5ea5721da78797b3e2d9f3acfae6bf6877705963acc410219140e496a3c1578febedb2fd7c0c2aa937669d5b30e44ed081754e9c4c25f72c298eeea83f3240fef3df7aefa43496e6535215ab6c0c637b97f807638e3b20b622e97c4a091c2d10655334f2643f3edf917c1d3627f5a4703489e7ec52893a453f2cf99b39f48ae0948472c983e127da8ef2a984e2e9b0fb61b561ea468">
+    <script type="text/javascript" src="//use.typekit.net/fuf6cds.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="jwplayer/jwplayer.js"></script>
   </head>
   <body>
@@ -45,8 +46,18 @@
               </div>
               <script type="text/javascript">
                 jwplayer("video").setup({
-                  file : "http://developer.longtailvideo.com/trac/export/944/trunk/html5/test/files/bunny.mp4",
-                  image : "images/bg.png",
+                  playlist: [{
+                    image: "images/bg.png",
+                    sources: [{
+                      file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-300k.mp4",
+                      label: "360p SD"
+                    },{
+                      file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.mp4",
+                      label: "720p HD"
+                    }]
+                  }],
+                  file: "http://developer.longtailvideo.com/trac/export/944/trunk/html5/test/files/bunny.mp4",
+                  skin: "jwplayer/six/six.xml",
                   width: "100%",
                   aspectratio: "16:9"
                 });

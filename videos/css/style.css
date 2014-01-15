@@ -1039,7 +1039,7 @@ blockquote {
 /* line 161, ../scss/_videos.scss */
 .js-tabs {
   padding: 0;
-  margin: 2em 0 0 -1.5em;
+  margin: 2em 0 0;
   overflow: hidden;
 }
 /* line 166, ../scss/_videos.scss */
@@ -1155,7 +1155,7 @@ a.quiz.active {
 /* line 269, ../scss/_videos.scss */
 .add-to-queue.active:hover {
   background-image: url("../images/icon_queue_remove.svg");
-  background-color: #c60e00;
+  background-color: #ec5448;
   color: white;
 }
 
@@ -1448,37 +1448,36 @@ textarea {
 
   /* line 537, ../scss/_videos.scss */
   .js-tabs {
-    margin-left: 0;
     padding-left: 2em;
   }
-  /* line 542, ../scss/_videos.scss */
+  /* line 541, ../scss/_videos.scss */
   .js-tabs li a {
     color: #555555;
     border-top: none;
     border-bottom: 5px solid transparent;
     padding: .5em 1em;
   }
-  /* line 548, ../scss/_videos.scss */
+  /* line 547, ../scss/_videos.scss */
   .js-tabs li a.active {
     border-top: none;
     border-bottom: 5px solid #137cc1;
   }
 
-  /* line 556, ../scss/_videos.scss */
+  /* line 555, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 562, ../scss/_videos.scss */
+  /* line 561, ../scss/_videos.scss */
   .add-to-queue {
     position: static;
     float: left;
     margin-bottom: 2em;
   }
 
-  /* line 571, ../scss/_videos.scss */
+  /* line 570, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1486,7 +1485,7 @@ textarea {
     clear: left;
   }
 
-  /* line 575, ../scss/_videos.scss */
+  /* line 574, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;

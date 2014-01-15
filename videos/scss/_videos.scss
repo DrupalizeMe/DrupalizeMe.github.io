@@ -160,7 +160,7 @@
 
 .js-tabs {
   padding: 0;
-  margin: 2em 0 0 -1.5em;
+  margin: 2em 0 0;
   overflow: hidden;
 
   li {
@@ -268,7 +268,7 @@ a.quiz {
 
     &:hover {
       background-image: url('../images/icon_queue_remove.svg');
-      background-color: $red;
+      background-color: #ec5448;
       color: white;
     }
   }
@@ -535,7 +535,6 @@ textarea {
   }
 
   .js-tabs {
-    margin-left: 0;
     padding-left: 2em;
 
     li {
