@@ -2,6 +2,10 @@
 @import "variables";
 @import "mixins";
 @import "action-links";
-
 @import "typography";
+
+@import "compass/utilities/sprites";
+@import "icon/*.png";
+@include all-icon-sprites;
+
 @import "videos";

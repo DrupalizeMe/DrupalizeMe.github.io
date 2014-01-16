@@ -1,5 +1,6 @@
 $(function() {
-  // Add 2x speed button for HTML5
+
+  // Embed JWPlayer
   jwplayer("video").setup({
     playlist: [{
       image: "images/bg.png",
@@ -12,41 +13,81 @@ $(function() {
       }]
     }],
     file: "http://developer.longtailvideo.com/trac/export/944/trunk/html5/test/files/bunny.mp4",
-    skin: "jwplayer/six/six.xml",
+    skin: "jwplayer/skins/bekle.xml",
     width: "100%",
     aspectratio: "16:9"
   });
 
+  // Once the first video is played, add our custom buttons.
   jwplayer().onPlay(function(){
     playerSetup(this);
   });
 
   function playerSetup(player) {
+    // Add 2x speed button when in HTML5 mode
     if (player.getRenderingMode() == 'html5') {
       player.addButton(
         "images/1x.png",
-        "Current Speed",
+        "Speed",
         function() {
-          var video = document.getElementById('video');
+          var video = document.getElementById('video').querySelector("video");
 
-          if (video.querySelector("video").playbackRate == 1.0) {
-            video.querySelector("video").playbackRate = 1.5;
-            $('#video_dock_transcript').css('background-image', "url('images/15x.png')");
+          if (video.playbackRate == 1.0) {
+            video.playbackRate = 1.5;
+            $('#video_dock_speed').css('background-image', "url('images/15x.png')");
           }
-          else if (video.querySelector("video").playbackRate == 1.5) {
-            video.querySelector("video").playbackRate = 2.0;
-            $('#video_dock_transcript').css('background-image', "url('images/2x.png')");
+          else if (video.playbackRate == 1.5) {
+            video.playbackRate = 2.0;
+            $('#video_dock_speed').css('background-image', "url('images/2x.png')");
           }
           else {
-            video.querySelector("video").playbackRate = 1.0;
-            $('#video_dock_transcript').css('background-image', "url('images/1x.png')");
+            video.playbackRate = 1.0;
+            $('#video_dock_speed').css('background-image', "url('images/1x.png')");
           }
         },
-        "transcript"
+        "speed"
       );
     }
+
+    // Add a transcript toggle button
+    player.addButton(
+      "images/1x.png",
+      "Transcript",
+      function() {
+        $('.transcript').toggle();
+      },
+      "transcript"
+    );
+
+    // Add a layout toggle button
+    player.addButton(
+      "images/1x.png",
+      "Layout",
+      function() {
+        $('.hero').toggleClass('stacked');
+      },
+      "layout"
+    );
   }
 
+  // Transcript filter
+  $('#transcript-filter').keyup(function() {
+    if ($(this).val().length) {
+      $('.transcript-list li').hide().filter(function () {
+        return $(this).text().toLowerCase().indexOf($('#transcript-filter').val().toLowerCase()) != -1;
+      }).show();
+    }
+    else {
+      $('.transcript-list li').show();
+    }
+  });
+
+  // Transcript close button
+  $('.close').click(function() {
+    $('.transcript').hide();
+  });
+
+  // Playlist navigation
   $('.playlist-content a').click(function() {
     $('.playlist-content a').removeClass('active');
     $(this).addClass('active');
@@ -85,6 +126,7 @@ $(function() {
     return false;
   });
 
+  // Tab navigation
   $('.js-tabs a').click(function() {
     $('.js-tabs a').removeClass('active');
     $(this).addClass('active');
@@ -96,14 +138,15 @@ $(function() {
     return false;
   });
 
+  // Add to Queue
   $('.add-to-queue').click(function() {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $(this).html('In your Queue');
+      $(this).find('.text').html('In your Queue');
     }
     else {
-      $(this).html('Add to Queue');
+      $(this).find('.text').html('Add to Queue');
     }
 
     return false;
