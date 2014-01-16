@@ -544,6 +544,9 @@ textarea {
     a {
       font-weight: bold;
       padding-left: 2.25em;
+      display: block;
+      line-height: 22px;
+      margin-bottom: .5em;
       @include icon-sprite(download-blue);
 
       &:hover {

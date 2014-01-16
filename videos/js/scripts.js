@@ -149,7 +149,7 @@ $(function() {
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.mp4",
         label: "720p HD"
       }]
-    }]);
+    }]).play();
 
     return false;
   });
