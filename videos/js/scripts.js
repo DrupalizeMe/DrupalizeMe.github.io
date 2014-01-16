@@ -180,21 +180,23 @@ $(function() {
     return false;
   });
 
-  // Animate series progress water
-  var percent = $('.series-progress').attr('data-percent');
-  var position = (80 / 100) * percent;
-  var position = 80 - position;
-  $('.series-progress .water').css('top', position + 'px');
+  setTimeout(function() {
+    // Animate series progress water
+    var percent = $('.series-progress').attr('data-percent');
+    var position = (80 / 100) * percent;
+    var position = 80 - position;
+    $('.series-progress .water').css('top', position + 'px');
 
-  // Animate series progress percent
-  $({number: 0}).animate({number: percent}, {
-    duration: 2000,
-    easing: 'linear',
-    step: function() {
-      $('.series-progress .percent').text(Math.floor(this.number) + '%');
-    },
-    complete: function() {
-      $('.series-progress .percent').text(this.number + '%');
-    }
-  });
+    // Animate series progress percent
+    $({number: 0}).animate({number: percent}, {
+      duration: 2000,
+      easing: 'linear',
+      step: function() {
+        $('.series-progress .percent').text(Math.floor(this.number) + '%');
+      },
+      complete: function() {
+        $('.series-progress .percent').text(this.number + '%');
+      }
+    });
+  }, 1000);
 });
