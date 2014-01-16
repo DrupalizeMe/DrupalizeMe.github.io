@@ -825,102 +825,102 @@ blockquote {
 }
 /* line 194, icon/*.png */
 .icon-sprite, .icon-check, .icon-cross-grey, .icon-cross, .icon-description-blue, .icon-description-orange, .icon-description-white, .icon-download-blue, .icon-download-orange, .icon-drop, .icon-play, .icon-plus, .icon-quiz-blue, .icon-quiz-orange, .icon-quiz-white, .icon-share, .icon-star-blue, .icon-star-orange, .icon-star-white, .icon-water, .playlist-content ul li a.active .count, .description span, .description:hover span, .description.active span, .reviews span, .reviews:hover span, .reviews.active span, .quiz-tab span, .quiz-tab:hover span, .quiz-tab.active span, .add-to-queue .icon, .add-to-queue.active .icon, .add-to-queue.active:hover .icon, .resources li a, .resources li a:hover {
-  background: url('../images/icon-sea20f0f4cb.png') no-repeat;
+  background: url('../images/icon-s4a813bf198.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-check {
-  background-position: 0 -287px;
+  background-position: 0 -302px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-cross-grey {
-  background-position: 0 -361px;
+  background-position: 0 -376px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-cross {
-  background-position: 0 -473px;
+  background-position: 0 -468px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-description-blue {
-  background-position: 0 -453px;
+  background-position: 0 -448px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-description-orange {
-  background-position: 0 -489px;
+  background-position: 0 -484px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-description-white {
-  background-position: 0 0;
+  background-position: 0 -80px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-download-blue {
-  background-position: 0 -303px;
+  background-position: 0 -318px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-download-orange {
-  background-position: 0 -245px;
+  background-position: 0 -180px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-drop {
-  background-position: 0 -20px;
+  background-position: 0 0;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-play {
-  background-position: 0 -397px;
+  background-position: 0 -392px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-plus {
-  background-position: 0 -345px;
+  background-position: 0 -360px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-quiz-blue {
-  background-position: 0 -225px;
+  background-position: 0 -262px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-quiz-orange {
-  background-position: 0 -267px;
+  background-position: 0 -282px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-quiz-white {
-  background-position: 0 -413px;
+  background-position: 0 -408px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-share {
-  background-position: 0 -205px;
+  background-position: 0 -242px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-star-blue {
-  background-position: 0 -325px;
+  background-position: 0 -340px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-star-orange {
-  background-position: 0 -377px;
+  background-position: 0 -202px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-star-white {
-  background-position: 0 -433px;
+  background-position: 0 -428px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-water {
-  background-position: 0 -105px;
+  background-position: 0 -100px;
 }
 
 /* line 1, ../scss/_videos.scss */
@@ -1222,7 +1222,7 @@ input, textarea {
   height: 16px;
   top: 1.25em;
   margin-left: -.25em;
-  background-position: 0 -397px;
+  background-position: 0 -392px;
 }
 /* line 218, ../scss/_videos.scss */
 .playlist-content ul li a.active .duration {
@@ -1282,41 +1282,41 @@ input, textarea {
 
 /* line 278, ../scss/_videos.scss */
 .description span {
-  background-position: 0 0;
+  background-position: 0 -80px;
 }
 /* line 283, ../scss/_videos.scss */
 .description:hover span {
-  background-position: 0 -489px;
+  background-position: 0 -484px;
 }
 /* line 289, ../scss/_videos.scss */
 .description.active span {
-  background-position: 0 -453px;
+  background-position: 0 -448px;
 }
 
 /* line 296, ../scss/_videos.scss */
 .reviews span {
-  background-position: 0 -433px;
+  background-position: 0 -428px;
 }
 /* line 301, ../scss/_videos.scss */
 .reviews:hover span {
-  background-position: 0 -377px;
+  background-position: 0 -202px;
 }
 /* line 307, ../scss/_videos.scss */
 .reviews.active span {
-  background-position: 0 -325px;
+  background-position: 0 -340px;
 }
 
 /* line 314, ../scss/_videos.scss */
 .quiz-tab span {
-  background-position: 0 -413px;
+  background-position: 0 -408px;
 }
 /* line 319, ../scss/_videos.scss */
 .quiz-tab:hover span {
-  background-position: 0 -267px;
+  background-position: 0 -282px;
 }
 /* line 325, ../scss/_videos.scss */
 .quiz-tab.active span {
-  background-position: 0 -225px;
+  background-position: 0 -262px;
 }
 
 /* line 331, ../scss/_videos.scss */
@@ -1353,7 +1353,7 @@ input, textarea {
 }
 /* line 360, ../scss/_videos.scss */
 .add-to-queue .icon {
-  background-position: 0 -345px;
+  background-position: 0 -360px;
   margin-right: .5em;
   width: 17px;
   height: 16px;
@@ -1374,7 +1374,7 @@ input, textarea {
 }
 /* line 380, ../scss/_videos.scss */
 .add-to-queue.active .icon {
-  background-position: 0 -287px;
+  background-position: 0 -302px;
 }
 /* line 384, ../scss/_videos.scss */
 .add-to-queue.active:hover {
@@ -1383,7 +1383,7 @@ input, textarea {
 }
 /* line 388, ../scss/_videos.scss */
 .add-to-queue.active:hover .icon {
-  background-position: 0 -473px;
+  background-position: 0 -468px;
 }
 
 /* line 395, ../scss/_videos.scss */
@@ -1556,11 +1556,11 @@ textarea {
 .resources li a {
   font-weight: bold;
   padding-left: 2.25em;
-  background-position: 0 -303px;
+  background-position: 0 -318px;
 }
 /* line 549, ../scss/_videos.scss */
 .resources li a:hover {
-  background-position: 0 -245px;
+  background-position: 0 -180px;
 }
 
 /* line 556, ../scss/_videos.scss */
