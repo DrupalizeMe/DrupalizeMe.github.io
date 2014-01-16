@@ -180,8 +180,9 @@ $(function() {
     return false;
   });
 
-  setTimeout(function() {
-    // Animate series progress water
+  // Animate series progress water
+  $(window).load(function() {
+    $('.series-progress').css('background', '#137cc1');
     var percent = $('.series-progress').attr('data-percent');
     var position = (80 / 100) * percent;
     var position = 80 - position;
@@ -198,5 +199,5 @@ $(function() {
         $('.series-progress .percent').text(this.number + '%');
       }
     });
-  }, 1000);
+  });
 });
