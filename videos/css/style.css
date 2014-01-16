@@ -823,34 +823,34 @@ blockquote {
     font-size: 3em;
   }
 }
-/* line 194, icon/*.png */
-.icon-sprite, .icon-check, .icon-cross-grey, .icon-cross, .icon-description-blue, .icon-description-orange, .icon-description-white, .icon-download-blue, .icon-download-orange, .icon-drop, .icon-play, .icon-plus, .icon-quiz-blue, .icon-quiz-orange, .icon-quiz-white, .icon-share, .icon-star-blue, .icon-star-orange, .icon-star-white, .icon-water, .playlist-content ul li a.active .count, .description span, .description:hover span, .description.active span, .reviews span, .reviews:hover span, .reviews.active span, .quiz-tab span, .quiz-tab:hover span, .quiz-tab.active span, .add-to-queue .icon, .add-to-queue.active .icon, .add-to-queue.active:hover .icon, .resources li a, .resources li a:hover {
-  background: url('../images/icon-sae7d8a870d.png') no-repeat;
+/* line 186, icon/*.png */
+.icon-sprite, .icon-check, .icon-cross-grey, .icon-cross, .icon-description-blue, .icon-description-orange, .icon-description-white, .icon-download-blue, .icon-download-orange, .icon-drop, .icon-play, .icon-plus, .icon-quiz-blue, .icon-quiz-orange, .icon-quiz-white, .icon-share-active, .icon-star-blue, .icon-star-orange, .icon-star-white, .icon-water, .playlist-content ul li a.active .count, .description span, .description:hover span, .description.active span, .reviews span, .reviews:hover span, .reviews.active span, .quiz-tab span, .quiz-tab:hover span, .quiz-tab.active span, .add-to-queue .icon, .add-to-queue.active .icon, .add-to-queue.active:hover .icon, .resources li a, .resources li a:hover {
+  background: url('../images/icon-saf84942801.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-check {
-  background-position: 0 -307px;
+  background-position: 0 -287px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-cross-grey {
-  background-position: 0 -381px;
+  background-position: 0 -361px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-cross {
-  background-position: 0 -473px;
-}
-
-/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-description-blue {
   background-position: 0 -453px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-description-blue {
+  background-position: 0 -433px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-description-orange {
-  background-position: 0 -489px;
+  background-position: 0 -469px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -860,7 +860,7 @@ blockquote {
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-download-blue {
-  background-position: 0 -323px;
+  background-position: 0 -303px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -875,37 +875,37 @@ blockquote {
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-play {
-  background-position: 0 -397px;
+  background-position: 0 -377px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-plus {
-  background-position: 0 -365px;
+  background-position: 0 -345px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-quiz-blue {
-  background-position: 0 -267px;
-}
-
-/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-quiz-orange {
-  background-position: 0 -287px;
-}
-
-/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-quiz-white {
-  background-position: 0 -413px;
-}
-
-/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-share {
   background-position: 0 -247px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-quiz-orange {
+  background-position: 0 -267px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-quiz-white {
+  background-position: 0 -393px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-share-active {
+  background-position: 0 -227px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-star-blue {
-  background-position: 0 -345px;
+  background-position: 0 -325px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -915,7 +915,7 @@ blockquote {
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-star-white {
-  background-position: 0 -433px;
+  background-position: 0 -413px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -1222,7 +1222,7 @@ input, textarea {
   height: 16px;
   top: 1.25em;
   margin-left: -.25em;
-  background-position: 0 -397px;
+  background-position: 0 -377px;
 }
 /* line 218, ../scss/_videos.scss */
 .playlist-content ul li a.active .duration {
@@ -1286,16 +1286,16 @@ input, textarea {
 }
 /* line 283, ../scss/_videos.scss */
 .description:hover span {
-  background-position: 0 -489px;
+  background-position: 0 -469px;
 }
 /* line 289, ../scss/_videos.scss */
 .description.active span {
-  background-position: 0 -453px;
+  background-position: 0 -433px;
 }
 
 /* line 296, ../scss/_videos.scss */
 .reviews span {
-  background-position: 0 -433px;
+  background-position: 0 -413px;
 }
 /* line 301, ../scss/_videos.scss */
 .reviews:hover span {
@@ -1303,20 +1303,20 @@ input, textarea {
 }
 /* line 307, ../scss/_videos.scss */
 .reviews.active span {
-  background-position: 0 -345px;
+  background-position: 0 -325px;
 }
 
 /* line 314, ../scss/_videos.scss */
 .quiz-tab span {
-  background-position: 0 -413px;
+  background-position: 0 -393px;
 }
 /* line 319, ../scss/_videos.scss */
 .quiz-tab:hover span {
-  background-position: 0 -287px;
+  background-position: 0 -267px;
 }
 /* line 325, ../scss/_videos.scss */
 .quiz-tab.active span {
-  background-position: 0 -267px;
+  background-position: 0 -247px;
 }
 
 /* line 331, ../scss/_videos.scss */
@@ -1353,7 +1353,7 @@ input, textarea {
 }
 /* line 360, ../scss/_videos.scss */
 .add-to-queue .icon {
-  background-position: 0 -365px;
+  background-position: 0 -345px;
   margin-right: .5em;
   width: 17px;
   height: 16px;
@@ -1374,7 +1374,7 @@ input, textarea {
 }
 /* line 380, ../scss/_videos.scss */
 .add-to-queue.active .icon {
-  background-position: 0 -307px;
+  background-position: 0 -287px;
 }
 /* line 384, ../scss/_videos.scss */
 .add-to-queue.active:hover {
@@ -1383,7 +1383,7 @@ input, textarea {
 }
 /* line 388, ../scss/_videos.scss */
 .add-to-queue.active:hover .icon {
-  background-position: 0 -473px;
+  background-position: 0 -453px;
 }
 
 /* line 395, ../scss/_videos.scss */
@@ -1416,37 +1416,42 @@ input, textarea {
   margin-bottom: 2em;
 }
 
-/* line 425, ../scss/_videos.scss */
+/* line 423, ../scss/_videos.scss */
+.embed {
+  display: block;
+}
+
+/* line 429, ../scss/_videos.scss */
 .loading,
 .comments,
 .quiz {
   display: none;
 }
 
-/* line 429, ../scss/_videos.scss */
+/* line 433, ../scss/_videos.scss */
 .comment {
   position: relative;
   margin: 2em 0;
   padding-bottom: 2em;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 435, ../scss/_videos.scss */
+/* line 439, ../scss/_videos.scss */
 .comment:last-child {
   border-bottom: none;
 }
-/* line 439, ../scss/_videos.scss */
+/* line 443, ../scss/_videos.scss */
 .comment > img {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-/* line 446, ../scss/_videos.scss */
+/* line 450, ../scss/_videos.scss */
 .empty-stars {
   vertical-align: middle;
 }
 
-/* line 450, ../scss/_videos.scss */
+/* line 454, ../scss/_videos.scss */
 textarea {
   width: 100%;
   border: 1px solid #e6e6e6;
@@ -1457,7 +1462,7 @@ textarea {
   -moz-box-sizing: border-box;
 }
 
-/* line 460, ../scss/_videos.scss */
+/* line 464, ../scss/_videos.scss */
 .sidebar {
   background: whitesmoke;
   border-left: 1px solid #e6e6e6;
@@ -1467,23 +1472,23 @@ textarea {
   float: right;
 }
 
-/* line 469, ../scss/_videos.scss */
+/* line 473, ../scss/_videos.scss */
 .block {
   border-bottom: 1px solid #e6e6e6;
   margin: 0 2em 2.5em;
   padding-bottom: 2.5em;
   overflow: hidden;
 }
-/* line 475, ../scss/_videos.scss */
+/* line 479, ../scss/_videos.scss */
 .block:first-child {
   margin-top: 2.5em;
 }
-/* line 479, ../scss/_videos.scss */
+/* line 483, ../scss/_videos.scss */
 .block:last-child {
   border-bottom: none;
 }
 
-/* line 484, ../scss/_videos.scss */
+/* line 488, ../scss/_videos.scss */
 .block-title {
   font-size: 1em;
   line-height: 1.125;
@@ -1492,7 +1497,7 @@ textarea {
   margin: 0.5em 0 1em;
 }
 
-/* line 488, ../scss/_videos.scss */
+/* line 492, ../scss/_videos.scss */
 .series-progress {
   float: left;
   height: 85px;
@@ -1500,14 +1505,14 @@ textarea {
   position: relative;
   overflow: hidden;
 }
-/* line 495, ../scss/_videos.scss */
+/* line 499, ../scss/_videos.scss */
 .series-progress .drop {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 2;
 }
-/* line 502, ../scss/_videos.scss */
+/* line 506, ../scss/_videos.scss */
 .series-progress .water {
   transition: all 2s;
   -webkit-transition: all 2s;
@@ -1517,7 +1522,7 @@ textarea {
   position: absolute;
   z-index: 1;
 }
-/* line 512, ../scss/_videos.scss */
+/* line 516, ../scss/_videos.scss */
 .series-progress .percent {
   position: absolute;
   font-size: 1.25em;
@@ -1531,47 +1536,47 @@ textarea {
   z-index: 3;
 }
 
-/* line 526, ../scss/_videos.scss */
+/* line 530, ../scss/_videos.scss */
 .remaining {
   float: left;
   margin: 1.25em 0 0 .5em;
 }
-/* line 530, ../scss/_videos.scss */
+/* line 534, ../scss/_videos.scss */
 .remaining h3 {
   color: #137cc1;
   margin: 0;
 }
 
-/* line 536, ../scss/_videos.scss */
+/* line 540, ../scss/_videos.scss */
 .resources {
   margin: 0;
   padding: 0;
 }
-/* line 540, ../scss/_videos.scss */
+/* line 544, ../scss/_videos.scss */
 .resources li {
   list-style: none;
   line-height: 2em;
 }
-/* line 544, ../scss/_videos.scss */
+/* line 548, ../scss/_videos.scss */
 .resources li a {
   font-weight: bold;
   padding-left: 2.25em;
   display: block;
   line-height: 22px;
   margin-bottom: .5em;
-  background-position: 0 -323px;
+  background-position: 0 -303px;
 }
-/* line 552, ../scss/_videos.scss */
+/* line 556, ../scss/_videos.scss */
 .resources li a:hover {
   background-position: 0 -205px;
 }
 
-/* line 559, ../scss/_videos.scss */
+/* line 563, ../scss/_videos.scss */
 .trainer {
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 563, ../scss/_videos.scss */
+/* line 567, ../scss/_videos.scss */
 .trainer img {
   width: 70px;
   height: 70px;
@@ -1579,35 +1584,35 @@ textarea {
   float: left;
 }
 
-/* line 571, ../scss/_videos.scss */
+/* line 575, ../scss/_videos.scss */
 .trainer-name {
   float: left;
   line-height: 1.3em;
   margin: 1em;
 }
-/* line 576, ../scss/_videos.scss */
+/* line 580, ../scss/_videos.scss */
 .trainer-name a {
   display: block;
   font-weight: bold;
 }
-/* line 581, ../scss/_videos.scss */
+/* line 585, ../scss/_videos.scss */
 .trainer-name span {
   font-size: 0.9em;
 }
 
-/* line 586, ../scss/_videos.scss */
+/* line 590, ../scss/_videos.scss */
 .bottom {
   width: 100%;
   background: #fd7037;
 }
 
-/* line 591, ../scss/_videos.scss */
+/* line 595, ../scss/_videos.scss */
 .cover-image {
   width: 100%;
   display: block;
 }
 
-/* line 596, ../scss/_videos.scss */
+/* line 600, ../scss/_videos.scss */
 .footer {
   width: 100%;
   background: whitesmoke;
@@ -1648,116 +1653,116 @@ textarea {
     border-bottom: 1px solid #e6e6e6;
   }
 
-  /* line 607, ../scss/_videos.scss */
+  /* line 611, ../scss/_videos.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 612, ../scss/_videos.scss */
+  /* line 616, ../scss/_videos.scss */
   .content,
   .sidebar {
     width: 100%;
   }
 
-  /* line 616, ../scss/_videos.scss */
+  /* line 620, ../scss/_videos.scss */
   .header {
     padding: 0 1em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
-  /* line 622, ../scss/_videos.scss */
+  /* line 626, ../scss/_videos.scss */
   .header ul,
   .header #search {
     display: none;
   }
-  /* line 626, ../scss/_videos.scss */
+  /* line 630, ../scss/_videos.scss */
   .header .responsive-nav {
     display: block;
     float: right;
     margin-top: 1.3em;
   }
 
-  /* line 633, ../scss/_videos.scss */
+  /* line 637, ../scss/_videos.scss */
   .hero {
     background: none;
     padding-top: 0;
   }
 
-  /* line 638, ../scss/_videos.scss */
+  /* line 642, ../scss/_videos.scss */
   .hero-shadow {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
 
-  /* line 645, ../scss/_videos.scss */
+  /* line 649, ../scss/_videos.scss */
   .jwdockbuttons button:last-child {
     display: none;
   }
 
-  /* line 650, ../scss/_videos.scss */
+  /* line 654, ../scss/_videos.scss */
   .transcript {
     max-height: 428px;
   }
 
-  /* line 654, ../scss/_videos.scss */
+  /* line 658, ../scss/_videos.scss */
   .playlist-content {
     height: auto;
   }
 
-  /* line 658, ../scss/_videos.scss */
+  /* line 662, ../scss/_videos.scss */
   .js-tabs {
     padding-left: 2em;
     margin: 1em 0 0;
   }
-  /* line 663, ../scss/_videos.scss */
+  /* line 667, ../scss/_videos.scss */
   .js-tabs li a {
     color: #555555;
     border-top: none;
     border-bottom: 5px solid transparent;
     padding: .5em 1em;
   }
-  /* line 669, ../scss/_videos.scss */
+  /* line 673, ../scss/_videos.scss */
   .js-tabs li a.active {
     border-top: none;
     border-bottom: 5px solid #137cc1;
   }
 
-  /* line 681, ../scss/_videos.scss */
+  /* line 685, ../scss/_videos.scss */
   .description span {
     background-position: 0 -390px;
   }
 
-  /* line 687, ../scss/_videos.scss */
+  /* line 691, ../scss/_videos.scss */
   .reviews span {
     background-position: 0 -237px;
   }
 
-  /* line 693, ../scss/_videos.scss */
+  /* line 697, ../scss/_videos.scss */
   .quiz-tab span {
     background-position: 0 -254px;
   }
 
-  /* line 698, ../scss/_videos.scss */
+  /* line 702, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 704, ../scss/_videos.scss */
+  /* line 708, ../scss/_videos.scss */
   .add-to-queue {
     position: static;
     float: left;
     margin-bottom: 2em;
   }
 
-  /* line 711, ../scss/_videos.scss */
+  /* line 715, ../scss/_videos.scss */
   .comment > img {
     position: static;
   }
 
-  /* line 719, ../scss/_videos.scss */
+  /* line 723, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1765,7 +1770,7 @@ textarea {
     clear: left;
   }
 
-  /* line 723, ../scss/_videos.scss */
+  /* line 727, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;
