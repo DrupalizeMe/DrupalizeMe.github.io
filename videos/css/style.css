@@ -1667,69 +1667,74 @@ textarea {
     box-shadow: none;
   }
 
-  /* line 627, ../scss/_videos.scss */
+  /* line 628, ../scss/_videos.scss */
+  .jwdockbuttons button:last-child {
+    display: none;
+  }
+
+  /* line 633, ../scss/_videos.scss */
   .transcript {
     max-height: 428px;
   }
 
-  /* line 631, ../scss/_videos.scss */
+  /* line 637, ../scss/_videos.scss */
   .playlist-content {
     height: auto;
   }
 
-  /* line 635, ../scss/_videos.scss */
+  /* line 641, ../scss/_videos.scss */
   .js-tabs {
     padding-left: 2em;
     margin: 1em 0 0;
   }
-  /* line 640, ../scss/_videos.scss */
+  /* line 646, ../scss/_videos.scss */
   .js-tabs li a {
     color: #555555;
     border-top: none;
     border-bottom: 5px solid transparent;
     padding: .5em 1em;
   }
-  /* line 646, ../scss/_videos.scss */
+  /* line 652, ../scss/_videos.scss */
   .js-tabs li a.active {
     border-top: none;
     border-bottom: 5px solid #137cc1;
   }
 
-  /* line 658, ../scss/_videos.scss */
+  /* line 664, ../scss/_videos.scss */
   .description span {
     background-position: 0 -390px;
   }
 
-  /* line 664, ../scss/_videos.scss */
+  /* line 670, ../scss/_videos.scss */
   .reviews span {
     background-position: 0 -237px;
   }
 
-  /* line 670, ../scss/_videos.scss */
+  /* line 676, ../scss/_videos.scss */
   .quiz-tab span {
     background-position: 0 -254px;
   }
 
-  /* line 675, ../scss/_videos.scss */
+  /* line 681, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 681, ../scss/_videos.scss */
+  /* line 687, ../scss/_videos.scss */
   .add-to-queue {
     position: static;
     float: left;
     margin-bottom: 2em;
   }
 
-  /* line 688, ../scss/_videos.scss */
+  /* line 694, ../scss/_videos.scss */
   .comment > img {
     position: static;
   }
 
-  /* line 696, ../scss/_videos.scss */
+  /* line 702, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1737,7 +1742,7 @@ textarea {
     clear: left;
   }
 
-  /* line 700, ../scss/_videos.scss */
+  /* line 706, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;

@@ -10,6 +10,15 @@ $(function() {
       },{
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.mp4",
         label: "720p HD"
+      }],
+      tracks: [{
+        file: "jwplayer/english.vtt",
+        label: "English",
+        kind: "captions"
+      },{
+        file: "jwplayer/french.vtt",
+        label: "French",
+        kind: "captions"
       }]
     }],
     file: "http://developer.longtailvideo.com/trac/export/944/trunk/html5/test/files/bunny.mp4",
@@ -80,6 +89,12 @@ $(function() {
     else {
       $('.transcript-list li').show();
     }
+  });
+
+  // Transcript seek links
+  $('.time').click(function() {
+    var position = $(this).attr('data-offset');
+    jwplayer().seek(position);
   });
 
   // Transcript close button
