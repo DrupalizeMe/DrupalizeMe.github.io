@@ -36,7 +36,7 @@ $(function() {
   });
 
   // Once the first video is played, add our custom buttons.
-  jwplayer().onPlay(function(){
+  jwplayer().onReady(function(){
     playerSetup(this);
   });
 
@@ -47,18 +47,20 @@ $(function() {
         speed_normal_icon,
         "Speed",
         function() {
-          var video = document.getElementById('video').querySelector("video");
-          if (video.playbackRate == 1.0) {
-            video.playbackRate = 1.5;
-            $('#video_dock_speed').css('background-image', "url(" + speed_fast_icon + ")");
-          }
-          else if (video.playbackRate == 1.5) {
-            video.playbackRate = 2.0;
-            $('#video_dock_speed').css('background-image', "url(" + speed_fastest_icon + ")");
-          }
-          else {
-            video.playbackRate = 1.0;
-            $('#video_dock_speed').css('background-image', "url(" + speed_normal_icon + ")");
+          if (player.getState() !== 'IDLE') {
+            var video = document.getElementById('video').querySelector("video");
+            if (video.playbackRate == 1.0) {
+              video.playbackRate = 1.5;
+              $('#video_dock_speed').css('background-image', "url(" + speed_fast_icon + ")");
+            }
+            else if (video.playbackRate == 1.5) {
+              video.playbackRate = 2.0;
+              $('#video_dock_speed').css('background-image', "url(" + speed_fastest_icon + ")");
+            }
+            else {
+              video.playbackRate = 1.0;
+              $('#video_dock_speed').css('background-image', "url(" + speed_normal_icon + ")");
+            }
           }
         },
         "speed"
