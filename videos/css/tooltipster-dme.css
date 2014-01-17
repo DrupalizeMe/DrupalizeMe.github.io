@@ -1,0 +1,13 @@
+.tooltipster-dme {
+	border-radius: 5px;
+	border: 1px solid #00293f;
+	background: #273138;
+	color: #fff;
+}
+.tooltipster-dme .tooltipster-content {
+  font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+	padding: 8px 10px;
+}

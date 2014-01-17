@@ -100,6 +100,11 @@ $(function() {
     );
   }
 
+  // Tooltip initializer
+  $('.tooltip').tooltipster({
+    theme: 'tooltipster-dme',
+  });
+
   // Transcript filter
   $('#transcript-filter').keyup(function() {
     if ($(this).val().length) {
