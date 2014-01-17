@@ -72,7 +72,13 @@ $(function() {
       transcript_icon,
       "Transcript",
       function() {
-        $('.transcript').toggle();
+        $('.transcript').toggleClass('active');
+        if ($('.transcript.active').length) {
+          $('#video_dock_transcript').css('background-color', "#13a0d8");
+        }
+        else {
+          $('#video_dock_transcript').css('background-color', "transparent");
+        }
       },
       "transcript"
     );

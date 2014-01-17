@@ -87,6 +87,11 @@ input, textarea {
   position: relative;
 }
 
+#video_dock_transcript {
+  border-radius: 4px;
+  margin: 0;
+}
+
 .transcript {
   display: none;
   position: absolute;
@@ -98,6 +103,10 @@ input, textarea {
   z-index: 2;
   font-size: .875em;
   box-sizing: border-box;
+
+  &.active {
+    display: block;
+  }
 }
 
 .transcript-header {
