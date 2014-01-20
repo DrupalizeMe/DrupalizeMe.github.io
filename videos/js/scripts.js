@@ -196,6 +196,7 @@ $(function() {
 
   $('.embed').click(function() {
     $('.embed-wrapper').slideToggle();
+    $('.embed-wrapper textarea').select();
     return false;
   });
 
