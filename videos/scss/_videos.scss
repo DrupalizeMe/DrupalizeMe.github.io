@@ -357,7 +357,7 @@ input, textarea {
   h1 {
     margin-top: 1em;
 
-    .icon-check-bigs {
+    .icon-check-big {
       width: 24px;
       height: 24px;
       display: inline-block;
@@ -402,7 +402,7 @@ input, textarea {
     color: $text;
 
     .icon {
-      @include icon-sprite(check);
+      @include icon-sprite(list);
     }
 
     &:hover {
