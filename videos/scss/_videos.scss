@@ -103,10 +103,6 @@ input, textarea {
   z-index: 2;
   font-size: .875em;
   box-sizing: border-box;
-
-  &.active {
-    display: block;
-  }
 }
 
 .transcript-header {
@@ -676,7 +672,9 @@ textarea {
   }
 
   .transcript {
-    max-height: 428px;
+    height: 428px;
+    position: relative;
+    border-bottom: 1px solid $light-border;
   }
 
   .playlist-content {
@@ -684,7 +682,7 @@ textarea {
   }
 
   .js-tabs {
-    padding-left: 2em;
+    padding-left: 1em;
     margin: 1em 0 0;
 
     li {
@@ -702,24 +700,21 @@ textarea {
     }
   }
 
-  // TODO can we move this out of @media queries or into JS to avoid
-  // SASS depreciation warnings? "@extending an outer selector from within
-  // @media is deprecated."
   .description {
     span {
-      background-position: 0 -390px;
+      @include icon-sprite-position(description-blue);
     }
   }
 
   .reviews {
     span {
-      background-position: 0 -237px;
+      @include icon-sprite-position(star-blue);
     }
   }
 
   .quiz-tab {
     span {
-      background-position: 0 -254px;
+      @include icon-sprite-position(quiz-blue);
     }
   }
 

@@ -72,8 +72,8 @@ $(function() {
       transcript_icon,
       "Transcript",
       function() {
-        $('.transcript').toggleClass('active');
-        if ($('.transcript.active').length) {
+        $('.transcript').toggle();
+        if ($('.transcript').is(':visible')) {
           $('#video_dock_transcript').css('background-color', "#13a0d8");
         }
         else {
@@ -126,6 +126,7 @@ $(function() {
   // Transcript close button
   $('.close').click(function() {
     $('.transcript').hide();
+    $('#video_dock_transcript').css('background-color', "transparent");
   });
 
   // Playlist navigation
