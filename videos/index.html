@@ -181,7 +181,7 @@
 
     <div class="content-wrapper container">
       <div class="content">
-        <h1 id="page-title">Case Study: Band Wagon</h1>
+        <h1 id="page-title">Case Study: Band Wagon<span class="icon-check tooltip" title="Watched"></span></h1>
         <a href="#" class="add-to-queue"><span class="icon"></span><span class="text">Add to Queue</span></a>
 
         <div class="loading">Loading...</div>
@@ -214,6 +214,11 @@
         </div>
 
         <div class="comments tab-content">
+          <div class="review-average-wrapper">
+            <div><strong>Average Review</strong></div>
+            <img class="review-average" src="images/stars.png"><span class="review-count">(2 reviews)</span>
+            <div><a href="#review">Create your own review</a></div>
+          </div>
           <div class="comment">
             <h4>Posted on January 13, 2014 by Bob's Uncle</h4>
             <img src="images/stars.png">
@@ -230,7 +235,7 @@
             </p>
           </div>
 
-          <strong>Review this video</strong> <img class="empty-stars" src="images/empty-stars.png">
+          <strong id="review">Review this video</strong> <img class="empty-stars" src="images/empty-stars.png">
           <textarea rows="7"></textarea>
           <a href="#" class="action-link">Submit</a>
         </div>

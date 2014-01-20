@@ -181,6 +181,16 @@ input, textarea {
   }
 }
 
+.icon-check {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  line-height: 2em;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 5px;
+}
+
 .playlist-content {
   background: white;
   height: 344px;
@@ -236,15 +246,6 @@ input, textarea {
     color: $text;
     position: absolute;
     left: 2em;
-  }
-
-  .icon-check {
-    width: 17px;
-    height: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -2px;
-    margin-left: 5px;
   }
 
   .duration {
@@ -448,15 +449,20 @@ input, textarea {
   display: none;
 }
 
+.review-average-wrapper {
+  border-bottom: 1px solid $light-border;
+  padding-bottom: 2em;
+}
+
+.review-average {
+  vertical-align: middle;
+}
+
 .comment {
   position: relative;
   margin: 2em 0;
   padding-bottom: 2em;
   border-bottom: 1px solid $light-border;
-
-  &:last-child {
-    border-bottom: none;
-  }
 
   >img {
     position: absolute;
