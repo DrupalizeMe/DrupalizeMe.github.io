@@ -196,21 +196,28 @@ $(function() {
 
   // Animate series progress water
   $(window).load(function() {
-    $('.series-progress').css('background', '#137cc1');
-    var percent = $('.series-progress').attr('data-percent');
+    var watched = $('.series-progress').attr('data-watched');
+    var total = $('.series-progress').attr('data-total');
+
+    // Calculate percentage watched
+    var percent = (watched / total) * 100;
+
+    // Calculate water background position based on percentage
     var position = (80 / 100) * percent;
     var position = 80 - position;
+
+    $('.series-progress').css('background', '#137cc1');
     $('.series-progress .water').css('top', position + 'px');
 
     // Animate series progress percent
-    $({number: 0}).animate({number: percent}, {
+    $({number: 0}).animate({number: watched}, {
       duration: 2000,
       easing: 'linear',
       step: function() {
-        $('.series-progress .percent').text(Math.floor(this.number) + '%');
+        $('.series-progress .percent').text(Math.floor(this.number) + '/' + total);
       },
       complete: function() {
-        $('.series-progress .percent').text(this.number + '%');
+        $('.series-progress .percent').text(this.number + '/' + total);
       }
     });
   });
