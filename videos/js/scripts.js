@@ -194,6 +194,11 @@ $(function() {
     return false;
   });
 
+  $('.embed').click(function() {
+    $('.embed-wrapper').slideToggle();
+    return false;
+  });
+
   // Animate series progress water
   $(window).load(function() {
     var watched = $('.series-progress').attr('data-watched');

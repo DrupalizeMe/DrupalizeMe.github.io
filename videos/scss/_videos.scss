@@ -448,6 +448,14 @@ input, textarea {
   display: block;
 }
 
+.embed-wrapper {
+  display: none;
+}
+
+label {
+  font-weight: bold;
+}
+
 .loading,
 .comments,
 .quiz {
