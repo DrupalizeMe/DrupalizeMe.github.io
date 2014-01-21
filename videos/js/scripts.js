@@ -185,13 +185,23 @@ $(function() {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $(this).find('.text').html('In your Queue');
+      $(this).find('.text').html('Remove');
     }
     else {
-      $(this).find('.text').html('Add to Queue');
+      $(this).find('.text').html('Queue');
     }
 
     return false;
+  });
+
+  $('.add-to-queue').hover(function() {
+    if ($(this).hasClass('active')) {
+      $(this).find('.text').html('Remove');
+    }
+  }, function() {
+    if ($(this).hasClass('active')) {
+      $(this).find('.text').html('Queued');
+    }
   });
 
   $('.embed').click(function() {
