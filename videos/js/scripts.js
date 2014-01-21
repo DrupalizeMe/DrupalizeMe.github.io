@@ -135,7 +135,7 @@ $(function() {
     $(this).addClass('active');
 
     var title = $(this).find('.playlist-item-title').html();
-    $('#page-title').html(title);
+    $('#page-title .video-title').html(title);
     $(document).attr("title", title);
 
     if (!$('.js-tabs a.description').hasClass('active')) {
