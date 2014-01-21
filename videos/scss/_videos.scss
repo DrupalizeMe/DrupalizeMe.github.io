@@ -641,6 +641,26 @@ textarea {
   padding: 2em 0;
 }
 
+// No series example for video.html
+.no-series {
+  .video-player {
+    width: 100%;
+    height: auto;
+  }
+
+  .transcript {
+    height: 428px;
+    position: relative;
+    border-bottom: 1px solid $light-border;
+    clear: both;
+    width: 100%;
+  }
+
+  .jwdockbuttons button:last-child {
+    display: none;
+  }
+}
+
 // Quick and dirty desktop-first responsive design, just for this prototype ;)
 @media screen and (max-width: 1080px) {
   @include hero-stacked;

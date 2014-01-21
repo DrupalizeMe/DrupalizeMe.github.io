@@ -1674,6 +1674,24 @@ textarea {
   padding: 2em 0;
 }
 
+/* line 646, ../scss/_videos.scss */
+.no-series .video-player {
+  width: 100%;
+  height: auto;
+}
+/* line 651, ../scss/_videos.scss */
+.no-series .transcript {
+  height: 428px;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  clear: both;
+  width: 100%;
+}
+/* line 659, ../scss/_videos.scss */
+.no-series .jwdockbuttons button:last-child {
+  display: none;
+}
+
 @media screen and (max-width: 1080px) {
   /* line 78, ../scss/_mixins.scss */
   .hero-sidebar,
@@ -1707,118 +1725,118 @@ textarea {
     border-bottom: 1px solid #e6e6e6;
   }
 
-  /* line 648, ../scss/_videos.scss */
+  /* line 668, ../scss/_videos.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 653, ../scss/_videos.scss */
+  /* line 673, ../scss/_videos.scss */
   .content,
   .sidebar {
     width: 100%;
   }
 
-  /* line 657, ../scss/_videos.scss */
+  /* line 677, ../scss/_videos.scss */
   .header {
     padding: 0 1em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
-  /* line 663, ../scss/_videos.scss */
+  /* line 683, ../scss/_videos.scss */
   .header ul,
   .header #search {
     display: none;
   }
-  /* line 667, ../scss/_videos.scss */
+  /* line 687, ../scss/_videos.scss */
   .header .responsive-nav {
     display: block;
     float: right;
     margin-top: 1.3em;
   }
 
-  /* line 674, ../scss/_videos.scss */
+  /* line 694, ../scss/_videos.scss */
   .hero {
     background: none;
     padding-top: 0;
   }
 
-  /* line 679, ../scss/_videos.scss */
+  /* line 699, ../scss/_videos.scss */
   .hero-shadow {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
 
-  /* line 686, ../scss/_videos.scss */
+  /* line 706, ../scss/_videos.scss */
   .jwdockbuttons button:last-child {
     display: none;
   }
 
-  /* line 691, ../scss/_videos.scss */
+  /* line 711, ../scss/_videos.scss */
   .transcript {
     height: 428px;
     position: relative;
     border-bottom: 1px solid #e6e6e6;
   }
 
-  /* line 697, ../scss/_videos.scss */
+  /* line 717, ../scss/_videos.scss */
   .playlist-content {
     height: auto;
   }
 
-  /* line 701, ../scss/_videos.scss */
+  /* line 721, ../scss/_videos.scss */
   .js-tabs {
     padding-left: 1em;
     margin: 1em 0 0;
   }
-  /* line 706, ../scss/_videos.scss */
+  /* line 726, ../scss/_videos.scss */
   .js-tabs li a {
     color: #555555;
     border-top: none;
     border-bottom: 5px solid transparent;
     padding: .5em 1em;
   }
-  /* line 712, ../scss/_videos.scss */
+  /* line 732, ../scss/_videos.scss */
   .js-tabs li a.active {
     border-top: none;
     border-bottom: 5px solid #137cc1;
   }
 
-  /* line 721, ../scss/_videos.scss */
+  /* line 741, ../scss/_videos.scss */
   .description span {
     background-position: 0 -473px;
   }
 
-  /* line 727, ../scss/_videos.scss */
+  /* line 747, ../scss/_videos.scss */
   .reviews span {
     background-position: 0 -365px;
   }
 
-  /* line 733, ../scss/_videos.scss */
+  /* line 753, ../scss/_videos.scss */
   .quiz-tab span {
     background-position: 0 -303px;
   }
 
-  /* line 738, ../scss/_videos.scss */
+  /* line 758, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 744, ../scss/_videos.scss */
+  /* line 764, ../scss/_videos.scss */
   .add-to-queue {
     position: static;
     float: left;
     margin-bottom: 2em;
   }
 
-  /* line 751, ../scss/_videos.scss */
+  /* line 771, ../scss/_videos.scss */
   .comment > img {
     position: static;
   }
 
-  /* line 759, ../scss/_videos.scss */
+  /* line 779, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1826,7 +1844,7 @@ textarea {
     clear: left;
   }
 
-  /* line 763, ../scss/_videos.scss */
+  /* line 783, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;
