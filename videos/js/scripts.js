@@ -1,4 +1,21 @@
 $(function() {
+
+  // Preloads the JWPlayer dock icon image states.
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+      $('<img/>')[0].src = this;
+    });
+  }
+
+  preload([
+    "images/jwplayer/speed-normal.png",
+    "images/jwplayer/speed-fast.png",
+    "images/jwplayer/speed-fastest.png",
+    "images/jwplayer/layout-normal.png",
+    "images/jwplayer/layout-stacked.png",
+    "images/jwplayer/transcript.png"
+  ]);
+
   // Embed JWPlayer
   jwplayer("video").setup({
     playlist: [{
