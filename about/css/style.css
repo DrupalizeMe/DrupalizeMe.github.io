@@ -854,30 +854,228 @@ input, textarea {
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
 }
-/* line 28, ../scss/_about.scss */
+/* line 29, ../scss/_about.scss */
 .header ul {
   float: right;
 }
-/* line 31, ../scss/_about.scss */
+/* line 32, ../scss/_about.scss */
 .header ul li {
   list-style: none;
   padding: 0 16px;
   float: left;
 }
-/* line 36, ../scss/_about.scss */
+/* line 37, ../scss/_about.scss */
 .header ul li a {
   font-weight: bold;
 }
-/* line 42, ../scss/_about.scss */
+/* line 43, ../scss/_about.scss */
 .header .responsive-nav {
   display: none;
 }
 
-/* line 47, ../scss/_about.scss */
+/* line 48, ../scss/_about.scss */
 .footer {
   width: 100%;
   background: whitesmoke;
   text-align: center;
   padding: 2em 0;
+}
+
+/* line 55, ../scss/_about.scss */
+.page-about {
+  text-align: center;
+}
+
+/* line 59, ../scss/_about.scss */
+#page-title {
+  margin-top: 1em;
+  font-size: 3em;
+}
+
+/* line 67, ../scss/_about.scss */
+.about--header,
+.about--team-banner,
+.about--team,
+.about--offices-banner {
+  padding: 4em 0;
+}
+
+/* line 71, ../scss/_about.scss */
+.about--header {
+  padding-top: 0;
+}
+
+/* line 75, ../scss/_about.scss */
+.about--paragraph {
+  font-size: 1.2em;
+  padding: 0 12em;
+}
+
+/* line 81, ../scss/_about.scss */
+.about--heading {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
+
+/* line 87, ../scss/_about.scss */
+.about--team-banner {
+  background: url("../images/team-banner.jpg") no-repeat center center #137cc1;
+  height: 406px;
+  width: 100%;
+}
+/* line 92, ../scss/_about.scss */
+.about--team-banner h2 {
+  padding-top: 203px;
+  margin-top: -27px;
+}
+
+/* line 98, ../scss/_about.scss */
+.about--team {
+  background: whitesmoke;
+}
+
+/* line 102, ../scss/_about.scss */
+.about--team-member {
+  display: inline-block;
+  margin-right: 3em;
+  margin-bottom: 3em;
+}
+/* line 108, ../scss/_about.scss */
+.about--team-member:nth-child(4), .about--team-member:nth-child(8) {
+  margin-right: 0;
+}
+/* line 112, ../scss/_about.scss */
+.about--team-member h4 {
+  margin: .25em 0;
+  font-size: 1.25em;
+}
+
+/* line 118, ../scss/_about.scss */
+.about--offices-banner {
+  background: #fd7037;
+  width: 100%;
+  color: white;
+}
+
+/* line 126, ../scss/_about.scss */
+.jcarousel-wrapper {
+  margin: 20px auto;
+  position: relative;
+  border: 10px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+}
+
+/** Carousel **/
+/* line 140, ../scss/_about.scss */
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 146, ../scss/_about.scss */
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 154, ../scss/_about.scss */
+.jcarousel li {
+  width: 200px;
+  float: left;
+  border: 1px solid #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 163, ../scss/_about.scss */
+.jcarousel img {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/** Carousel Controls **/
+/* line 172, ../scss/_about.scss */
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #4E443C;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  font: 24px/27px Arial, sans-serif;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 4px #F0EFE7;
+  -moz-box-shadow: 0 0 4px #F0EFE7;
+  box-shadow: 0 0 4px #F0EFE7;
+}
+
+/* line 192, ../scss/_about.scss */
+.jcarousel-control-prev {
+  left: 15px;
+}
+
+/* line 196, ../scss/_about.scss */
+.jcarousel-control-next {
+  right: 15px;
+}
+
+/** Carousel Pagination **/
+/* line 202, ../scss/_about.scss */
+.jcarousel-pagination {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  margin: 0;
+}
+
+/* line 212, ../scss/_about.scss */
+.jcarousel-pagination a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  background: #fff;
+  color: #4E443C;
+  border-radius: 10px;
+  text-indent: -9999px;
+  margin-right: 7px;
+  -webkit-box-shadow: 0 0 2px #4E443C;
+  -moz-box-shadow: 0 0 2px #4E443C;
+  box-shadow: 0 0 2px #4E443C;
+}
+
+/* line 234, ../scss/_about.scss */
+.jcarousel-pagination a.active {
+  background: #4E443C;
+  color: #fff;
+  opacity: 1;
+  -webkit-box-shadow: 0 0 2px #F0EFE7;
+  -moz-box-shadow: 0 0 2px #F0EFE7;
+  box-shadow: 0 0 2px #F0EFE7;
 }
