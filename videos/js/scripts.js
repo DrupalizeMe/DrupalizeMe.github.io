@@ -1,11 +1,7 @@
 $(function() {
-
-  // Stores the currently playing video asset ID. This is used as the key for
-  // local playback time storage.
-  var dbVideoAssetId = 1;
-
-  // Stores the latest playback position stored.
-  var dbPosition = 0;
+  // If available, sets the initial resume position.
+  // TODO on production, use Drupalize.settings.resumePosition.
+  var resumePosition = 0;
 
   // Preloads the JWPlayer dock icon image states.
   function preload(arrayOfImages) {
@@ -120,19 +116,10 @@ $(function() {
       "layout"
     );
 
-    // When the user clicks play, resume where they last played until.
+    // When the user clicks play, resume where they last played up to.
     player.onPlay(function() {
-      var position = $.jStorage.get(dbVideoAssetId, 0);
-      if (position) {
-        player.seek(position);
-      }
-    });
-
-    // Every 5 seconds, store locally how far the user has played a video.
-    player.onTime(function(event) {
-      if (event.position >= dbPosition + 5) {
-        $.jStorage.set(dbVideoAssetId, event.position);
-        dbPosition = event.position;
+      if (resumePosition) {
+        player.seek(resumePosition);
       }
     });
   }
@@ -168,9 +155,11 @@ $(function() {
 
   // Playlist navigation
   $('.playlist-content a').click(function() {
-    // Update the local db storage configuration.
-    dbVideoAssetId = 2;
-    dbPosition = 0;
+
+    // Set the resume position if it's available
+    if ($(this).attr('data-resume')) {
+      resumePosition = $(this).attr('data-resume');
+    }
 
     $('.playlist-content a').removeClass('active');
     $(this).addClass('active');
