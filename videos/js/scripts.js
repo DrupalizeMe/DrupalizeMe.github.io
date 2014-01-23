@@ -1,5 +1,12 @@
 $(function() {
 
+  // Stores the currently playing video asset ID. This is used as the key for
+  // local playback time storage.
+  var dbVideoAssetId = 1;
+
+  // Stores the latest playback position stored.
+  var dbPosition = 0;
+
   // Preloads the JWPlayer dock icon image states.
   function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
@@ -24,7 +31,13 @@ $(function() {
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-300k.mp4",
         label: "360p SD"
       },{
+        file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-300k.webm",
+        label: "360p SD"
+      },{
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.mp4",
+        label: "720p HD"
+      },{
+        file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.webm",
         label: "720p HD"
       }],
       tracks: [{
@@ -106,6 +119,22 @@ $(function() {
       },
       "layout"
     );
+
+    // When the user clicks play, resume where they last played until.
+    player.onPlay(function() {
+      var position = $.jStorage.get(dbVideoAssetId, 0);
+      if (position) {
+        player.seek(position);
+      }
+    });
+
+    // Every 5 seconds, store locally how far the user has played a video.
+    player.onTime(function(event) {
+      if (event.position >= dbPosition + 5) {
+        $.jStorage.set(dbVideoAssetId, event.position);
+        dbPosition = event.position;
+      }
+    });
   }
 
   // Tooltip initializer
@@ -139,6 +168,10 @@ $(function() {
 
   // Playlist navigation
   $('.playlist-content a').click(function() {
+    // Update the local db storage configuration.
+    dbVideoAssetId = 2;
+    dbPosition = 0;
+
     $('.playlist-content a').removeClass('active');
     $(this).addClass('active');
 
@@ -168,8 +201,14 @@ $(function() {
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-300k.mp4",
         label: "360p SD"
       },{
+        file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-300k.webm",
+        label: "360p SD"
+      },{
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.mp4",
         label: "720p HD"
+      },{
+        file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.webm",
+        label: "360p SD"
       }]
     }]).play();
 
