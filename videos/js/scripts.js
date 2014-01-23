@@ -31,10 +31,12 @@ $(function() {
         label: "360p SD"
       },{
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.mp4",
-        label: "720p HD"
+        label: "720p HD",
+        default: true
       },{
         file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Using-Drupal-4-01-960x540-1200k.webm",
-        label: "720p HD"
+        label: "720p HD",
+        default: true
       }],
       tracks: [{
         file: "jwplayer/english.vtt",
@@ -194,10 +196,12 @@ $(function() {
         label: "360p SD"
       },{
         file: "https://s3.amazonaws.com/drupalize.me/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.mp4",
-        label: "720p HD"
+        label: "720p HD",
+        default: true
       },{
         file: "http://drupalize.me.s3.amazonaws.com/_testing_joe_/jwp6/2013-10-31-Media-01-960x540-1200k.webm",
-        label: "360p SD"
+        label: "720p HD",
+        default: true
       }]
     }]).play();
 
