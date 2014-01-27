@@ -109,6 +109,10 @@ input, textarea {
   padding: 1em 1em 1em 1.5em;
   border-bottom: 1px solid $light-border;
 
+  label {
+    display: none;
+  }
+
   .filter {
     padding: .5em;
     width: 12em;
