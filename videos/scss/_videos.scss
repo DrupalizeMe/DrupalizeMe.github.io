@@ -92,6 +92,50 @@ input, textarea {
   margin: 0;
 }
 
+.jwcontrols {
+  #video_dock {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+
+    .jwdockbuttons {
+      width: 42px;
+
+      button {
+        height: 32px;
+        margin-bottom: 8px;
+      }
+
+      .capLeft,
+      .capRight,
+      .divider {
+        display: none;
+      }
+    }
+
+    .jwoverlay {
+      margin-top: 0;
+      margin-left: 0 !important;
+      left: auto;
+      right: 58px;
+      white-space: nowrap;
+    }
+
+    #video_dock_layout_tooltip {
+      top: 10px;
+    }
+
+    #video_dock_transcript_tooltip {
+      top: 50px;
+    }
+
+    #video_dock_speed_tooltip {
+      top: 90px;
+    }
+  }
+}
+
 .transcript {
   display: none;
   position: absolute;
@@ -660,7 +704,7 @@ textarea {
     width: 100%;
   }
 
-  .jwdockbuttons button:last-child {
+  .jwdockbuttons button:first-child {
     display: none;
   }
 
@@ -711,7 +755,7 @@ textarea {
   }
 
   .jwdockbuttons {
-    button:last-child {
+    button:first-child {
       display: none;
     }
   }

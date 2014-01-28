@@ -60,11 +60,43 @@ $(function() {
   });
 
   function playerSetup(player) {
-    // Add 2x speed button when in HTML5 mode
+    // Add a layout toggle button
+    player.addButton(
+      "images/jwplayer/layout-stacked.png",
+      "Switch layout",
+      function() {
+        $('.hero').toggleClass('stacked');
+        if ($('.hero.stacked').length) {
+          $('#video_dock_layout').css('background-image', "url('images/jwplayer/layout-normal.png')");
+        }
+        else {
+          $('#video_dock_layout').css('background-image', "url('images/jwplayer/layout-stacked.png')");
+        }
+      },
+      "layout"
+    );
+
+    // Add a transcript toggle button
+    player.addButton(
+      "images/jwplayer/transcript.png",
+      "Toggle transcript",
+      function() {
+        $('.transcript').toggle();
+        if ($('.transcript').is(':visible')) {
+          $('#video_dock_transcript').css('background-color', "#13a0d8");
+        }
+        else {
+          $('#video_dock_transcript').css('background-color', "transparent");
+        }
+      },
+      "transcript"
+    );
+
+    // Add a speed adjustment button when in HTML5 mode
     if (player.getRenderingMode() == 'html5') {
       player.addButton(
         "images/jwplayer/speed-normal.png",
-        "Speed",
+        "Adjust playback speed",
         function() {
           if (player.getState() !== 'IDLE') {
             var video = document.getElementById('video').querySelector("video");
@@ -85,38 +117,6 @@ $(function() {
         "speed"
       );
     }
-
-    // Add a transcript toggle button
-    player.addButton(
-      "images/jwplayer/transcript.png",
-      "Transcript",
-      function() {
-        $('.transcript').toggle();
-        if ($('.transcript').is(':visible')) {
-          $('#video_dock_transcript').css('background-color', "#13a0d8");
-        }
-        else {
-          $('#video_dock_transcript').css('background-color', "transparent");
-        }
-      },
-      "transcript"
-    );
-
-    // Add a layout toggle button
-    player.addButton(
-      "images/jwplayer/layout-stacked.png",
-      "Layout",
-      function() {
-        $('.hero').toggleClass('stacked');
-        if ($('.hero.stacked').length) {
-          $('#video_dock_layout').css('background-image', "url('images/jwplayer/layout-normal.png')");
-        }
-        else {
-          $('#video_dock_layout').css('background-image', "url('images/jwplayer/layout-stacked.png')");
-        }
-      },
-      "layout"
-    );
 
     // When the user clicks play, resume where they last played up to.
     player.onPlay(function() {
