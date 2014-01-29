@@ -164,16 +164,9 @@ input, textarea {
 
   .close {
     position: absolute;
-    top: 1.5em;
+    top: 1.3em;
     right: 1em;
-    width: 17px;
-    height: 16px;
-    text-align: center;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.9;
-    }
+    width: auto;
   }
 }
 
@@ -764,6 +757,7 @@ textarea {
     height: 428px;
     position: relative;
     border-bottom: 1px solid $light-border;
+    border-top: 1px solid $light-border;
   }
 
   .playlist-content {

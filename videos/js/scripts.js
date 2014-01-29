@@ -147,12 +147,14 @@ $(function() {
   $('.time').click(function() {
     var position = $(this).attr('data-offset');
     jwplayer().seek(position);
+    return false;
   });
 
   // Transcript close button
   $('.close').click(function() {
     $('.transcript').hide();
     $('#video_dock_transcript').css('background-color', "transparent");
+    return false;
   });
 
   // Playlist navigation
