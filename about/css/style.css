@@ -960,122 +960,51 @@ input, textarea {
   color: white;
 }
 
-/* line 126, ../scss/_about.scss */
-.jcarousel-wrapper {
-  margin: 20px auto;
-  position: relative;
-  border: 10px solid #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 2px #999;
-  -moz-box-shadow: 0 0 2px #999;
-  box-shadow: 0 0 2px #999;
+/* line 127, ../scss/_about.scss */
+.bjqs-controls.v-centered li a {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+/* line 134, ../scss/_about.scss */
+.bjqs-controls.v-centered li a:hover {
+  background: #000;
+  color: #fff;
 }
 
-/** Carousel **/
-/* line 140, ../scss/_about.scss */
-.jcarousel {
-  position: relative;
-  overflow: hidden;
+/* line 144, ../scss/_about.scss */
+.bjqs-markers li a {
+  padding: 5px 10px;
+  background: #000;
+  color: #fff;
+  margin: 5px;
+  text-decoration: none;
+}
+/* line 151, ../scss/_about.scss */
+.bjqs-markers li a:hover {
+  background: #999;
+}
+/* line 157, ../scss/_about.scss */
+.bjqs-markers li.active-marker a {
+  background: #999;
+}
+
+/* line 164, ../scss/_about.scss */
+.about--offices--image {
   width: 100%;
 }
 
-/* line 146, ../scss/_about.scss */
-.jcarousel ul {
-  width: 20000em;
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 154, ../scss/_about.scss */
-.jcarousel li {
-  width: 200px;
-  float: left;
-  border: 1px solid #fff;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 163, ../scss/_about.scss */
-.jcarousel img {
-  display: block;
-  max-width: 100%;
-  height: auto !important;
-}
-
-/** Carousel Controls **/
-/* line 172, ../scss/_about.scss */
-.jcarousel-control-prev,
-.jcarousel-control-next {
+/* line 168, ../scss/_about.scss */
+.about--offices--caption {
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 50%;
-  margin-top: -15px;
-  width: 30px;
-  height: 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   text-align: center;
-  background: #4E443C;
-  color: #fff;
-  text-decoration: none;
-  text-shadow: 0 0 1px #000;
-  font: 24px/27px Arial, sans-serif;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 0 0 4px #F0EFE7;
-  -moz-box-shadow: 0 0 4px #F0EFE7;
-  box-shadow: 0 0 4px #F0EFE7;
-}
-
-/* line 192, ../scss/_about.scss */
-.jcarousel-control-prev {
-  left: 15px;
-}
-
-/* line 196, ../scss/_about.scss */
-.jcarousel-control-next {
-  right: 15px;
-}
-
-/** Carousel Pagination **/
-/* line 202, ../scss/_about.scss */
-.jcarousel-pagination {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  margin: 0;
-}
-
-/* line 212, ../scss/_about.scss */
-.jcarousel-pagination a {
-  text-decoration: none;
-  display: inline-block;
-  font-size: 11px;
-  height: 10px;
-  width: 10px;
-  line-height: 10px;
-  background: #fff;
-  color: #4E443C;
-  border-radius: 10px;
-  text-indent: -9999px;
-  margin-right: 7px;
-  -webkit-box-shadow: 0 0 2px #4E443C;
-  -moz-box-shadow: 0 0 2px #4E443C;
-  box-shadow: 0 0 2px #4E443C;
-}
-
-/* line 234, ../scss/_about.scss */
-.jcarousel-pagination a.active {
-  background: #4E443C;
-  color: #fff;
-  opacity: 1;
-  -webkit-box-shadow: 0 0 2px #F0EFE7;
-  -moz-box-shadow: 0 0 2px #F0EFE7;
-  box-shadow: 0 0 2px #F0EFE7;
+  color: white;
+  font-size: 3em;
 }
