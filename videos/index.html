@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/tooltipster.css">
     <link rel="stylesheet" href="css/tooltipster-dme.css">
     <script type="text/javascript" src="//use.typekit.net/fuf6cds.js"></script>
@@ -118,19 +119,19 @@
               <div class="playlist-content">
                 <ul>
                   <li>
-                    <a href="#" data-resume="0" class="active"><span class="count">1</span><span class="playlist-item-title">Case Study: Band Wagon</span><span class="icon-check tooltip" title="Watched"></span><span class="duration">6:27</span></a>
+                    <a href="#" data-resume="100" data-total="100" class="active"><div class="percent-background"></div><span class="count">1</span><span class="playlist-item-title">Case Study: Band Wagon<span class="icon-check tooltip" title="Watched"></span></span><span class="duration">6:27</span></a>
                   </li>
                   <li>
-                    <a href="#" data-resume="0"><span class="count">2</span><span class="playlist-item-title">Introduction to the Media Project</span><span class="icon-check tooltip" title="Watched"></span><span class="duration">2:47</span></a>
+                    <a href="#" data-resume="90" data-total="100"><div class="percent-background"></div><span class="count">2</span><span class="playlist-item-title">Introduction to the Media Project<span class="icon-check tooltip" title="Watched"></span></span><span class="duration">2:47</span></a>
                   </li>
                   <li>
-                    <a href="#" data-resume="0"><span class="count">3</span><span class="playlist-item-title">Hands-On: Image Styles</span><span class="icon-check tooltip" title="Watched"></span><span class="duration">12:47</span></a>
+                    <a href="#" data-resume="81" data-total="100"><div class="percent-background"></div><span class="count">3</span><span class="playlist-item-title">Hands-On: Image Styles<span class="icon-check tooltip" title="Watched"></span></span><span class="duration">12:47</span></a>
                   </li>
                   <li>
-                    <a href="#" data-resume="0"><span class="count">4</span><span class="playlist-item-title">Spotlight: Media Module</span><span class="duration">1:30</span></a>
+                    <a href="#" data-resume="75" data-total="100"><div class="percent-background"></div><span class="count">4</span><span class="playlist-item-title">Spotlight: Media Module</span><span class="duration">1:30</span></a>
                   </li>
                   <li>
-                    <a href="#" data-resume="0"><span class="count">5</span><span class="playlist-item-title">Hands-On: Music Review Content Type</span><span class="duration">9:13</span></a>
+                    <a href="#" data-resume="50" data-total="100"><div class="percent-background"></div><span class="count">5</span><span class="playlist-item-title">Hands-On: Music Review Content Type</span><span class="duration">9:13</span></a>
                   </li>
                   <li>
                     <a href="#" data-resume="0"><span class="count">6</span><span class="playlist-item-title">Case Study: Band Wagon</span><span class="duration">6:27</span></a>
@@ -185,13 +186,34 @@
     <div class="content-wrapper container">
       <div class="content">
         <h1 id="page-title"><span class="video-title">Case Study: Band Wagon</span><span class="icon-check-big tooltip" title="Watched"></span></h1>
-        <a href="#" class="add-to-queue active"><span class="icon"></span><span class="text">Queued</span></a>
 
         <div class="loading">Loading...</div>
 
         <div class="node tab-content">
-          <div class="meta">
-            <span class="length">6 minutes 27 seconds</span> // <span class="tags"><a href="#">Site Building</a>, <a href="#">Drupal 7</a></span> // <span class="features"><img src="images/features.png"></span>
+          <div class="meta--wrapper">
+            <div class="meta--info">
+              <span class="length">6 minutes 27 seconds</span> // <span class="tags"><a href="#">Site Building</a>, <a href="#">Drupal 7</a></span> // <span class="features"><img src="images/features.png"></span>
+            </div>
+            <div class="meta--actions">
+              <a href="#share-modal" class="share-link"><span class="icon"></span><span class="text">Share</span></a>
+              <a href="#" class="queue-link"><span class="icon"></span><span class="text">Add to Queue</span></a>
+            </div>
+            <div id="share-modal" class="mfp-hide">
+              <h4>Share</h4>
+              <div class="share--sns">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdrupalize.me%2Fvideos%2Fcase-study-band-wagon" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=635');return false;" class="share--sns-link icon-facebook tooltip" title="Share to Facebook">Share to Facebook</a>
+                <a href="https://twitter.com/intent/tweet?text=Watch%20Case%20Study%3A%20Band%20Wagon%20at&url=http%3A%2F%2Fdrupalize.me%2Fvideos%2Fcase-study-band-wagon" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=635');return false;" class="share--sns-link icon-twitter tooltip" title="Share to Twitter">Share to Twitter</a>
+                <a href="https://plus.google.com/share?url=http%3A%2F%2Fdrupalize.me%2Fvideos%2Fcase-study-band-wagon" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=512');return false;" class="share--sns-link icon-google tooltip" title="Share to Google+">Share to Google+</a>
+              </div>
+              <h4>Embed HTML code</h4>
+              <div class="share--embed">
+                <textarea readonly><iframe src="//drupalize.me/ajax/dmeembed/XBG73XF9XCUS9GM7J4TJEEM4OWRTKOXR" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen></iframe></textarea>
+                <label>Video size:</label> <input type="text" size="5" value="1280"> <span class="video-size-center">x</span> <input type="text" size="5" value="720">
+              </div>
+            </div>
           </div>
           <div class="body">
             <p>
@@ -211,13 +233,6 @@
               <a href="#">Document Name</a>
             </li>
           </ul>
-          <hr>
-          <img class="share-icons" src="images/share-icons.png">
-          <a class="embed" href="#">Embed</a>
-          <div class="embed-wrapper">
-            <textarea><iframe src="//drupalize.me/ajax/dmeembed/XBG73XF9XCUS9GM7J4TJEEM4OWRTKOXR" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen></iframe></textarea>
-            <label>Video size:</label> <input type="text" size="5" value="1280"> <span class="video-size-center">x</span> <input type="text" size="5" value="720">
-          </div>
         </div>
 
         <div class="comments tab-content">
@@ -310,6 +325,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

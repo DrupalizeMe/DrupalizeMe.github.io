@@ -129,6 +129,32 @@ $(function() {
   // Tooltip initializer
   $('.tooltip').tooltipster({
     theme: 'tooltipster-dme',
+    delay: 150,
+    speed: 200
+  });
+
+  // Modal initializer
+  $('.share-link').magnificPopup({
+    type: 'inline',
+    midClick: true,
+
+    // Delay in milliseconds before popup is removed
+    removalDelay: 300,
+
+    // Class that is added to popup wrapper and background
+    // make it unique to apply your CSS animations just to this exact popup
+    mainClass: 'mfp-fade'
+  });
+
+  // Set intial playlist percentages
+  $('.playlist-content li > a').each(function() {
+    var percent = $(this).attr('data-resume') / $(this).attr('data-total') * 100;
+
+    if (percent > 80) {
+      percent = 100;
+    }
+
+    $(this).find('.percent-background').css('width', percent + '%');
   });
 
   // Transcript filter
@@ -223,33 +249,35 @@ $(function() {
   });
 
   // Add to Queue
-  $('.add-to-queue').click(function() {
+  $('.queue-link').click(function() {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $(this).find('.text').html('Remove');
+      $(this).find('.text').html('Remove from Queue');
     }
     else {
-      $(this).find('.text').html('Queue');
+      $(this).find('.text').html('Add to Queue');
     }
 
     return false;
   });
 
-  $('.add-to-queue').hover(function() {
+  $('.queue-link').hover(function() {
     if ($(this).hasClass('active')) {
-      $(this).find('.text').html('Remove');
+      $(this).find('.text').html('Remove from Queue');
     }
   }, function() {
     if ($(this).hasClass('active')) {
-      $(this).find('.text').html('Queued');
+      $(this).find('.text').html('In your Queue');
     }
   });
 
-  $('.embed').click(function() {
-    $('.embed-wrapper').slideToggle();
-    $('.embed-wrapper textarea').select();
+  $('.share--embed textarea').click(function() {
+    $(this).select();
     return false;
+  });
+
+  $('#facebook-share').click(function() {
   });
 
   // Animate series progress water

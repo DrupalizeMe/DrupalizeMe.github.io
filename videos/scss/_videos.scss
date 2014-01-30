@@ -1,6 +1,6 @@
 input, textarea {
   font-family: $sans-serif;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 .container {
@@ -17,7 +17,7 @@ input, textarea {
 
 #search {
   float: right;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .header {
@@ -145,7 +145,7 @@ input, textarea {
   right: 0;
   background: $light-background;
   z-index: 2;
-  font-size: .875em;
+  font-size: 0.875em;
   box-sizing: border-box;
 }
 
@@ -158,7 +158,7 @@ input, textarea {
   }
 
   .filter {
-    padding: .5em;
+    padding: 0.5em;
     width: 12em;
   }
 
@@ -183,8 +183,8 @@ input, textarea {
 
   li {
     border-bottom: 1px solid $light-border;
-    padding-bottom: .5em;
-    margin: .5em 0;
+    padding-bottom: 0.5em;
+    margin: 0.5em 0;
     list-style: none;
   }
 
@@ -251,22 +251,26 @@ input, textarea {
 
       a {
         display: block;
-        padding: 1em 3.5em 1em 4em;
+        padding: 1em 3.75em 1em 3.5em;
 
         &:hover {
-          background: $light-background;
+          // background: $light-background;
         }
 
         &.active {
           background: #00be4c;
           color: white;
 
+          .percent-background {
+            display: none;
+          }
+
           .count {
             text-indent: -9999px;
             width: 16px;
             height: 16px;
             top: 1.25em;
-            margin-left: -.25em;
+            text-align: left;
 
             @include icon-sprite(play);
           }
@@ -279,10 +283,25 @@ input, textarea {
     }
   }
 
+  .playlist-item-title {
+    display: inline-block;
+    position: relative;
+  }
+
+  .percent-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: $light-background;
+  }
+
   .count {
     color: $text;
     position: absolute;
-    left: 2em;
+    left: 1.5em;
+    width: 1em;
+    text-align: right;
   }
 
   .duration {
@@ -290,7 +309,7 @@ input, textarea {
     right: 1.5em;
     color: $text-light;
     font-size: .8em;
-    top: 1.6em;
+    top: 1.5em;
   }
 }
 
@@ -409,22 +428,33 @@ input, textarea {
   margin-left: .5em;
 }
 
-.add-to-queue {
-  position: absolute;
-  top: 2em;
-  right: 30px;
-  background-color: #00be4c;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  display: block;
-  padding: .5em 1.5em;
-  color: white;
-  font-weight: bold;
-  font-size: .875em;
+.meta--wrapper {
+  border-top: 1px dashed $light-border;
+  border-bottom: 1px dashed $light-border;
+  padding: .5em 0;
+  margin: .5em 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#share-modal {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.meta--actions {
+  a {
+    float: right;
+    font-weight: bold;
+    font-size: 0.875em;
+  }
 
   .icon {
-    @include icon-sprite(plus);
-    margin-right: .5em;
+    margin-right: 0.25em;
     width: 17px;
     height: 16px;
     display: inline-block;
@@ -432,24 +462,30 @@ input, textarea {
     margin-top: -2px;
   }
 
-  &:hover {
-    opacity: 0.9;
-    color: white;
+  &.active {
+    color: $text;
+  }
+}
+
+.share-link {
+  .icon {
+    @include icon-sprite(share);
+  }
+}
+
+.queue-link {
+  margin-right: 1em;
+
+  .icon {
+    @include icon-sprite(plus);
   }
 
   &.active {
-    background-color: $light-background;
-    border: 1px solid $light-border;
-    color: $text;
-
     .icon {
       @include icon-sprite(list);
     }
 
     &:hover {
-      background-color: #ec5448;
-      color: white;
-
       .icon {
         @include icon-sprite(cross);
       }
@@ -457,10 +493,10 @@ input, textarea {
   }
 }
 
-.meta {
+.meta--info {
   color: $text-light;
-  font-size: .8em;
-  font-weight: bold;
+  font-size: 0.875em;
+  float: left;
 
   .length {
     color: $text;
@@ -469,6 +505,14 @@ input, textarea {
 
   .tags {
     padding: 0 .5em;
+
+    a {
+      color: $text;
+
+      &:hover {
+        color: $orange;
+      }
+    }
   }
 
   .features {
@@ -476,7 +520,7 @@ input, textarea {
 
     img {
       vertical-align: middle;
-      margin-top: -2px;
+      margin-top: -3px;
     }
   }
 }
@@ -485,16 +529,37 @@ input, textarea {
   margin-bottom: 2em;
 }
 
-.embed {
-  display: block;
+#share-modal {
+  h4 {
+    margin: 0 0 0.5em;
+  }
 }
 
-.embed-wrapper {
-  display: none;
+.share--embed {
+  textarea {
+    font-size: 0.7em;
+    margin-top: 0;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 0.875em;
+  }
+
+  input {
+    font-size: 0.875em;
+  }
 }
 
-label {
-  font-weight: bold;
+.share--sns {
+  margin-bottom: 1em;
+}
+
+.share--sns-link {
+  text-indent: -9999px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
 }
 
 .loading,
@@ -607,7 +672,7 @@ textarea {
 
 .remaining {
   float: left;
-  margin: 1.25em 0 0 .5em;
+  margin: 1.25em 0 0 0.5em;
 
   h3 {
     color: $link;
@@ -628,7 +693,7 @@ textarea {
       padding-left: 2.25em;
       display: block;
       line-height: 22px;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
       @include icon-sprite(download-blue);
 
       &:hover {
@@ -773,7 +838,7 @@ textarea {
         color: $text;
         border-top: none;
         border-bottom: 5px solid transparent;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
 
         &.active {
           border-top: none;
@@ -807,7 +872,7 @@ textarea {
     -moz-box-sizing: border-box;
   }
 
-  .add-to-queue {
+  .queue-link {
     position: static;
     float: left;
     margin-bottom: 2em;
