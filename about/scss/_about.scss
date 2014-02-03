@@ -62,29 +62,12 @@ input, textarea {
 }
 
 .about--header,
-.about--team-banner,
 .about--team,
 .about--offices-banner {
   padding: 4em 0;
 }
 
 .about--header {
-  padding-top: 0;
-}
-
-.about--paragraph {
-  font-size: 1.2em;
-  padding: 0 12em;
-}
-
-
-.about--heading {
-  color: $white;
-  font-size: 3em;
-  margin: 0;
-}
-
-.about--team-banner {
   background: url('../images/team-banner.jpg') no-repeat center center $logo-blue;
   height: 406px;
   width: 100%;
@@ -95,23 +78,59 @@ input, textarea {
   }
 }
 
+.about--paragraph {
+  font-size: 1.2em;
+  padding: 0 11em;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+.about--heading {
+  color: $white;
+  font-size: 3em;
+  margin: 0;
+}
+
 .about--team {
   background: $light-background;
+
+  h2 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .about--paragraph {
+    color: $text;
+  }
 }
 
 .about--team-member {
   display: inline-block;
-  margin-right: 3em;
-  margin-bottom: 3em;
-
-  &:nth-child(4),
-  &:nth-child(8) {
-    margin-right: 0;
-  }
+  margin: 2em 1.5em 0 1.5em;
+  width: 200px;
+  vertical-align: top;
 
   h4 {
     margin: .25em 0;
     font-size: 1.25em;
+  }
+}
+
+.about--team-member--pic {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+.about--offices-button {
+  @include button;
+
+  &:hover {
+    background: $button-background;
+    border: 1px solid $button-background;
   }
 }
 

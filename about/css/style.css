@@ -894,117 +894,110 @@ input, textarea {
   font-size: 3em;
 }
 
-/* line 67, ../scss/_about.scss */
+/* line 66, ../scss/_about.scss */
 .about--header,
-.about--team-banner,
 .about--team,
 .about--offices-banner {
   padding: 4em 0;
 }
 
-/* line 71, ../scss/_about.scss */
+/* line 70, ../scss/_about.scss */
 .about--header {
-  padding-top: 0;
+  background: url("../images/team-banner.jpg") no-repeat center center #137cc1;
+  height: 406px;
+  width: 100%;
 }
-
 /* line 75, ../scss/_about.scss */
-.about--paragraph {
-  font-size: 1.2em;
-  padding: 0 12em;
+.about--header h2 {
+  padding-top: 203px;
+  margin-top: -27px;
 }
 
 /* line 81, ../scss/_about.scss */
+.about--paragraph {
+  font-size: 1.2em;
+  padding: 0 11em;
+  color: white;
+}
+/* line 86, ../scss/_about.scss */
+.about--paragraph a {
+  color: white;
+}
+
+/* line 91, ../scss/_about.scss */
 .about--heading {
   color: white;
   font-size: 3em;
   margin: 0;
 }
 
-/* line 87, ../scss/_about.scss */
-.about--team-banner {
-  background: url("../images/team-banner.jpg") no-repeat center center #137cc1;
-  height: 406px;
-  width: 100%;
-}
-/* line 92, ../scss/_about.scss */
-.about--team-banner h2 {
-  padding-top: 203px;
-  margin-top: -27px;
-}
-
-/* line 98, ../scss/_about.scss */
+/* line 97, ../scss/_about.scss */
 .about--team {
   background: whitesmoke;
 }
+/* line 100, ../scss/_about.scss */
+.about--team h2 {
+  font-size: 3em;
+  margin: 0;
+}
+/* line 105, ../scss/_about.scss */
+.about--team .about--paragraph {
+  color: #555555;
+}
 
-/* line 102, ../scss/_about.scss */
+/* line 110, ../scss/_about.scss */
 .about--team-member {
   display: inline-block;
-  margin-right: 3em;
-  margin-bottom: 3em;
+  margin: 2em 1.5em 0 1.5em;
+  width: 200px;
+  vertical-align: top;
 }
-/* line 108, ../scss/_about.scss */
-.about--team-member:nth-child(4), .about--team-member:nth-child(8) {
-  margin-right: 0;
-}
-/* line 112, ../scss/_about.scss */
+/* line 116, ../scss/_about.scss */
 .about--team-member h4 {
   margin: .25em 0;
   font-size: 1.25em;
 }
 
-/* line 118, ../scss/_about.scss */
+/* line 122, ../scss/_about.scss */
+.about--team-member--pic {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+/* line 128, ../scss/_about.scss */
+.about--offices-button {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  background: #137cc1;
+  border: 1px solid #137cc1;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  max-width: 19em;
+  padding: .75em 2em;
+  text-align: center;
+  white-space: nowrap;
+}
+/* line 123, ../scss/_mixins.scss */
+.about--offices-button:hover, .about--offices-button:focus {
+  background: #fd7037;
+  border: 1px solid #fd7037;
+  color: white;
+}
+/* line 131, ../scss/_about.scss */
+.about--offices-button:hover {
+  background: #137cc1;
+  border: 1px solid #137cc1;
+}
+
+/* line 137, ../scss/_about.scss */
 .about--offices-banner {
   background: #fd7037;
   width: 100%;
   color: white;
-}
-
-/* line 127, ../scss/_about.scss */
-.bjqs-controls.v-centered li a {
-  display: block;
-  padding: 10px;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-}
-/* line 134, ../scss/_about.scss */
-.bjqs-controls.v-centered li a:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* line 144, ../scss/_about.scss */
-.bjqs-markers li a {
-  padding: 5px 10px;
-  background: #000;
-  color: #fff;
-  margin: 5px;
-  text-decoration: none;
-}
-/* line 151, ../scss/_about.scss */
-.bjqs-markers li a:hover {
-  background: #999;
-}
-/* line 157, ../scss/_about.scss */
-.bjqs-markers li.active-marker a {
-  background: #999;
-}
-
-/* line 164, ../scss/_about.scss */
-.about--offices--image {
-  width: 100%;
-}
-
-/* line 168, ../scss/_about.scss */
-.about--offices--caption {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-  color: white;
-  font-size: 3em;
 }
