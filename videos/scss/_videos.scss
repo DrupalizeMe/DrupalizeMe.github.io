@@ -254,7 +254,7 @@ input, textarea {
         padding: 1em 3.75em 1em 3.5em;
 
         &:hover {
-          // background: $light-background;
+          background: $light-background;
         }
 
         &.active {
@@ -293,7 +293,14 @@ input, textarea {
     left: 0;
     top: 0;
     bottom: 0;
-    background: $light-background;
+    background: #e9fee1;
+  }
+
+  .playlist-item-percent {
+    color: $text-light;
+    font-size: .875em;
+    display: block;
+    line-height: 1.2em;
   }
 
   .count {
@@ -429,8 +436,8 @@ input, textarea {
 }
 
 .meta--wrapper {
-  border-top: 1px dashed $light-border;
-  border-bottom: 1px dashed $light-border;
+  border-top: 1px solid $light-border;
+  border-bottom: 1px solid $light-border;
   padding: .5em 0;
   margin: .5em 0;
   width: 100%;
@@ -743,6 +750,7 @@ textarea {
 .footer {
   width: 100%;
   background: $light-background;
+  border-top: 1px solid $light-border;
   text-align: center;
   padding: 2em 0;
 }

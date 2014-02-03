@@ -126,13 +126,6 @@ $(function() {
     });
   }
 
-  // Tooltip initializer
-  $('.tooltip').tooltipster({
-    theme: 'tooltipster-dme',
-    delay: 150,
-    speed: 200
-  });
-
   // Modal initializer
   $('.share-link').magnificPopup({
     type: 'inline',
@@ -150,11 +143,16 @@ $(function() {
   $('.playlist-content li > a').each(function() {
     var percent = $(this).attr('data-resume') / $(this).attr('data-total') * 100;
 
-    if (percent > 80) {
-      percent = 100;
+    if (percent >= 90) {
+      $(this).find('.playlist-item-title').append('<span class="icon-check tooltip" title="Watched"></span>');
     }
+  });
 
-    $(this).find('.percent-background').css('width', percent + '%');
+  // Tooltip initializer
+  $('.tooltip').tooltipster({
+    theme: 'tooltipster-dme',
+    delay: 150,
+    speed: 200
   });
 
   // Transcript filter
