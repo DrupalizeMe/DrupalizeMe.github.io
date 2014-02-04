@@ -5,6 +5,8 @@
 @import "typography";
 
 @import "compass/utilities/sprites";
+@import "team/*.png";
+@include all-team-sprites;
 @import "compass/css3/images";
 
 @import "about";

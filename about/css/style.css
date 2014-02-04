@@ -894,78 +894,152 @@ input, textarea {
   font-size: 3em;
 }
 
-/* line 66, ../scss/_about.scss */
-.about--header,
-.about--team,
-.about--offices-banner {
-  padding: 4em 0;
-}
-
-/* line 70, ../scss/_about.scss */
+/* line 64, ../scss/_about.scss */
 .about--header {
-  background: url("../images/team-banner.jpg") no-repeat center center #137cc1;
-  height: 406px;
+  background: url("../images/about-banner.jpg") no-repeat center center #137cc1;
+  height: 472px;
   width: 100%;
+  overflow: auto;
 }
-/* line 75, ../scss/_about.scss */
+/* line 70, ../scss/_about.scss */
 .about--header h2 {
-  padding-top: 203px;
-  margin-top: -27px;
+  padding-top: 160px;
+}
+/* line 74, ../scss/_about.scss */
+.about--header a {
+  text-decoration: underline;
 }
 
-/* line 81, ../scss/_about.scss */
+/* line 79, ../scss/_about.scss */
 .about--paragraph {
   font-size: 1.2em;
   padding: 0 11em;
   color: white;
 }
-/* line 86, ../scss/_about.scss */
+/* line 84, ../scss/_about.scss */
 .about--paragraph a {
   color: white;
 }
 
-/* line 91, ../scss/_about.scss */
+/* line 89, ../scss/_about.scss */
 .about--heading {
   color: white;
   font-size: 3em;
   margin: 0;
 }
 
-/* line 97, ../scss/_about.scss */
+/* line 95, ../scss/_about.scss */
 .about--team {
   background: whitesmoke;
+  padding-top: 4em;
 }
-/* line 100, ../scss/_about.scss */
+/* line 99, ../scss/_about.scss */
 .about--team h2 {
   font-size: 3em;
   margin: 0;
 }
-/* line 105, ../scss/_about.scss */
+/* line 104, ../scss/_about.scss */
 .about--team .about--paragraph {
   color: #555555;
 }
 
-/* line 110, ../scss/_about.scss */
+/* line 109, ../scss/_about.scss */
+.about--team--banner {
+  margin: 4em auto -16px;
+  width: 817px;
+  position: relative;
+}
+/* line 114, ../scss/_about.scss */
+.about--team--banner span {
+  position: absolute;
+  background: red;
+  cursor: help;
+}
+/* line 120, ../scss/_about.scss */
+.about--team--banner .shoe {
+  width: 100px;
+  height: 40px;
+  top: 130px;
+  left: 0;
+}
+/* line 127, ../scss/_about.scss */
+.about--team--banner .globe {
+  width: 120px;
+  height: 160px;
+  top: 0;
+  left: 150px;
+}
+
+/* line 135, ../scss/_about.scss */
 .about--team-member {
   display: inline-block;
   margin: 2em 1.5em 0 1.5em;
   width: 200px;
   vertical-align: top;
 }
-/* line 116, ../scss/_about.scss */
+/* line 141, ../scss/_about.scss */
 .about--team-member h4 {
-  margin: .25em 0;
+  margin: 1em 0 0;
   font-size: 1.25em;
 }
 
-/* line 122, ../scss/_about.scss */
+/* line 147, ../scss/_about.scss */
 .about--team-member--pic {
-  border-radius: 100px;
-  width: 200px;
   height: 200px;
+  width: 200px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
+/* line 156, ../scss/_about.scss */
+.about--team-member--pic:hover img {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  opacity: 0.5;
+}
+/* line 162, ../scss/_about.scss */
+.about--team-member--pic:hover span {
+  opacity: 1.0;
+}
+/* line 167, ../scss/_about.scss */
+.about--team-member--pic img {
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+/* line 176, ../scss/_about.scss */
+.about--team-member--pic span {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  line-height: 200px;
+  text-align: center;
+  color: white;
 }
 
-/* line 128, ../scss/_about.scss */
+/* line 194, ../scss/_about.scss */
+.about--team-member--pic-mask {
+  background: url("../images/member-pic-mask.png") no-repeat center center transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* line 203, ../scss/_about.scss */
 .about--offices-button {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -989,15 +1063,20 @@ input, textarea {
   border: 1px solid #fd7037;
   color: white;
 }
-/* line 131, ../scss/_about.scss */
+/* line 206, ../scss/_about.scss */
 .about--offices-button:hover {
   background: #137cc1;
   border: 1px solid #137cc1;
 }
 
-/* line 137, ../scss/_about.scss */
+/* line 212, ../scss/_about.scss */
 .about--offices-banner {
-  background: #fd7037;
+  background: url("../images/offices-banner.jpg") no-repeat center center #fd7037;
+  height: 509px;
   width: 100%;
   color: white;
+}
+/* line 218, ../scss/_about.scss */
+.about--offices-banner .about--heading {
+  padding-top: 145px;
 }
