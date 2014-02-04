@@ -2,6 +2,7 @@ $(function() {
   // If available, sets the initial resume position.
   // TODO on production, use Drupalize.settings.resumePosition.
   var resumePosition = 0;
+  var currentItem = $('.playlist-content li:first-child > a');
 
   // Preloads the JWPlayer dock icon image states.
   function preload(arrayOfImages) {
@@ -124,6 +125,19 @@ $(function() {
         player.seek(resumePosition);
       }
     });
+
+    // Every 5 seconds, update our playlist item's resume attribute to reflect
+    // the latest time the user watched up until.
+    var playerTime = 0;
+    player.onTime(function(event) {
+      if (event.position > playerTime + 5) {
+        playerTime = Math.floor(event.position);
+        var currentItemTime = currentItem.attr('data-resume');
+        if (playerTime > currentItemTime) {
+          currentItem.attr('data-resume', playerTime);
+        }
+      }
+    });
   }
 
   // Modal initializer
@@ -139,7 +153,7 @@ $(function() {
     mainClass: 'mfp-fade'
   });
 
-  // Set intial playlist percentages
+  // Mark videos that are over 90% as watched
   $('.playlist-content li > a').each(function() {
     var percent = $(this).attr('data-resume') / $(this).attr('data-total') * 100;
 
@@ -183,6 +197,9 @@ $(function() {
 
   // Playlist navigation
   $('.playlist-content a').click(function() {
+
+    // Set the global current item to the one selected.
+    currentItem = $(this);
 
     // Set the resume position if it's available
     if ($(this).attr('data-resume')) {
