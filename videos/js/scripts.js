@@ -4,6 +4,23 @@ $(function() {
   var resumePosition = 0;
   var currentItem = $('.playlist-content li:first-child > a');
 
+  // Helper function to set a playlist item as watched.
+  function playlistCheckItemWatched(item) {
+    var percent = $(item).attr('data-resume') / $(item).attr('data-total') * 100;
+    var title = $(item).find('.playlist-item-title');
+
+    if (percent >= 90 && !title.find('.watched').length) {
+      $(item).find('.playlist-item-title').append('<span class="icon-check tooltip watched" title="Watched"></span>');
+
+      // Tooltip initializer
+      $(title.find('.tooltip')).tooltipster({
+        theme: 'tooltipster-dme',
+        delay: 150,
+        speed: 200
+      });
+    }
+  }
+
   // Preloads the JWPlayer dock icon image states.
   function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
@@ -136,6 +153,8 @@ $(function() {
         if (playerTime > currentItemTime) {
           currentItem.attr('data-resume', playerTime);
         }
+
+        playlistCheckItemWatched(currentItem);
       }
     });
   }
@@ -153,13 +172,10 @@ $(function() {
     mainClass: 'mfp-fade'
   });
 
-  // Mark videos that are over 90% as watched
-  $('.playlist-content li > a').each(function() {
-    var percent = $(this).attr('data-resume') / $(this).attr('data-total') * 100;
 
-    if (percent >= 90) {
-      $(this).find('.playlist-item-title').append('<span class="icon-check tooltip" title="Watched"></span>');
-    }
+  // Mark playlist items that are over 90% as watched.
+  $('.playlist-content li > a').each(function() {
+    playlistCheckItemWatched(this);
   });
 
   // Tooltip initializer
