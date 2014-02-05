@@ -218,16 +218,6 @@ input, textarea {
   }
 }
 
-.icon-check {
-  width: 17px;
-  height: 16px;
-  display: inline-block;
-  line-height: 2em;
-  vertical-align: middle;
-  margin-top: -2px;
-  margin-left: 5px;
-}
-
 .playlist-content {
   background: white;
   height: 344px;
@@ -259,10 +249,10 @@ input, textarea {
 
         &.active {
           background: #00be4c;
-          color: white;
+          color: $white;
 
-          .percent-background {
-            display: none;
+          .playlist-item-percent {
+            color: $white;
           }
 
           .count {
@@ -276,8 +266,18 @@ input, textarea {
           }
 
           .duration {
-            color: white;
+            color: $white;
           }
+        }
+
+        .watched {
+          width: 17px;
+          height: 16px;
+          display: inline-block;
+          line-height: 2em;
+          vertical-align: middle;
+          margin-top: -2px;
+          margin-left: 5px;
         }
       }
     }
@@ -288,19 +288,15 @@ input, textarea {
     position: relative;
   }
 
-  .percent-background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background: #e9fee1;
-  }
-
   .playlist-item-percent {
     color: $text-light;
     font-size: .875em;
-    display: block;
+    display: none;
     line-height: 1.2em;
+
+    &.active {
+      display: block;
+    }
   }
 
   .count {
@@ -420,19 +416,20 @@ input, textarea {
   padding-right: 30px;
   position: relative;
   padding-bottom: 3em;
-
-  h1 {
-    margin-top: 1em;
-  }
 }
 
-.icon-check-big {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  margin-top: -2px;
-  vertical-align: middle;
-  margin-left: .5em;
+#page-title {
+  margin-top: 1em;
+
+  .watched {
+    @include icon-sprite(check-big);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+    margin-left: 0.25em;
+  }
 }
 
 .meta--wrapper {
@@ -639,52 +636,35 @@ textarea {
   @include block-title;
 }
 
-.series-progress {
-  float: left;
-  height: 85px;
-  width: 85px;
-  position: relative;
+.series-progress--wrapper {
+  height: 30px;
+  width: 100%;
+  background: #093a54;
+  border-radius: 5px;
+  border: 1px solid #08354d;
+  box-sizing: border-box;
   overflow: hidden;
-
-  .drop {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .water {
-    transition: all 2s;
-    -webkit-transition: all 2s;
-    height: 100%;
-    width: 100%;
-    top: 80px;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .percent {
-    position: absolute;
-    font-size: 1.25em;
-    font-weight: bold;
-    color: white;
-    width: 85px;
-    height: 85px;
-    text-align: center;
-    line-height: 85px;
-    padding-top: 5px;
-    z-index: 3;
-  }
+  position: relative;
 }
 
-.remaining {
-  float: left;
-  margin: 1.25em 0 0 0.5em;
+.series-progress--bar {
+  background: $logo-blue;
+  width: 0%;
+  height: 30px;
+  transition: all 2s ease-out;
+  -webkit-transition: all 2s ease-out;
+}
 
-  h3 {
-    color: $link;
-    margin: 0;
-  }
+.series-progress--text {
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
 }
 
 .resources {

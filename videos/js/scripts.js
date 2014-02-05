@@ -1,33 +1,81 @@
 $(function() {
-  // If available, sets the initial resume position.
-  // TODO on production, use Drupalize.settings.resumePosition.
-  var resumePosition = 0;
+  // Global variables.
   var currentItem = $('.playlist-content li:first-child > a');
+  var resumePosition = currentItem.attr('data-resume');
+  var playerTime = 0;
 
-  // Helper function to set a playlist item as watched.
-  function playlistCheckItemWatched(item) {
-    var percent = $(item).attr('data-resume') / $(item).attr('data-total') * 100;
+  // Helper function to update the series progress bar.
+  function updateSeriesProgress(start) {
+    var total = $('.series-progress--wrapper').attr('data-total');
+    var watched = $('.series-progress--wrapper').attr('data-watched');
+
+    // Calculate percentage watched
+    var percent = (watched / total) * 100;
+
+    // Sets the progress bar width
+    $('.series-progress--bar').css('width', percent + '%');
+
+    // Animate series progress percent
+    $({number: start}).animate({number: watched}, {
+      duration: 2000,
+      easing: 'linear',
+      step: function() {
+        $('.series-progress--text').text(Math.floor(this.number) + '/' + total);
+      },
+      complete: function() {
+        $('.series-progress--text').text(this.number + '/' + total);
+      }
+    });
+  }
+
+  // Helper function to update a playlist item's watched progress.
+  function playlistCheckItemProgress(item) {
     var title = $(item).find('.playlist-item-title');
 
-    if (percent >= 90 && !title.find('.watched').length) {
-      $(item).find('.playlist-item-title').append('<span class="icon-check tooltip watched" title="Watched"></span>');
+    // If a video has already been marked as watched, no updates required.
+    if (title.find('.watched').length > 0) {
+      return;
+    }
 
-      // Tooltip initializer
+    var percent = $(item).attr('data-resume') / $(item).attr('data-total') * 100;
+    var status = $(item).find('.playlist-item-percent');
+
+    if (percent >= 90) {
+      // Append the watched check icon to both the playlist item and page title.
+      var watched = '<span class="icon-check tooltip watched" title="Watched"></span>';
+      title.append(watched);
+      $('#page-title').append(watched);
+
+      // Hide the watched percentage status text.
+      status.removeClass('active');
+
+      // Increment our series progress.
+      var watched = $('.series-progress--wrapper').attr('data-watched');
+      $('.series-progress--wrapper').attr('data-watched', parseFloat(watched) + 1);
+
+      // Trigger a single incrementation for the series progress bar.
+      updateSeriesProgress(watched);
+
+      // Tooltip initializer.
       $(title.find('.tooltip')).tooltipster({
         theme: 'tooltipster-dme',
         delay: 150,
         speed: 200
       });
     }
+    else if (percent > 0) {
+      status.html(Math.floor(percent) + '% watched').addClass('active');
+    }
   }
 
-  // Preloads the JWPlayer dock icon image states.
+  // Helper function to preload a given array of images.
   function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
       $('<img/>')[0].src = this;
     });
   }
 
+  // Preload the JWPlayer dock icon image states.
   preload([
     "images/jwplayer/speed-normal.png",
     "images/jwplayer/speed-fast.png",
@@ -37,7 +85,7 @@ $(function() {
     "images/jwplayer/transcript.png"
   ]);
 
-  // Embed JWPlayer
+  // Embed JWPlayer.
   jwplayer("video").setup({
     playlist: [{
       image: "images/bg.png",
@@ -72,13 +120,13 @@ $(function() {
     aspectratio: "16:9"
   });
 
-  // Once the first video is played, add our custom buttons.
+  // When JWPlayer is initialized add our custom buttons.
   jwplayer().onReady(function(){
     playerSetup(this);
   });
 
   function playerSetup(player) {
-    // Add a layout toggle button
+    // Add a layout toggle button.
     player.addButton(
       "images/jwplayer/layout-stacked.png",
       "Switch layout",
@@ -94,7 +142,7 @@ $(function() {
       "layout"
     );
 
-    // Add a transcript toggle button
+    // Add a transcript toggle button.
     player.addButton(
       "images/jwplayer/transcript.png",
       "Toggle transcript",
@@ -110,7 +158,7 @@ $(function() {
       "transcript"
     );
 
-    // Add a speed adjustment button when in HTML5 mode
+    // Add a speed adjustment button when in HTML5 mode.
     if (player.getRenderingMode() == 'html5') {
       player.addButton(
         "images/jwplayer/speed-normal.png",
@@ -136,16 +184,14 @@ $(function() {
       );
     }
 
-    // When the user clicks play, resume where they last played up to.
+    // When the user clicks play, resume from where they last played until.
     player.onPlay(function() {
       if (resumePosition) {
         player.seek(resumePosition);
       }
     });
 
-    // Every 5 seconds, update our playlist item's resume attribute to reflect
-    // the latest time the user watched up until.
-    var playerTime = 0;
+    // Every 5 seconds, update our current playlist item's watched progress.
     player.onTime(function(event) {
       if (event.position > playerTime + 5) {
         playerTime = Math.floor(event.position);
@@ -154,38 +200,32 @@ $(function() {
           currentItem.attr('data-resume', playerTime);
         }
 
-        playlistCheckItemWatched(currentItem);
+        playlistCheckItemProgress(currentItem);
       }
     });
   }
 
-  // Modal initializer
-  $('.share-link').magnificPopup({
-    type: 'inline',
-    midClick: true,
-
-    // Delay in milliseconds before popup is removed
-    removalDelay: 300,
-
-    // Class that is added to popup wrapper and background
-    // make it unique to apply your CSS animations just to this exact popup
-    mainClass: 'mfp-fade'
-  });
-
-
-  // Mark playlist items that are over 90% as watched.
-  $('.playlist-content li > a').each(function() {
-    playlistCheckItemWatched(this);
-  });
-
-  // Tooltip initializer
+  // Tooltip initializer.
   $('.tooltip').tooltipster({
     theme: 'tooltipster-dme',
     delay: 150,
     speed: 200
   });
 
-  // Transcript filter
+  // Modal initializer.
+  $('.share-link').magnificPopup({
+    type: 'inline',
+    midClick: true,
+
+    // Delay in milliseconds before popup is removed.
+    removalDelay: 300,
+
+    // Class that is added to popup wrapper and background
+    // make it unique to apply your CSS animations just to this exact popup.
+    mainClass: 'mfp-fade'
+  });
+
+  // Transcript filtering.
   $('#transcript-filter').keyup(function() {
     if ($(this).val().length) {
       $('.transcript-list li').hide().filter(function () {
@@ -197,27 +237,30 @@ $(function() {
     }
   });
 
-  // Transcript seek links
+  // Transcript seek links.
   $('.time').click(function() {
     var position = $(this).attr('data-offset');
     jwplayer().seek(position);
     return false;
   });
 
-  // Transcript close button
+  // Transcript close link.
   $('.close').click(function() {
     $('.transcript').hide();
     $('#video_dock_transcript').css('background-color', "transparent");
     return false;
   });
 
-  // Playlist navigation
+  // Playlist navigation.
   $('.playlist-content a').click(function() {
 
     // Set the global current item to the one selected.
     currentItem = $(this);
 
-    // Set the resume position if it's available
+    // Reset the player time counter.
+    playerTime = 0;
+
+    // Set the resume position if it's available.
     if ($(this).attr('data-resume')) {
       resumePosition = $(this).attr('data-resume');
     }
@@ -226,7 +269,7 @@ $(function() {
     $(this).addClass('active');
 
     var title = $(this).find('.playlist-item-title').html();
-    $('#page-title .video-title').html(title);
+    $('#page-title').html(title);
     $(document).attr("title", title);
 
     if (!$('.js-tabs a.description').hasClass('active')) {
@@ -308,34 +351,15 @@ $(function() {
     return false;
   });
 
-  $('#facebook-share').click(function() {
-  });
-
   // Animate series progress water
   $(window).load(function() {
-    var watched = $('.series-progress').attr('data-watched');
-    var total = $('.series-progress').attr('data-total');
+    var total = $('.playlist-content li a').size();
+    var watched = $('.playlist-content li a span.watched').size();
 
-    // Calculate percentage watched
-    var percent = (watched / total) * 100;
+    // Set the initial series progress values.
+    $('.series-progress--wrapper').attr('data-total', total).attr('data-watched', watched);
 
-    // Calculate water background position based on percentage
-    var position = (80 / 100) * percent;
-    var position = 80 - position;
-
-    $('.series-progress').css('background', '#137cc1');
-    $('.series-progress .water').css('top', position + 'px');
-
-    // Animate series progress percent
-    $({number: 0}).animate({number: watched}, {
-      duration: 2000,
-      easing: 'linear',
-      step: function() {
-        $('.series-progress .percent').text(Math.floor(this.number) + '/' + total);
-      },
-      complete: function() {
-        $('.series-progress .percent').text(this.number + '/' + total);
-      }
-    });
+    // Trigger the series progress animation from a starting position of 0.
+    updateSeriesProgress(0);
   });
 });
