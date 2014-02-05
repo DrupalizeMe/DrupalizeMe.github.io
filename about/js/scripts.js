@@ -7,7 +7,7 @@ $(function() {
   });
 
   $(window).load(function() {
-    $('h2, .about--paragraph, .about--team-member, .about--team--banner, .about--offices-button').addClass('active');
+    $('.about--team-member, .about--team--banner').addClass('active');
   });
 
 });
