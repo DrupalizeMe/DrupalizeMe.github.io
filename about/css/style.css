@@ -869,18 +869,30 @@ blockquote {
 }
 
 /* line 1, ../scss/_about.scss */
+h2, .about--paragraph, .about--team-member, .about--team--banner, .about--offices-button {
+  opacity: 0;
+  transition: opacity .5s ease;
+  -webkit-transition: opacity .5s ease;
+  /* Fade to color for Chrome and Safari */
+}
+/* line 6, ../scss/_about.scss */
+h2.active, .about--paragraph.active, .about--team-member.active, .about--team--banner.active, .about--offices-button.active {
+  opacity: 1.0;
+}
+
+/* line 11, ../scss/_about.scss */
 input, textarea {
   font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
   font-size: .875em;
 }
 
-/* line 6, ../scss/_about.scss */
+/* line 16, ../scss/_about.scss */
 .container {
   max-width: 1080px;
   margin: 0 auto;
 }
 
-/* line 11, ../scss/_about.scss */
+/* line 21, ../scss/_about.scss */
 #logo {
   background: url("../images/logo.png") no-repeat;
   width: 192px;
@@ -888,39 +900,39 @@ input, textarea {
   float: left;
 }
 
-/* line 18, ../scss/_about.scss */
+/* line 28, ../scss/_about.scss */
 #search {
   float: right;
   margin-top: .5em;
 }
 
-/* line 23, ../scss/_about.scss */
+/* line 33, ../scss/_about.scss */
 .header {
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 29, ../scss/_about.scss */
+/* line 39, ../scss/_about.scss */
 .header ul {
   float: right;
 }
-/* line 32, ../scss/_about.scss */
+/* line 42, ../scss/_about.scss */
 .header ul li {
   list-style: none;
   padding: 0 16px;
   float: left;
 }
-/* line 37, ../scss/_about.scss */
+/* line 47, ../scss/_about.scss */
 .header ul li a {
   font-weight: bold;
 }
-/* line 43, ../scss/_about.scss */
+/* line 53, ../scss/_about.scss */
 .header .responsive-nav {
   display: none;
 }
 
-/* line 48, ../scss/_about.scss */
+/* line 58, ../scss/_about.scss */
 .footer {
   width: 100%;
   background: whitesmoke;
@@ -928,74 +940,75 @@ input, textarea {
   padding: 2em 0;
 }
 
-/* line 55, ../scss/_about.scss */
+/* line 65, ../scss/_about.scss */
 .page-about {
   text-align: center;
 }
 
-/* line 59, ../scss/_about.scss */
+/* line 69, ../scss/_about.scss */
 #page-title {
   margin-top: 1em;
   font-size: 3em;
 }
 
-/* line 64, ../scss/_about.scss */
+/* line 74, ../scss/_about.scss */
 .about--header {
   background: url("../images/about-banner.jpg") no-repeat center center #137cc1;
   height: 472px;
   width: 100%;
   overflow: auto;
 }
-/* line 70, ../scss/_about.scss */
+/* line 80, ../scss/_about.scss */
 .about--header h2 {
   padding-top: 160px;
 }
-/* line 74, ../scss/_about.scss */
+/* line 84, ../scss/_about.scss */
 .about--header a {
   text-decoration: underline;
 }
 
-/* line 79, ../scss/_about.scss */
+/* line 89, ../scss/_about.scss */
 .about--paragraph {
   font-size: 1.2em;
   padding: 0 11em;
   color: white;
 }
-/* line 84, ../scss/_about.scss */
+/* line 94, ../scss/_about.scss */
 .about--paragraph a {
   color: white;
 }
 
-/* line 89, ../scss/_about.scss */
+/* line 99, ../scss/_about.scss */
 .about--heading {
   color: white;
   font-size: 3em;
   margin: 0;
 }
 
-/* line 95, ../scss/_about.scss */
+/* line 105, ../scss/_about.scss */
 .about--team {
   background: whitesmoke;
   padding-top: 4em;
+  min-height: 1200px;
 }
-/* line 99, ../scss/_about.scss */
+/* line 110, ../scss/_about.scss */
 .about--team h2 {
   font-size: 3em;
   margin: 0;
 }
-/* line 104, ../scss/_about.scss */
+/* line 115, ../scss/_about.scss */
 .about--team .about--paragraph {
   color: #555555;
 }
 
-/* line 109, ../scss/_about.scss */
+/* line 120, ../scss/_about.scss */
 .about--team--banner {
   margin: 4em auto -16px;
   width: 817px;
   height: 371px;
   position: relative;
 }
-/* line 115, ../scss/_about.scss */
+/* line 126, ../scss/_about.scss */
 .about--team--banner span {
   position: absolute;
   cursor: help;
@@ -1012,12 +1025,12 @@ input, textarea {
   -webkit-backface-visibility: hidden;
   /* Fix for transition flickering */
 }
-/* line 128, ../scss/_about.scss */
+/* line 139, ../scss/_about.scss */
 .about--team--banner span:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
-/* line 142, ../scss/_about.scss */
+/* line 145, ../scss/_about.scss */
 .about--team--banner .team-accordian {
   width: 277px;
   height: 193px;
@@ -1025,7 +1038,7 @@ input, textarea {
   left: 0;
   z-index: 1;
 }
-/* line 150, ../scss/_about.scss */
+/* line 153, ../scss/_about.scss */
 .about--team--banner .team-beer {
   width: 212px;
   height: 214px;
@@ -1033,7 +1046,7 @@ input, textarea {
   right: 0;
   z-index: 7;
 }
-/* line 158, ../scss/_about.scss */
+/* line 161, ../scss/_about.scss */
 .about--team--banner .team-bees {
   width: 210px;
   height: 355px;
@@ -1041,7 +1054,7 @@ input, textarea {
   right: 164px;
   z-index: 8;
 }
-/* line 166, ../scss/_about.scss */
+/* line 169, ../scss/_about.scss */
 .about--team--banner .team-books {
   width: 162px;
   height: 304px;
@@ -1049,7 +1062,7 @@ input, textarea {
   left: 141px;
   z-index: 5;
 }
-/* line 174, ../scss/_about.scss */
+/* line 177, ../scss/_about.scss */
 .about--team--banner .team-plane {
   width: 350px;
   height: 258px;
@@ -1057,7 +1070,7 @@ input, textarea {
   right: 51px;
   z-index: 3;
 }
-/* line 182, ../scss/_about.scss */
+/* line 185, ../scss/_about.scss */
 .about--team--banner .team-shoe {
   width: 119px;
   height: 48px;
@@ -1065,7 +1078,7 @@ input, textarea {
   left: 21px;
   z-index: 2;
 }
-/* line 190, ../scss/_about.scss */
+/* line 193, ../scss/_about.scss */
 .about--team--banner .team-skuba {
   width: 242px;
   height: 334px;
@@ -1073,7 +1086,7 @@ input, textarea {
   left: 287px;
   z-index: 4;
 }
-/* line 198, ../scss/_about.scss */
+/* line 201, ../scss/_about.scss */
 .about--team--banner .team-snowboard {
   width: 519px;
   height: 101px;
@@ -1082,20 +1095,20 @@ input, textarea {
   z-index: 6;
 }
 
-/* line 207, ../scss/_about.scss */
+/* line 210, ../scss/_about.scss */
 .about--team-member {
   display: inline-block;
   margin: 2em 1.5em 0 1.5em;
   width: 200px;
   vertical-align: top;
 }
-/* line 213, ../scss/_about.scss */
+/* line 216, ../scss/_about.scss */
 .about--team-member h4 {
   margin: 1em 0 0;
   font-size: 1.25em;
 }
 
-/* line 219, ../scss/_about.scss */
+/* line 222, ../scss/_about.scss */
 .about--team-member--pic {
   height: 200px;
   width: 200px;
@@ -1104,17 +1117,17 @@ input, textarea {
   overflow: hidden;
   background: black;
 }
-/* line 228, ../scss/_about.scss */
+/* line 231, ../scss/_about.scss */
 .about--team-member--pic:hover img {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   opacity: 0.5;
 }
-/* line 234, ../scss/_about.scss */
+/* line 237, ../scss/_about.scss */
 .about--team-member--pic:hover span {
   opacity: 1.0;
 }
-/* line 239, ../scss/_about.scss */
+/* line 242, ../scss/_about.scss */
 .about--team-member--pic img {
   border-radius: 100px;
   width: 100%;
@@ -1123,13 +1136,12 @@ input, textarea {
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 248, ../scss/_about.scss */
+/* line 251, ../scss/_about.scss */
 .about--team-member--pic span {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   opacity: 0;
-  font-size: 1.2em;
   font-weight: bold;
   position: absolute;
   top: 0;
@@ -1141,7 +1153,7 @@ input, textarea {
   color: white;
 }
 
-/* line 266, ../scss/_about.scss */
+/* line 268, ../scss/_about.scss */
 .about--team-member--pic-mask {
   background: url("../images/member-pic-mask.png") no-repeat center center transparent;
   position: absolute;
@@ -1151,7 +1163,7 @@ input, textarea {
   left: 0;
 }
 
-/* line 275, ../scss/_about.scss */
+/* line 277, ../scss/_about.scss */
 .about--offices-button {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -1175,20 +1187,20 @@ input, textarea {
   border: 1px solid #fd7037;
   color: white;
 }
-/* line 278, ../scss/_about.scss */
+/* line 280, ../scss/_about.scss */
 .about--offices-button:hover {
   background: #137cc1;
   border: 1px solid #137cc1;
 }
 
-/* line 284, ../scss/_about.scss */
+/* line 286, ../scss/_about.scss */
 .about--offices-banner {
   background: url("../images/offices-banner.jpg") no-repeat center center #fd7037;
   height: 509px;
   width: 100%;
   color: white;
 }
-/* line 290, ../scss/_about.scss */
+/* line 292, ../scss/_about.scss */
 .about--offices-banner .about--heading {
   padding-top: 145px;
 }

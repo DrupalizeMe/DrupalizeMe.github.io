@@ -1,3 +1,13 @@
+h2, .about--paragraph, .about--team-member, .about--team--banner, .about--offices-button {
+  opacity: 0;
+  transition: opacity .5s ease;
+  -webkit-transition: opacity .5s ease; /* Fade to color for Chrome and Safari */
+
+  &.active {
+    opacity: 1.0;
+  }
+}
+
 input, textarea {
   font-family: $sans-serif;
   font-size: .875em;
@@ -95,6 +105,7 @@ input, textarea {
 .about--team {
   background: $light-background;
   padding-top: 4em;
+  min-height: 1200px;
 
   h2 {
     font-size: 3em;
@@ -129,14 +140,6 @@ input, textarea {
       filter: none;
       -webkit-filter: grayscale(0%);
     }
-
-img.half-grayscale {
-
-}
-
-img.half-grayscale:hover {
-
-}
   }
 
   .team-accordian {
@@ -250,7 +253,6 @@ img.half-grayscale:hover {
     -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     opacity: 0;
-    font-size: 1.2em;
     font-weight: bold;
     position: absolute;
     top: 0;
