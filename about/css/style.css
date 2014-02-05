@@ -823,6 +823,51 @@ blockquote {
     font-size: 3em;
   }
 }
+/* line 98, team/*.png */
+.team-sprite, .team-accordian, .team-beer, .team-bees, .team-books, .team-plane, .team-shoe, .team-skuba, .team-snowboard {
+  background: url('../images/team-s2a6bed1652.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-accordian {
+  background-position: 0 -1566px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-beer {
+  background-position: 0 -1251px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-bees {
+  background-position: 0 -592px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-books {
+  background-position: 0 -947px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-plane {
+  background-position: 0 -334px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-shoe {
+  background-position: 0 -1759px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-skuba {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-snowboard {
+  background-position: 0 -1465px;
+}
+
 /* line 1, ../scss/_about.scss */
 input, textarea {
   font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
@@ -947,43 +992,110 @@ input, textarea {
 .about--team--banner {
   margin: 4em auto -16px;
   width: 817px;
+  height: 371px;
   position: relative;
 }
-/* line 114, ../scss/_about.scss */
+/* line 115, ../scss/_about.scss */
 .about--team--banner span {
   position: absolute;
-  background: red;
   cursor: help;
+  opacity: 1.0;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.7'/></filter></svg>#grayscale");
+  /* Firefox 10+ */
+  filter: gray alpha(opacity=70);
+  /* IE6-9 */
+  -webkit-filter: grayscale(70%);
+  /* Chrome 19+ & Safari 6+ */
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  /* Fade to color for Chrome and Safari */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
 }
-/* line 120, ../scss/_about.scss */
-.about--team--banner .shoe {
-  width: 100px;
-  height: 40px;
-  top: 130px;
+/* line 128, ../scss/_about.scss */
+.about--team--banner span:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+/* line 142, ../scss/_about.scss */
+.about--team--banner .team-accordian {
+  width: 277px;
+  height: 193px;
+  bottom: 3px;
   left: 0;
+  z-index: 1;
 }
-/* line 127, ../scss/_about.scss */
-.about--team--banner .globe {
-  width: 120px;
-  height: 160px;
+/* line 150, ../scss/_about.scss */
+.about--team--banner .team-beer {
+  width: 212px;
+  height: 214px;
+  bottom: 0;
+  right: 0;
+  z-index: 7;
+}
+/* line 158, ../scss/_about.scss */
+.about--team--banner .team-bees {
+  width: 210px;
+  height: 355px;
+  bottom: 0;
+  right: 164px;
+  z-index: 8;
+}
+/* line 166, ../scss/_about.scss */
+.about--team--banner .team-books {
+  width: 162px;
+  height: 304px;
   top: 0;
-  left: 150px;
+  left: 141px;
+  z-index: 5;
+}
+/* line 174, ../scss/_about.scss */
+.about--team--banner .team-plane {
+  width: 350px;
+  height: 258px;
+  top: 10px;
+  right: 51px;
+  z-index: 3;
+}
+/* line 182, ../scss/_about.scss */
+.about--team--banner .team-shoe {
+  width: 119px;
+  height: 48px;
+  top: 132px;
+  left: 21px;
+  z-index: 2;
+}
+/* line 190, ../scss/_about.scss */
+.about--team--banner .team-skuba {
+  width: 242px;
+  height: 334px;
+  top: 10px;
+  left: 287px;
+  z-index: 4;
+}
+/* line 198, ../scss/_about.scss */
+.about--team--banner .team-snowboard {
+  width: 519px;
+  height: 101px;
+  bottom: 0;
+  left: 80px;
+  z-index: 6;
 }
 
-/* line 135, ../scss/_about.scss */
+/* line 207, ../scss/_about.scss */
 .about--team-member {
   display: inline-block;
   margin: 2em 1.5em 0 1.5em;
   width: 200px;
   vertical-align: top;
 }
-/* line 141, ../scss/_about.scss */
+/* line 213, ../scss/_about.scss */
 .about--team-member h4 {
   margin: 1em 0 0;
   font-size: 1.25em;
 }
 
-/* line 147, ../scss/_about.scss */
+/* line 219, ../scss/_about.scss */
 .about--team-member--pic {
   height: 200px;
   width: 200px;
@@ -992,17 +1104,17 @@ input, textarea {
   overflow: hidden;
   background: black;
 }
-/* line 156, ../scss/_about.scss */
+/* line 228, ../scss/_about.scss */
 .about--team-member--pic:hover img {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   opacity: 0.5;
 }
-/* line 162, ../scss/_about.scss */
+/* line 234, ../scss/_about.scss */
 .about--team-member--pic:hover span {
   opacity: 1.0;
 }
-/* line 167, ../scss/_about.scss */
+/* line 239, ../scss/_about.scss */
 .about--team-member--pic img {
   border-radius: 100px;
   width: 100%;
@@ -1011,7 +1123,7 @@ input, textarea {
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 176, ../scss/_about.scss */
+/* line 248, ../scss/_about.scss */
 .about--team-member--pic span {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -1029,7 +1141,7 @@ input, textarea {
   color: white;
 }
 
-/* line 194, ../scss/_about.scss */
+/* line 266, ../scss/_about.scss */
 .about--team-member--pic-mask {
   background: url("../images/member-pic-mask.png") no-repeat center center transparent;
   position: absolute;
@@ -1039,7 +1151,7 @@ input, textarea {
   left: 0;
 }
 
-/* line 203, ../scss/_about.scss */
+/* line 275, ../scss/_about.scss */
 .about--offices-button {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -1063,20 +1175,20 @@ input, textarea {
   border: 1px solid #fd7037;
   color: white;
 }
-/* line 206, ../scss/_about.scss */
+/* line 278, ../scss/_about.scss */
 .about--offices-button:hover {
   background: #137cc1;
   border: 1px solid #137cc1;
 }
 
-/* line 212, ../scss/_about.scss */
+/* line 284, ../scss/_about.scss */
 .about--offices-banner {
   background: url("../images/offices-banner.jpg") no-repeat center center #fd7037;
   height: 509px;
   width: 100%;
   color: white;
 }
-/* line 218, ../scss/_about.scss */
+/* line 290, ../scss/_about.scss */
 .about--offices-banner .about--heading {
   padding-top: 145px;
 }

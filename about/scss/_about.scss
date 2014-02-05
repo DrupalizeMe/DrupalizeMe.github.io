@@ -109,26 +109,98 @@ input, textarea {
 .about--team--banner {
   margin: 4em auto -16px;
   width: 817px;
+  height: 371px;
   position: relative;
 
   span {
     position: absolute;
-    background: red;
     cursor: help;
+    opacity: 1.0;
+
+    // TODO use compass functions.
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.7\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray alpha(opacity=70); /* IE6-9 */
+    -webkit-filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+
+    &:hover {
+      filter: none;
+      -webkit-filter: grayscale(0%);
+    }
+
+img.half-grayscale {
+
+}
+
+img.half-grayscale:hover {
+
+}
+  }
+
+  .team-accordian {
+    width: 277px;
+    height: 193px;
+    bottom: 3px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .team-beer {
+    width: 212px;
+    height: 214px;
+    bottom: 0;
+    right: 0;
+    z-index: 7;
+  }
+
+  .team-bees {
+    width: 210px;
+    height: 355px;
+    bottom: 0;
+    right: 164px;
+    z-index: 8;
+  }
+
+  .team-books {
+    width: 162px;
+    height: 304px;
+    top: 0;
+    left: 141px;
+    z-index: 5;
+  }
+
+  .team-plane {
+    width: 350px;
+    height: 258px;
+    top: 10px;
+    right: 51px;
+    z-index: 3;
   }
 
   .team-shoe {
-    width: 100px;
-    height: 40px;
-    top: 130px;
-    left: 0;
+    width: 119px;
+    height: 48px;
+    top: 132px;
+    left: 21px;
+    z-index: 2;
   }
 
-  .team-globe {
-    width: 120px;
-    height: 160px;
-    top: 0;
-    left: 150px
+  .team-skuba {
+    width: 242px;
+    height: 334px;
+    top: 10px;
+    left: 287px;
+    z-index: 4;
+  }
+
+  .team-snowboard {
+    width: 519px;
+    height: 101px;
+    bottom: 0;
+    left: 80px;
+    z-index: 6;
   }
 }
 
