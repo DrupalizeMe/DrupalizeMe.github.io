@@ -65,7 +65,7 @@ input, textarea {
   background: url('../images/about-banner.jpg') no-repeat center center $logo-blue;
   height: 472px;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
 
   h2 {
     padding-top: 160px;
@@ -292,5 +292,70 @@ input, textarea {
 
   .about--heading {
     padding-top: 145px;
+  }
+}
+
+// Quick and dirty desktop-first responsive design, just for this prototype ;)
+@media screen and (max-width: 1080px) {
+  img {
+    max-width: 100%;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    ul,
+    #search {
+      display: none;
+    }
+
+    .responsive-nav {
+      display: block;
+      float: right;
+      margin-top: 1.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about--header {
+    background: $logo-blue;
+    height: auto;
+    padding: 4em 0;
+
+    .about--heading {
+      padding: 0;
+    }
+  }
+
+  .about--team {
+    padding-bottom: 4em;
+  }
+
+  .about--offices-banner {
+    background: $orange;
+    height: auto;
+    padding: 4em 0;
+
+    .about--heading {
+      padding-top: 0;
+    }
+  }
+
+  .about--paragraph {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .about--team--banner {
+    display: none;
   }
 }

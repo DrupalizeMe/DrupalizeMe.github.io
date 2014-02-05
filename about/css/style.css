@@ -944,7 +944,7 @@ input, textarea {
   background: url("../images/about-banner.jpg") no-repeat center center #137cc1;
   height: 472px;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 /* line 70, ../scss/_about.scss */
 .about--header h2 {
@@ -1204,4 +1204,74 @@ input, textarea {
 /* line 293, ../scss/_about.scss */
 .about--offices-banner .about--heading {
   padding-top: 145px;
+}
+
+@media screen and (max-width: 1080px) {
+  /* line 300, ../scss/_about.scss */
+  img {
+    max-width: 100%;
+  }
+
+  /* line 305, ../scss/_about.scss */
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  /* line 309, ../scss/_about.scss */
+  .header {
+    padding: 0 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  /* line 315, ../scss/_about.scss */
+  .header ul,
+  .header #search {
+    display: none;
+  }
+  /* line 319, ../scss/_about.scss */
+  .header .responsive-nav {
+    display: block;
+    float: right;
+    margin-top: 1.3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 328, ../scss/_about.scss */
+  .about--header {
+    background: #137cc1;
+    height: auto;
+    padding: 4em 0;
+  }
+  /* line 333, ../scss/_about.scss */
+  .about--header .about--heading {
+    padding: 0;
+  }
+
+  /* line 338, ../scss/_about.scss */
+  .about--team {
+    padding-bottom: 4em;
+  }
+
+  /* line 342, ../scss/_about.scss */
+  .about--offices-banner {
+    background: #fd7037;
+    height: auto;
+    padding: 4em 0;
+  }
+  /* line 347, ../scss/_about.scss */
+  .about--offices-banner .about--heading {
+    padding-top: 0;
+  }
+
+  /* line 352, ../scss/_about.scss */
+  .about--paragraph {
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 830px) {
+  /* line 358, ../scss/_about.scss */
+  .about--team--banner {
+    display: none;
+  }
 }
