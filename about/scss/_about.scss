@@ -132,14 +132,14 @@ input, textarea {
     cursor: help;
     filter: none;
     -webkit-filter: grayscale(0%);
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
 
     &:hover {
       filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.7\'/></filter></svg>#grayscale"); /* Firefox 10+ */
       filter: gray alpha(opacity=70); /* IE6-9 */
       -webkit-filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
-      transition: all .2s ease;
-      -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
-      -webkit-backface-visibility: hidden; /* Fix for transition flickering */
     }
   }
 
