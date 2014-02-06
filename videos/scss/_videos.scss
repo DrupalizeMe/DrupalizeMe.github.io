@@ -241,7 +241,7 @@ input, textarea {
 
       a {
         display: block;
-        padding: 1em 3.75em 1em 3.5em;
+        padding: 1em 4.25em 1em 3.5em;
 
         &:hover {
           background: $light-background;
@@ -637,11 +637,11 @@ textarea {
 }
 
 .series-progress--wrapper {
-  height: 30px;
+  height: 36px;
   width: 100%;
   background: #093a54;
   border-radius: 5px;
-  border: 1px solid #08354d;
+  border: 4px solid #093a54;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -887,5 +887,11 @@ textarea {
   .sidebar {
     border-left: 0;
     border-top: 1px solid $light-border;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .js-tabs li a span {
+    display: none;
   }
 }
