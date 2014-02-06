@@ -1881,58 +1881,63 @@ textarea {
   }
 
   /* line 820, ../scss/_videos.scss */
-  .js-tabs {
-    padding-left: 1em;
-    margin: 1em 0 0;
-  }
-  /* line 825, ../scss/_videos.scss */
-  .js-tabs li a {
-    color: #555555;
-    border-top: none;
-    border-bottom: 5px solid transparent;
-    padding: 0.5em 1em;
-  }
-  /* line 831, ../scss/_videos.scss */
-  .js-tabs li a.active {
-    border-top: none;
-    border-bottom: 5px solid #137cc1;
+  .meta--actions {
+    float: left;
+    margin: 0.5em 0;
+    clear: both;
   }
 
-  /* line 840, ../scss/_videos.scss */
+  /* line 826, ../scss/_videos.scss */
+  .js-tabs {
+    padding: 1em 0 0 1em;
+    margin: 0;
+    background: whitesmoke;
+    border-bottom: 1px solid #e6e6e6;
+    height: 44px;
+    overflow: visible;
+  }
+  /* line 835, ../scss/_videos.scss */
+  .js-tabs li a {
+    color: #555555;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+  }
+  /* line 843, ../scss/_videos.scss */
+  .js-tabs li a.active {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  /* line 851, ../scss/_videos.scss */
   .description span {
     background-position: 0 -416px;
   }
 
-  /* line 846, ../scss/_videos.scss */
+  /* line 857, ../scss/_videos.scss */
   .reviews span {
     background-position: 0 -340px;
   }
 
-  /* line 852, ../scss/_videos.scss */
+  /* line 863, ../scss/_videos.scss */
   .quiz-tab span {
     background-position: 0 -280px;
   }
 
-  /* line 857, ../scss/_videos.scss */
+  /* line 868, ../scss/_videos.scss */
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  /* line 863, ../scss/_videos.scss */
-  .queue-link {
-    position: static;
-    float: left;
-    margin-bottom: 2em;
-  }
-
-  /* line 870, ../scss/_videos.scss */
+  /* line 875, ../scss/_videos.scss */
   .comment > img {
     position: static;
   }
 
-  /* line 878, ../scss/_videos.scss */
+  /* line 883, ../scss/_videos.scss */
   .loading,
   .node,
   .comments,
@@ -1940,7 +1945,7 @@ textarea {
     clear: left;
   }
 
-  /* line 882, ../scss/_videos.scss */
+  /* line 887, ../scss/_videos.scss */
   .sidebar {
     border-left: 0;
     border-top: 1px solid #e6e6e6;
