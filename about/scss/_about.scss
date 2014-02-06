@@ -68,7 +68,7 @@ input, textarea {
   overflow: hidden;
 
   h2 {
-    padding-top: 160px;
+    padding-top: 140px;
   }
 
   a {
@@ -126,20 +126,20 @@ input, textarea {
 
   span {
     position: absolute;
-    cursor: help;
-    opacity: 1.0;
+  }
 
-    // TODO use compass functions.
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.7\'/></filter></svg>#grayscale"); /* Firefox 10+ */
-    filter: gray alpha(opacity=70); /* IE6-9 */
-    -webkit-filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
-    transition: all .2s ease;
-    -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
-    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+  .tooltip {
+    cursor: help;
+    filter: none;
+    -webkit-filter: grayscale(0%);
 
     &:hover {
-      filter: none;
-      -webkit-filter: grayscale(0%);
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.7\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+      filter: gray alpha(opacity=70); /* IE6-9 */
+      -webkit-filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
+      transition: all .2s ease;
+      -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
+      -webkit-backface-visibility: hidden; /* Fix for transition flickering */
     }
   }
 
@@ -161,7 +161,7 @@ input, textarea {
 
   .team-bees {
     width: 210px;
-    height: 355px;
+    height: 200px;
     bottom: 0;
     right: 164px;
     z-index: 8;
@@ -205,6 +205,13 @@ input, textarea {
     bottom: 0;
     left: 80px;
     z-index: 6;
+  }
+
+  .team-arrow {
+    width: 150px;
+    height: 75px;
+    left: 0;
+    top: 0;
   }
 }
 

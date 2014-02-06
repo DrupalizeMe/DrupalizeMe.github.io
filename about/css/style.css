@@ -823,29 +823,34 @@ blockquote {
     font-size: 3em;
   }
 }
-/* line 98, team/*.png */
-.team-sprite, .team-accordian, .team-beer, .team-bees, .team-books, .team-plane, .team-shoe, .team-skuba, .team-snowboard {
-  background: url('../images/team-s2a6bed1652.png') no-repeat;
+/* line 106, team/*.png */
+.team-sprite, .team-accordian, .team-arrow, .team-beer, .team-bees, .team-books, .team-plane, .team-shoe, .team-skuba, .team-snowboard {
+  background: url('../images/team-sef5d6a67bb.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-accordian {
-  background-position: 0 -1566px;
+  background-position: 0 -1211px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.team-arrow {
+  background-position: 0 -1652px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-beer {
-  background-position: 0 -1251px;
+  background-position: 0 -896px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-bees {
-  background-position: 0 -592px;
+  background-position: 0 -1452px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-books {
-  background-position: 0 -947px;
+  background-position: 0 -592px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -855,7 +860,7 @@ blockquote {
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-shoe {
-  background-position: 0 -1759px;
+  background-position: 0 -1404px;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -865,7 +870,7 @@ blockquote {
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-snowboard {
-  background-position: 0 -1465px;
+  background-position: 0 -1110px;
 }
 
 /* line 1, ../scss/_about.scss */
@@ -948,7 +953,7 @@ input, textarea {
 }
 /* line 70, ../scss/_about.scss */
 .about--header h2 {
-  padding-top: 160px;
+  padding-top: 140px;
 }
 /* line 74, ../scss/_about.scss */
 .about--header a {
@@ -1012,8 +1017,15 @@ input, textarea {
 /* line 127, ../scss/_about.scss */
 .about--team--banner span {
   position: absolute;
+}
+/* line 131, ../scss/_about.scss */
+.about--team--banner .tooltip {
   cursor: help;
-  opacity: 1.0;
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+/* line 136, ../scss/_about.scss */
+.about--team--banner .tooltip:hover {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.7'/></filter></svg>#grayscale");
   /* Firefox 10+ */
   filter: gray alpha(opacity=70);
@@ -1025,11 +1037,6 @@ input, textarea {
   /* Fade to color for Chrome and Safari */
   -webkit-backface-visibility: hidden;
   /* Fix for transition flickering */
-}
-/* line 140, ../scss/_about.scss */
-.about--team--banner span:hover {
-  filter: none;
-  -webkit-filter: grayscale(0%);
 }
 /* line 146, ../scss/_about.scss */
 .about--team--banner .team-accordian {
@@ -1050,7 +1057,7 @@ input, textarea {
 /* line 162, ../scss/_about.scss */
 .about--team--banner .team-bees {
   width: 210px;
-  height: 355px;
+  height: 200px;
   bottom: 0;
   right: 164px;
   z-index: 8;
@@ -1095,21 +1102,28 @@ input, textarea {
   left: 80px;
   z-index: 6;
 }
+/* line 210, ../scss/_about.scss */
+.about--team--banner .team-arrow {
+  width: 150px;
+  height: 75px;
+  left: 0;
+  top: 0;
+}
 
-/* line 211, ../scss/_about.scss */
+/* line 218, ../scss/_about.scss */
 .about--team-member {
   display: inline-block;
   margin: 2em 1.5em 0 1.5em;
   width: 200px;
   vertical-align: top;
 }
-/* line 217, ../scss/_about.scss */
+/* line 224, ../scss/_about.scss */
 .about--team-member h4 {
   margin: 1em 0 0;
   font-size: 1.25em;
 }
 
-/* line 223, ../scss/_about.scss */
+/* line 230, ../scss/_about.scss */
 .about--team-member--pic {
   height: 200px;
   width: 200px;
@@ -1118,17 +1132,17 @@ input, textarea {
   overflow: hidden;
   background: black;
 }
-/* line 232, ../scss/_about.scss */
+/* line 239, ../scss/_about.scss */
 .about--team-member--pic:hover img {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   opacity: 0.5;
 }
-/* line 238, ../scss/_about.scss */
+/* line 245, ../scss/_about.scss */
 .about--team-member--pic:hover span {
   opacity: 1.0;
 }
-/* line 243, ../scss/_about.scss */
+/* line 250, ../scss/_about.scss */
 .about--team-member--pic img {
   border-radius: 100px;
   width: 100%;
@@ -1137,7 +1151,7 @@ input, textarea {
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 252, ../scss/_about.scss */
+/* line 259, ../scss/_about.scss */
 .about--team-member--pic span {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -1154,7 +1168,7 @@ input, textarea {
   color: white;
 }
 
-/* line 269, ../scss/_about.scss */
+/* line 276, ../scss/_about.scss */
 .about--team-member--pic-mask {
   background: url("../images/member-pic-mask.png") no-repeat center center transparent;
   position: absolute;
@@ -1164,7 +1178,7 @@ input, textarea {
   left: 0;
 }
 
-/* line 278, ../scss/_about.scss */
+/* line 285, ../scss/_about.scss */
 .about--offices-button {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -1188,48 +1202,48 @@ input, textarea {
   border: 1px solid #fd7037;
   color: white;
 }
-/* line 281, ../scss/_about.scss */
+/* line 288, ../scss/_about.scss */
 .about--offices-button:hover {
   background: #137cc1;
   border: 1px solid #137cc1;
 }
 
-/* line 287, ../scss/_about.scss */
+/* line 294, ../scss/_about.scss */
 .about--offices-banner {
   background: url("../images/offices-banner.jpg") no-repeat center center #fd7037;
   height: 509px;
   width: 100%;
   color: white;
 }
-/* line 293, ../scss/_about.scss */
+/* line 300, ../scss/_about.scss */
 .about--offices-banner .about--heading {
   padding-top: 145px;
 }
 
 @media screen and (max-width: 1080px) {
-  /* line 300, ../scss/_about.scss */
+  /* line 307, ../scss/_about.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 305, ../scss/_about.scss */
+  /* line 312, ../scss/_about.scss */
   .content,
   .sidebar {
     width: 100%;
   }
 
-  /* line 309, ../scss/_about.scss */
+  /* line 316, ../scss/_about.scss */
   .header {
     padding: 0 1em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
-  /* line 315, ../scss/_about.scss */
+  /* line 322, ../scss/_about.scss */
   .header ul,
   .header #search {
     display: none;
   }
-  /* line 319, ../scss/_about.scss */
+  /* line 326, ../scss/_about.scss */
   .header .responsive-nav {
     display: block;
     float: right;
@@ -1237,40 +1251,40 @@ input, textarea {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 328, ../scss/_about.scss */
+  /* line 335, ../scss/_about.scss */
   .about--header {
     background: #137cc1;
     height: auto;
     padding: 4em 0;
   }
-  /* line 333, ../scss/_about.scss */
+  /* line 340, ../scss/_about.scss */
   .about--header .about--heading {
     padding: 0;
   }
 
-  /* line 338, ../scss/_about.scss */
+  /* line 345, ../scss/_about.scss */
   .about--team {
     padding-bottom: 4em;
   }
 
-  /* line 342, ../scss/_about.scss */
+  /* line 349, ../scss/_about.scss */
   .about--offices-banner {
     background: #fd7037;
     height: auto;
     padding: 4em 0;
   }
-  /* line 347, ../scss/_about.scss */
+  /* line 354, ../scss/_about.scss */
   .about--offices-banner .about--heading {
     padding-top: 0;
   }
 
-  /* line 352, ../scss/_about.scss */
+  /* line 359, ../scss/_about.scss */
   .about--paragraph {
     padding: 0 2em;
   }
 }
 @media screen and (max-width: 830px) {
-  /* line 358, ../scss/_about.scss */
+  /* line 365, ../scss/_about.scss */
   .about--team--banner {
     display: none;
   }
