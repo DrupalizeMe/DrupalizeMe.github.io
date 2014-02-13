@@ -459,8 +459,8 @@ input, textarea {
 
   .icon {
     margin-right: 0.25em;
-    width: 17px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     vertical-align: middle;
     margin-top: -2px;
@@ -473,7 +473,13 @@ input, textarea {
 
 .share-link {
   .icon {
-    @include icon-sprite(share);
+    @include icon-sprite(share-blue);
+  }
+
+  &:hover {
+    .icon {
+      @include icon-sprite(share-orange);
+    }
   }
 }
 
@@ -481,7 +487,13 @@ input, textarea {
   margin-right: 1em;
 
   .icon {
-    @include icon-sprite(plus);
+    @include icon-sprite(queue-blue);
+  }
+
+  &:hover {
+    .icon {
+      @include icon-sprite(queue-orange);
+    }
   }
 
   &.active {
