@@ -455,12 +455,17 @@ input, textarea {
     float: right;
     font-weight: bold;
     font-size: 0.875em;
+    color: $text;
+
+    &:hover {
+      color: $link;
+    }
   }
 
   .icon {
-    margin-right: 0.25em;
-    width: 20px;
-    height: 20px;
+    margin-right: 0.3em;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     vertical-align: middle;
     margin-top: -2px;
@@ -473,12 +478,12 @@ input, textarea {
 
 .share-link {
   .icon {
-    @include icon-sprite(share-blue);
+    @include icon-sprite(share-grey);
   }
 
   &:hover {
     .icon {
-      @include icon-sprite(share-orange);
+      @include icon-sprite(share-blue);
     }
   }
 }
@@ -487,23 +492,23 @@ input, textarea {
   margin-right: 1em;
 
   .icon {
-    @include icon-sprite(queue-blue);
+    @include icon-sprite(queue-plus-grey);
   }
 
   &:hover {
     .icon {
-      @include icon-sprite(queue-orange);
+      @include icon-sprite(queue-plus-green);
     }
   }
 
   &.active {
     .icon {
-      @include icon-sprite(list);
+      @include icon-sprite(queue-cross-grey);
     }
 
     &:hover {
       .icon {
-        @include icon-sprite(cross);
+        @include icon-sprite(queue-cross-red);
       }
     }
   }

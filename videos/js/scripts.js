@@ -336,16 +336,6 @@ $(function() {
     return false;
   });
 
-  $('.queue-link').hover(function() {
-    if ($(this).hasClass('active')) {
-      $(this).find('.text').html('Remove from Queue');
-    }
-  }, function() {
-    if ($(this).hasClass('active')) {
-      $(this).find('.text').html('In your Queue');
-    }
-  });
-
   $('.share--embed textarea').click(function() {
     $(this).select();
     return false;
