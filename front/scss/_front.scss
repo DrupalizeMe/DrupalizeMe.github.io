@@ -59,6 +59,10 @@ input, textarea {
 
 .front {
   text-align: center;
+
+  #page-title {
+    margin-bottom: 1em;
+  }
 }
 
 .home--heading {
@@ -68,6 +72,7 @@ input, textarea {
 
 .home--paragraph {
   font-size: 1.1em;
+  line-height: 1.5em;
   margin: 0 0 3em;
 }
 
@@ -96,6 +101,13 @@ input, textarea {
 .home--hero--button {
   @include button;
   background: $orange;
+  border: none;
+  font-size: 1.2em;
+
+  &:hover {
+    border: none;
+    background: $green;
+  }
 }
 
 .home--hero--white-stripe {
@@ -150,13 +162,14 @@ input, textarea {
   a, span {
     color: $white;
     font-weight: bold;
+    font-size: 1.1em;
   }
 
   a {
+    @include box-sizing(border-box);
     display: block;
     padding: 2em 1em;
     width: 100%;
-    box-sizing: border-box;
   }
 }
 
@@ -205,14 +218,12 @@ input, textarea {
 }
 
 .home--library--tabs {
+  @include box-shadow(#08354d 0 4px 0);
   display: inline-block;
-  -webkit-box-shadow: #08354d 0 4px 0;
-  -moz-box-shadow: #08354d 0 4px 0;
-  box-shadow: #08354d 0 4px 0;
 }
 
 .home--library--tab {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   -webkit-font-smoothing: antialiased;
   background: $light-background;
   display: inline-block;
@@ -237,23 +248,40 @@ input, textarea {
   }
 }
 
+.home--library--tab-content {
+  display: none;
+  margin: 2em 0 4em;
+
+  &.active {
+    display: block;
+  }
+}
+
 .home--library--week {
   font-size: 1.2em;
-  margin: 2em 0 0;
+  margin: 2em 0 1.5em;
+}
+
+.home--bar {
+  height: 3px;
+  background: $logo-blue;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em;
+}
+
+.home--library--videos {
+  margin: 15px 0;
 }
 
 .home--library--video {
+  @include box-shadow(#08354d 0 4px 0);
   width: 340px;
   height: 230px;
   position: relative;
-  margin: 0 15px;
-  -webkit-box-shadow: #08354d 0 4px 0;
-  -moz-box-shadow: #08354d 0 4px 0;
-  box-shadow: #08354d 0 4px 0;
-
-  &:first-child {
-    margin-left: 0;
-  }
+  margin-right: 15px;
+  display: inline-block;
 
   &:last-child {
     margin-right: 0;
@@ -261,6 +289,7 @@ input, textarea {
 
   img {
     position: absolute;
+    z-index: 2;
     left: 0;
     top: 0;
   }
@@ -274,6 +303,7 @@ input, textarea {
   color: $white;
   display: block;
   position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;
@@ -307,6 +337,7 @@ input, textarea {
 .home--library--meta {
   position: absolute;
   height: 40px;
+  z-index: 5;
   line-height: 40px;
   padding: 0 1em;
   bottom: 0;
@@ -334,6 +365,7 @@ input, textarea {
   line-height: 1;
   font-size: 3em;
   text-align: center;
+  margin-bottom: 0.4em;
 
   .tick-separator {
     position: absolute;
@@ -343,7 +375,8 @@ input, textarea {
     font-size: 1.5em;
   }
 
- .tick-wheel {
+  .tick-wheel {
+    @include box-shadow(rgb(0,0,0) 0 0 3px);
     position: relative;
     display: inline-block;
     width: 50px;
@@ -352,7 +385,6 @@ input, textarea {
     color: $logo-blue;
     font-weight: bold;
     background-color: $white;
-    box-shadow: 0 0 3px rgb(0,0,0);
 
     &:first-child,
     &:nth-child(5) {
@@ -363,6 +395,18 @@ input, textarea {
       display: block;
       padding: 16px 0;
     }
+  }
+}
+
+.home--library--minutes {
+  .home--bar {
+    width: 14em;
+  }
+
+  .block-title {
+    font-size: 1.4em;
+    vertical-align: middle;
+    display: inline-block;
   }
 }
 
@@ -470,6 +514,7 @@ input, textarea {
 }
 
 .home--newsletter--email {
+  @include box-sizing(border-box);
   padding: .75em 1em;
   font-size: 1.1em;
   font-weight: normal;
@@ -477,7 +522,6 @@ input, textarea {
   border: 0;
   border-radius: 5px;
   height: 42px;
-  box-sizing: border-box;
   margin-right: 1em;
   width: 15em;
 

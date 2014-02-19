@@ -4,9 +4,23 @@ $(function() {
       separators: true
     });
 
+    $('.home--library--tab').click(function() {
+      $('.home--library--tab').removeClass('active');
+      $(this).addClass('active');
+
+      var tab = $(this).attr('data-tab');
+      $('.home--library--tab-content').removeClass('active');
+      $('.home--library--tab-content.' + tab).addClass('active');
+
+      return false;
+    });
+
     // Sets the interval duration between each call of our animate function.
     // This is in milliseconds. The higher this is, the slower the animations.
-    var tick = 100;
+    var tick = 20;
+
+    // Animate our background changes after this number of ticks.
+    var bgAnimateTicks = 4;
 
     // A new video icon will be spawned after this number of ticks.
     var vidIconSpawnTicks = 25;
@@ -23,6 +37,7 @@ $(function() {
     // Set our default animation values.
     var vidIconCount = 1;
     var vidIconTickCount = 0;
+    var bgTIckCount = 0;
     var windowWidth = $(window).width() - 40;
     var headerY = 0;
     var cloudsX = 0;
@@ -50,18 +65,24 @@ $(function() {
     }
 
     function animate() {
-      // Increment tick counter.
+      // Increment tick counters.
       vidIconTickCount++;
+      bgTIckCount++;
 
-      // Decrement scrolling animation position values.
-      headerY--;
-      cloudsX--;
+      if (bgTIckCount == bgAnimateTicks) {
+        // Reset tick counter.
+        bgTIckCount = 0;
 
-      // Vertically move the header background to simulate scrolling.
-      $('div.home--hero--header').css("background-position", '0 ' + headerY + 'px');
+        // Decrement scrolling animation position values.
+        headerY++;
+        cloudsX--;
 
-      // Horizontally move the clouds to simulate scrolling.
-      $('div.home--apps--clouds').css('background-position', cloudsX + 'px 0');
+        // Vertically move the header background to simulate scrolling.
+        $('div.home--hero--header').css("background-position", '0 ' + headerY + 'px');
+
+        // Horizontally move the clouds to simulate scrolling.
+        $('div.home--apps--clouds').css('background-position', cloudsX + 'px 0');
+      }
 
       if (vidIconTickCount == vidIconSpawnTicks) {
         // Reset tick counter.
@@ -87,8 +108,12 @@ $(function() {
           return true;
         }
       });
+
+      setTimeout(animate, tick);
     }
 
     // Calls our animation function at every tick interval.
-    setInterval(animate, tick);
+    $(window).load(function() {
+      animate();
+    });
 });
