@@ -10,7 +10,7 @@
     <script type="text/javascript" src="//use.typekit.net/fuf6cds.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>
+  <body class="front">
     <div class="header container">
       <div id="logo"></div>
       <img id="search" src="images/search.png">
@@ -36,9 +36,9 @@
     </div>
 
     <div class="home--hero">
-      <div class="home-hero--header">
+      <div class="home--hero--header">
         <div class="container">
-          <h1 class="page-title">Premium Drupal Video Training</h1>
+          <h1 id="page-title" class="home--heading">Premium Drupal<br>Video Training</h1>
           <a href="#" class="home--hero--button">Start learning today!</a>
           <div class="home--hero--video">
             <iframe>TODO</iframe>
@@ -55,14 +55,14 @@
         </div>
       </div>
 
-      <div class="home--action blue">
+      <div class="home--action home--action--hero blue">
         <div class="container">
-          <a href="#" class="home--hero-action">Keep scrolling</a>
+          <span class="home--action--arrow">Keep scrolling</span>
         </div>
       </div>
     </div>
 
-    <div class="home--library">
+    <div class="home--library home--vid-icons">
       <div class="container">
         <h2 class="home--heading">Our Video Library</h2>
         <p class="home--paragraph">
@@ -70,18 +70,17 @@
           Our team releases five new lessons each week!
         </p>
         <div class="home--library--tabs">
-          <a href="#" class="home--library--tab">Latest</a>
-          <a href="#" class="home--library--tab">Suggested</a>
+          <a href="#" class="home--library--tab active">Latest</a><a href="#" class="home--library--tab">Suggested</a>
         </div>
-        <div class="home--library--bar"></div>
         <div class="home--library--week block-title">Released week of Jan 8th</div>
         <div class="home--library--videos">
-          <div class="home--library--videos-left"></div>
-          <div class="home--library--videos-right"></div>
           <div class="home--library--video">
-            <img src="">
+            <img src="images/thumb.jpg">
             <div class="home--library--free-label">Free</div>
-            <div class="home--library--video-title">Introduction to the Media Project</div>
+            <a href="#" class="home--library--video-title">
+              Introduction to the Media Project
+              <div class="home--library--play">Play</div>
+            </a>
             <div class="home--library--meta">
               <span class="home--library--category">Site Building</span>
               <span class="home--library--duration">6:39</span>
@@ -93,13 +92,12 @@
         <p class="home--paragraph">
           Our members rack up thousands of hours watching our premium Drupal training videos.
         </p>
+        <p class="tick tick-scroll">7,320,331</p>
       </div>
     </div>
 
     <div class="home--action blue">
-      <div class="container">
-        <a href="#" class="home--library-action">Browse our entire library</a>
-      </div>
+      <a href="#" class="home--library-action">Browse our entire video library</a>
     </div>
 
     <div class="home--why">
@@ -109,11 +107,27 @@
           Here are just a few reasons why thousands of users trust Drupalize.Me for their Drupal training.
         </p>
 
-        <div class="home--why--experts">
+        <div class="home--why--block home--why--experts">
           <div class="home--why--image"></div>
           <h3 class="home--why--title">Expert Trainers</h3>
           <p class="home--why--paragraph">
             Drupalize.Me is a team of Drupal experts with real development expertise and 35 collective years of experience. <a href="#">Meet our team</a>
+          </p>
+        </div>
+
+        <div class="home--why--block home--why--learning">
+          <div class="home--why--image"></div>
+          <h3 class="home--why--title">Built for Learning</h3>
+          <p class="home--why--paragraph">
+            Drupalize.Me lessons are organized and bundled together to give you an easy to follow learning experience. <a href="#">Explore our guides</a>
+          </p>
+        </div>
+
+        <div class="home--why--block home--why--lullabot">
+          <div class="home--why--image"></div>
+          <h3 class="home--why--title">Backed by Lullabot</h3>
+          <p class="home--why--paragraph">
+            Drupalize.Me is a product of Lullabot, one of the worlds top open source web strategy, design and development companies. <a href="#">Learn more</a>
           </p>
         </div>
       </div>
@@ -121,25 +135,27 @@
 
     <div class="home--apps">
       <div class="home--apps--clouds"></div>
-      <div class="home--apps--sun"></div>
       <div class="container">
         <h2 class="home--heading">Learn Anytime, Anywhere</h2>
         <p class="home--paragraph">
           Watch Drupalize.Me at your desk or on the go with any mobile device.
         </p>
-        <div class="home--apps--wrapper">
-          <div class="home--apps--devices"></div>
-          <div class="home--apps--tablet"></div>
-          <div class="home--apps--desktop"></div>
-          <div class="home--apps--mobile"></div>
+        <div class="home--apps--scene">
+          <div class="home--apps--sun"></div>
+          <div class="home--apps--bg"></div>
+          <div class="home--apps--wrapper">
+            <div class="home--apps--devices"></div>
+            <div class="home--apps--tablet"></div>
+            <div class="home--apps--desktop"></div>
+            <div class="home--apps--mobile"></div>
+          </div>
         </div>
       </div>
+      <div class="home--apps--floor"></div>
     </div>
 
     <div class="home--action green">
-      <div class="container">
-        <a href="#" class="home--apps-action">Learn more about our iOS, Android and Roku apps</a>
-      </div>
+      <a href="#" class="home--apps-action">Learn more about our iOS, Android and Roku apps</a>
     </div>
 
     <div class="home--quotes">
@@ -148,7 +164,7 @@
         <div class="home--quotes--left"></div>
         <div class="home--quotes--right"></div>
         <p class="home--paragraph">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
         </p>
         <div class="home--quotes--author">
           <span>First Lastname</span> // <span>Company Name</span>
@@ -171,15 +187,13 @@
         <p class="home--paragraph">
           Sign up for our mailing list and get Drupal tips n' tricks in your inbox!
         </p>
-        <input type="text" class="home--newsletter--email">
+        <input type="text" class="home--newsletter--email" placeholder="email address">
         <a href="#" class="home--newsletter--submit">Subscribe</a>
       </div>
     </div>
 
     <div class="home--action orange">
-      <div class="container">
-        <a href="#" class="home--pricing-action">View our pricing information, and start learning Drupal today!</a>
-      </div>
+      <a href="#" class="home--pricing-action">View our pricing information, and start learning Drupal today!</a>
     </div>
 
     <div class="footer">
@@ -187,6 +201,8 @@
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/tick.js"></script>
   </body>
 </html>

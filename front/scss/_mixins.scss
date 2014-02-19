@@ -101,3 +101,28 @@
     border-bottom: 1px solid $light-border;
   }
 }
+
+@mixin button {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  background: $button-background;
+  border: 1px solid $button-background;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  max-width: 19em;
+  padding: .75em 2em;
+  text-align: center;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background: $orange;
+    border: 1px solid $orange;
+    color: white;
+  }
+}
