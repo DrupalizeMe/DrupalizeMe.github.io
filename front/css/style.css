@@ -1489,7 +1489,7 @@ input, textarea {
   -o-border-radius: 5px;
   border-radius: 5px;
   height: 42px;
-  margin-right: 1em;
+  margin: 0 1em 1em 0;
   width: 15em;
 }
 /* line 571, ../scss/_front.scss */
@@ -1803,7 +1803,7 @@ input, textarea {
   }
   /* line 831, ../scss/_front.scss */
   .home--hero--white-stripe p {
-    width: 22em;
+    width: 19em;
     font-size: 1.1em;
     line-height: 1.5em;
     margin-top: 0.25em;

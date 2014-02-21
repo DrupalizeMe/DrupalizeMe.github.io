@@ -562,7 +562,7 @@ input, textarea {
   border: 0;
   @include border-radius(5px);
   height: 42px;
-  margin-right: 1em;
+  margin: 0 1em 1em 0;
   width: 15em;
 
   ::-webkit-input-placeholder,
@@ -829,7 +829,7 @@ input, textarea {
     }
 
     p {
-      width: 22em;
+      width: 19em;
       font-size: 1.1em;
       line-height: 1.5em;
       margin-top: 0.25em;
