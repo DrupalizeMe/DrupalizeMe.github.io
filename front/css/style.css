@@ -831,11 +831,13 @@ input, textarea {
 
 /* line 6, ../scss/_front.scss */
 .container {
-  max-width: 1080px;
+  max-width: 65em;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* line 11, ../scss/_front.scss */
+/* line 13, ../scss/_front.scss */
 #logo {
   background: url("../images/logo.png") no-repeat;
   width: 192px;
@@ -843,38 +845,38 @@ input, textarea {
   float: left;
 }
 
-/* line 18, ../scss/_front.scss */
+/* line 20, ../scss/_front.scss */
 #search {
   float: right;
   margin-top: .5em;
 }
 
-/* line 23, ../scss/_front.scss */
+/* line 25, ../scss/_front.scss */
 .header {
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
 }
-/* line 28, ../scss/_front.scss */
+/* line 30, ../scss/_front.scss */
 .header ul {
   float: right;
 }
-/* line 31, ../scss/_front.scss */
+/* line 33, ../scss/_front.scss */
 .header ul li {
   list-style: none;
   padding: 0 16px;
   float: left;
 }
-/* line 36, ../scss/_front.scss */
+/* line 38, ../scss/_front.scss */
 .header ul li a {
   font-weight: bold;
 }
-/* line 42, ../scss/_front.scss */
+/* line 44, ../scss/_front.scss */
 .header .responsive-nav {
   display: none;
 }
 
-/* line 47, ../scss/_front.scss */
+/* line 49, ../scss/_front.scss */
 .footer {
   width: 100%;
   background: whitesmoke;
@@ -882,7 +884,17 @@ input, textarea {
   padding: 2em 0;
 }
 
-/* line 54, ../scss/_front.scss */
+/* line 56, ../scss/_front.scss */
+.hide-mobile {
+  display: none;
+}
+
+/* line 60, ../scss/_front.scss */
+.show-mobile {
+  display: block;
+}
+
+/* line 64, ../scss/_front.scss */
 .block-title {
   font-size: 1em;
   line-height: 1.125;
@@ -893,29 +905,29 @@ input, textarea {
   margin-bottom: 0.5em;
 }
 
-/* line 60, ../scss/_front.scss */
+/* line 70, ../scss/_front.scss */
 .front {
   text-align: center;
 }
-/* line 63, ../scss/_front.scss */
+/* line 73, ../scss/_front.scss */
 .front #page-title {
   margin-bottom: 1em;
 }
 
-/* line 68, ../scss/_front.scss */
+/* line 78, ../scss/_front.scss */
 .home--heading {
   font-size: 3em;
   margin: 0 0 0.25em;
 }
 
-/* line 73, ../scss/_front.scss */
+/* line 83, ../scss/_front.scss */
 .home--paragraph {
   font-size: 1.1em;
   line-height: 1.5em;
   margin: 0 0 3em;
 }
 
-/* line 85, ../scss/_front.scss */
+/* line 95, ../scss/_front.scss */
 .home--hero--header,
 .home--library,
 .home--why,
@@ -923,24 +935,23 @@ input, textarea {
 .home--quotes,
 .home--world,
 .home--newsletter {
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
-/* line 89, ../scss/_front.scss */
-.home--hero {
-  text-align: left;
-}
-
-/* line 93, ../scss/_front.scss */
+/* line 99, ../scss/_front.scss */
 .home--hero--header {
   background: url("../images/hero-bg.png") repeat;
 }
-/* line 96, ../scss/_front.scss */
+/* line 102, ../scss/_front.scss */
+.home--hero--header .container {
+  position: relative;
+}
+/* line 106, ../scss/_front.scss */
 .home--hero--header .home--heading {
   color: white;
 }
 
-/* line 101, ../scss/_front.scss */
+/* line 111, ../scss/_front.scss */
 .home--hero--button {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -967,68 +978,106 @@ input, textarea {
   border: 1px solid #fd7037;
   color: white;
 }
-/* line 107, ../scss/_front.scss */
+/* line 117, ../scss/_front.scss */
 .home--hero--button:hover {
   border: none;
   background: #00be4c;
 }
 
-/* line 113, ../scss/_front.scss */
-.home--hero--white-stripe {
-  padding: 3em 0;
-}
-/* line 116, ../scss/_front.scss */
-.home--hero--white-stripe h4 {
-  font-size: 1.2em;
-  margin-bottom: 0;
-}
-/* line 121, ../scss/_front.scss */
-.home--hero--white-stripe p {
-  width: 22em;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin-top: 0.25em;
+/* line 123, ../scss/_front.scss */
+.home--hero--video {
+  max-width: 672px;
+  position: relative;
+  margin: 0 auto 2em;
 }
 
-/* line 130, ../scss/_front.scss */
+/* line 129, ../scss/_front.scss */
+.home--hero--video-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 137, ../scss/_front.scss */
+.home--hero--video-link:hover .home--hero--video-button {
+  background-color: #fd7037;
+}
+
+/* line 143, ../scss/_front.scss */
+.home--hero--video-button {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  padding: 0px 24px;
+  width: 24px;
+  height: 52px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAfUlEQVR42s3OuQ3AMAxDUW+WbB5vprhxaUEHyYTAr9i8YWbj0LO6nJ+Sd+5JYRGQFJYBSWAVEBXWAVFgCBAUhgRBYAxQC8YElWAKUAqmBIVgX4Dm6v4DyIUoQSGIApSCMEElCAPUgiBBEAgCBIV0QBRIBUSFZEASSAQkhexe/7U1ZhVTfkwAAAAASUVORK5CYII=);
+  background-size: 36px 24px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -36px;
+}
+
+/* line 162, ../scss/_front.scss */
+#video-modal {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* line 171, ../scss/_front.scss */
+.home--hero--white-stripe {
+  display: none;
+}
+
+/* line 176, ../scss/_front.scss */
 .home--action.blue {
   background: #137cc1;
 }
-/* line 133, ../scss/_front.scss */
+/* line 179, ../scss/_front.scss */
 .home--action.blue:hover {
   background: rgba(19, 124, 193, 0.95);
 }
-/* line 138, ../scss/_front.scss */
+/* line 184, ../scss/_front.scss */
 .home--action.green {
   background: #00be4c;
 }
-/* line 141, ../scss/_front.scss */
+/* line 187, ../scss/_front.scss */
 .home--action.green:hover {
   background: rgba(0, 190, 76, 0.95);
 }
-/* line 146, ../scss/_front.scss */
+/* line 192, ../scss/_front.scss */
 .home--action.orange {
   background: #fd7037;
 }
-/* line 149, ../scss/_front.scss */
+/* line 195, ../scss/_front.scss */
 .home--action.orange:hover {
   background: rgba(253, 112, 55, 0.95);
 }
-/* line 154, ../scss/_front.scss */
+/* line 200, ../scss/_front.scss */
 .home--action.home--action--hero {
-  padding: 1.5em 0;
+  display: none;
 }
-/* line 157, ../scss/_front.scss */
-.home--action.home--action--hero:hover {
-  background: #137cc1;
-}
-/* line 162, ../scss/_front.scss */
+/* line 204, ../scss/_front.scss */
 .home--action a, .home--action span {
   color: white;
   font-weight: bold;
   font-size: 1.1em;
 }
-/* line 168, ../scss/_front.scss */
+/* line 210, ../scss/_front.scss */
 .home--action a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1038,54 +1087,67 @@ input, textarea {
   width: 100%;
 }
 
-/* line 176, ../scss/_front.scss */
+/* line 218, ../scss/_front.scss */
+.home--action--arrow {
+  padding-right: 32px;
+}
+/* line 221, ../scss/_front.scss */
+.home--action--arrow.down {
+  background: url("../images/arrow-down.png") no-repeat right center;
+}
+/* line 225, ../scss/_front.scss */
+.home--action--arrow.right {
+  background: url("../images/arrow-right.png") no-repeat right center;
+}
+
+/* line 230, ../scss/_front.scss */
 .home--library {
   background: #003b58;
   color: white;
 }
-/* line 180, ../scss/_front.scss */
+/* line 234, ../scss/_front.scss */
 .home--library .home--heading {
   color: white;
 }
-/* line 184, ../scss/_front.scss */
+/* line 238, ../scss/_front.scss */
 .home--library .block-title {
   color: white;
 }
 
-/* line 189, ../scss/_front.scss */
+/* line 243, ../scss/_front.scss */
 .home--vid-icons {
   position: relative;
   overflow: hidden;
 }
 
-/* line 194, ../scss/_front.scss */
+/* line 248, ../scss/_front.scss */
 .home--vid-icon {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 199, ../scss/_front.scss */
+/* line 253, ../scss/_front.scss */
 .home--vid-icon.blue {
   background: url("../images/vid-icon-blue.png") no-repeat;
   background-size: contain;
 }
-/* line 204, ../scss/_front.scss */
+/* line 258, ../scss/_front.scss */
 .home--vid-icon.darkblue {
   background: url("../images/vid-icon-darkblue.png") no-repeat;
   background-size: contain;
 }
-/* line 209, ../scss/_front.scss */
+/* line 263, ../scss/_front.scss */
 .home--vid-icon.green {
   background: url("../images/vid-icon-green.png") no-repeat;
   background-size: contain;
 }
-/* line 214, ../scss/_front.scss */
+/* line 268, ../scss/_front.scss */
 .home--vid-icon.orange {
   background: url("../images/vid-icon-orange.png") no-repeat;
   background-size: contain;
 }
 
-/* line 220, ../scss/_front.scss */
+/* line 274, ../scss/_front.scss */
 .home--library--tabs {
   -webkit-box-shadow: #08354d 0 4px 0;
   -moz-box-shadow: #08354d 0 4px 0;
@@ -1093,7 +1155,7 @@ input, textarea {
   display: inline-block;
 }
 
-/* line 225, ../scss/_front.scss */
+/* line 279, ../scss/_front.scss */
 .home--library--tab {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1108,67 +1170,56 @@ input, textarea {
   white-space: nowrap;
   color: #555555;
 }
-/* line 237, ../scss/_front.scss */
+/* line 291, ../scss/_front.scss */
 .home--library--tab:first-child {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
-/* line 241, ../scss/_front.scss */
+/* line 295, ../scss/_front.scss */
 .home--library--tab:last-child {
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-/* line 245, ../scss/_front.scss */
+/* line 299, ../scss/_front.scss */
 .home--library--tab.active {
   color: white;
   background: #fd7037;
 }
 
-/* line 251, ../scss/_front.scss */
+/* line 305, ../scss/_front.scss */
 .home--library--tab-content {
   display: none;
-  margin: 2em 0 4em;
+  margin: 3em 0;
 }
-/* line 255, ../scss/_front.scss */
+/* line 309, ../scss/_front.scss */
 .home--library--tab-content.active {
   display: block;
 }
 
-/* line 260, ../scss/_front.scss */
+/* line 314, ../scss/_front.scss */
 .home--library--week {
   font-size: 1.2em;
-  margin: 2em 0 1.5em;
+  margin: 1em 0;
 }
 
-/* line 265, ../scss/_front.scss */
-.home--bar {
-  height: 3px;
-  background: #137cc1;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10em;
-  margin: 0 1em;
-}
-
-/* line 274, ../scss/_front.scss */
-.home--library--videos {
-  margin: 15px 0;
-}
-
-/* line 278, ../scss/_front.scss */
+/* line 319, ../scss/_front.scss */
 .home--library--video {
   -webkit-box-shadow: #08354d 0 4px 0;
   -moz-box-shadow: #08354d 0 4px 0;
   box-shadow: #08354d 0 4px 0;
-  width: 340px;
-  height: 230px;
+  width: 330px;
+  height: 224px;
   position: relative;
-  margin-right: 15px;
   display: inline-block;
+  margin: 10px;
 }
-/* line 286, ../scss/_front.scss */
-.home--library--video:last-child {
-  margin-right: 0;
-}
-/* line 290, ../scss/_front.scss */
+/* line 327, ../scss/_front.scss */
 .home--library--video img {
   position: absolute;
   z-index: 2;
@@ -1176,12 +1227,21 @@ input, textarea {
   top: 0;
 }
 
-/* line 298, ../scss/_front.scss */
+/* line 335, ../scss/_front.scss */
 .home--library--free-label {
   position: absolute;
+  right: -9px;
+  top: -9px;
+  background: url("../images/vid-free.png") no-repeat;
+  height: 34px;
+  width: 78px;
+  z-index: 4;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 2px;
 }
 
-/* line 302, ../scss/_front.scss */
+/* line 348, ../scss/_front.scss */
 .home--library--video-title {
   color: white;
   display: block;
@@ -1197,20 +1257,20 @@ input, textarea {
   padding: 2em 3em 0;
   line-height: 1.4em;
 }
-/* line 317, ../scss/_front.scss */
+/* line 363, ../scss/_front.scss */
 .home--library--video-title:hover {
   color: white;
   background: rgba(19, 124, 193, 0.8);
 }
-/* line 321, ../scss/_front.scss */
+/* line 367, ../scss/_front.scss */
 .home--library--video-title:hover .home--library--play {
-  background: #fd7037;
+  background-color: #fd7037;
 }
 
-/* line 327, ../scss/_front.scss */
+/* line 373, ../scss/_front.scss */
 .home--library--play {
-  background: #003b58;
-  width: 3em;
+  background: url("../images/arrow-right.png") no-repeat 3.5em center #003b58;
+  width: 3.5em;
   text-align: left;
   margin: 1em auto 0;
   padding: 0 1em;
@@ -1218,7 +1278,7 @@ input, textarea {
   line-height: 2.25em;
 }
 
-/* line 337, ../scss/_front.scss */
+/* line 383, ../scss/_front.scss */
 .home--library--meta {
   position: absolute;
   height: 40px;
@@ -1232,12 +1292,12 @@ input, textarea {
   color: #c7c7c7;
 }
 
-/* line 350, ../scss/_front.scss */
+/* line 396, ../scss/_front.scss */
 .home--library--category {
   float: left;
 }
 
-/* line 354, ../scss/_front.scss */
+/* line 400, ../scss/_front.scss */
 .home--library--duration {
   float: right;
 }
@@ -1245,174 +1305,158 @@ input, textarea {
 /*
   Tick.tick-scroll
 */
-/* line 361, ../scss/_front.scss */
+/* line 407, ../scss/_front.scss */
 .tick-scroll {
   overflow: hidden;
   position: relative;
-  height: 80px;
+  height: 40px;
   line-height: 1;
-  font-size: 3em;
+  font-size: 1.5em;
   text-align: center;
   margin-bottom: 0.4em;
 }
-/* line 370, ../scss/_front.scss */
+/* line 416, ../scss/_front.scss */
 .tick-scroll .tick-separator {
   position: absolute;
   bottom: 0;
   content: ',';
-  margin-left: -23px;
-  font-size: 1.5em;
+  margin-left: -10px;
+  font-size: 1em;
 }
-/* line 378, ../scss/_front.scss */
+/* line 424, ../scss/_front.scss */
 .tick-scroll .tick-wheel {
   -webkit-box-shadow: black 0 0 3px;
   -moz-box-shadow: black 0 0 3px;
   box-shadow: black 0 0 3px;
   position: relative;
   display: inline-block;
-  width: 50px;
-  margin: 0 8px;
+  width: 25px;
+  margin: 0 4px;
   padding: 0 4px;
   color: #137cc1;
   font-weight: bold;
   background-color: white;
 }
-/* line 390, ../scss/_front.scss */
+/* line 436, ../scss/_front.scss */
 .tick-scroll .tick-wheel:first-child, .tick-scroll .tick-wheel:nth-child(5) {
-  margin-right: 40px;
+  margin-right: 20px;
 }
-/* line 394, ../scss/_front.scss */
+/* line 440, ../scss/_front.scss */
 .tick-scroll .tick-wheel span {
   display: block;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
-/* line 402, ../scss/_front.scss */
+/* line 448, ../scss/_front.scss */
 .home--library--minutes .home--bar {
   width: 14em;
 }
-/* line 406, ../scss/_front.scss */
+/* line 452, ../scss/_front.scss */
 .home--library--minutes .block-title {
   font-size: 1.4em;
   vertical-align: middle;
   display: inline-block;
 }
 
-/* line 413, ../scss/_front.scss */
+/* line 459, ../scss/_front.scss */
 .home--why {
   background: #e7e7e8;
 }
 
-/* line 417, ../scss/_front.scss */
+/* line 463, ../scss/_front.scss */
 .home--why--block {
   background: white;
   border: 5px solid whitesmoke;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  width: 337px;
-  margin-right: 15px;
+  width: 324px;
+  margin-bottom: 15px;
   display: inline-block;
 }
-/* line 425, ../scss/_front.scss */
-.home--why--block:last-child {
-  margin-right: 0;
-}
 
-/* line 430, ../scss/_front.scss */
+/* line 472, ../scss/_front.scss */
 .home--why--image {
-  background: url("../images/thumb.jpg") no-repeat;
-  background-size: contain;
-  height: 300px;
+  height: 264px;
   width: 100%;
+  padding: 2em 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: 2em;
+}
+/* line 479, ../scss/_front.scss */
+.home--why--experts .home--why--image {
+  background: url("../images/expert-drop.png") no-repeat center center #54afe2;
+}
+/* line 482, ../scss/_front.scss */
+.home--why--experts .home--why--image:hover {
+  background-image: url("../images/expert-hover.png");
+}
+/* line 487, ../scss/_front.scss */
+.home--why--learning .home--why--image {
+  background: url("../images/learning-drop.png") no-repeat center center #91e5b3;
+}
+/* line 490, ../scss/_front.scss */
+.home--why--learning .home--why--image:hover {
+  background-image: url("../images/learning-hover.png");
+}
+/* line 495, ../scss/_front.scss */
+.home--why--lullabot .home--why--image {
+  background: url("../images/lullabot-drop.png") no-repeat center center #f99348;
+}
+/* line 498, ../scss/_front.scss */
+.home--why--lullabot .home--why--image:hover {
+  background-image: url("../images/lullabot-hover.png");
 }
 
-/* line 437, ../scss/_front.scss */
+/* line 504, ../scss/_front.scss */
 .home--why--title {
   margin: 0;
   font-size: 1.5em;
 }
 
-/* line 442, ../scss/_front.scss */
+/* line 509, ../scss/_front.scss */
 .home--why--paragraph {
   margin: 0;
-  padding: 0.5em 2em 2em;
+  padding: 0.5em 1.5em 2em;
 }
 
-/* line 447, ../scss/_front.scss */
+/* line 514, ../scss/_front.scss */
 .home--apps {
   background: whitesmoke;
   position: relative;
-  padding-bottom: 0;
 }
 
-/* line 453, ../scss/_front.scss */
-.home--apps--sun {
-  position: absolute;
-  background: url("../images/apps-sun.png") no-repeat center transparent;
-  width: 80px;
-  height: 79px;
-  top: 30px;
-  right: 100px;
-  z-index: 1;
-}
-
-/* line 463, ../scss/_front.scss */
-.home--apps--clouds {
-  background: url("../images/apps-clouds.png") repeat-x transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 15em;
-  height: 161px;
-  z-index: 2;
-}
-
-/* line 473, ../scss/_front.scss */
-.home--apps--bg {
-  background: url("../images/apps-bg.png") no-repeat center bottom transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
-/* line 483, ../scss/_front.scss */
-.home--apps--floor {
-  background: #dcddde;
-  width: 100%;
-  height: 10em;
-}
-
-/* line 489, ../scss/_front.scss */
-.home--apps--scene {
-  margin-top: 4em;
-  height: 270px;
-  position: relative;
-}
-
-/* line 495, ../scss/_front.scss */
+/* line 519, ../scss/_front.scss */
 .home--world {
   background: #e7e7e8;
 }
 
-/* line 500, ../scss/_front.scss */
+/* line 524, ../scss/_front.scss */
 .home--quotes .home--paragraph {
-  padding: 0 8em;
   margin-bottom: 1em;
 }
 
-/* line 506, ../scss/_front.scss */
+/* line 529, ../scss/_front.scss */
 .home--quotes--author {
   font-size: 0.875em;
 }
 
-/* line 511, ../scss/_front.scss */
+/* line 534, ../scss/_front.scss */
+.home--newsletter .block-title {
+  margin-top: 0;
+}
+/* line 538, ../scss/_front.scss */
 .home--newsletter .home--paragraph {
   margin-bottom: 2em;
 }
 
-/* line 516, ../scss/_front.scss */
+/* line 543, ../scss/_front.scss */
 .home--newsletter--email {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1422,12 +1466,16 @@ input, textarea {
   font-weight: normal;
   background: whitesmoke;
   border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   height: 42px;
   margin-right: 1em;
   width: 15em;
 }
-/* line 531, ../scss/_front.scss */
+/* line 558, ../scss/_front.scss */
 .home--newsletter--email ::-webkit-input-placeholder,
 .home--newsletter--email :-moz-placeholder,
 .home--newsletter--email ::-moz-placeholder,
@@ -1435,7 +1483,7 @@ input, textarea {
   color: #c7c7c7;
 }
 
-/* line 536, ../scss/_front.scss */
+/* line 563, ../scss/_front.scss */
 .home--newsletter--submit {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -1458,4 +1506,337 @@ input, textarea {
   background: #fd7037;
   border: 1px solid #fd7037;
   color: white;
+}
+
+/*! http://responsiveslides.com v1.54 by @viljamis */
+/* line 568, ../scss/_front.scss */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* line 576, ../scss/_front.scss */
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+/* line 584, ../scss/_front.scss */
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+/* line 591, ../scss/_front.scss */
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+/* line 600, ../scss/_front.scss */
+.rslides_tabs {
+  margin: 2em 0 0;
+  text-align: center;
+  padding: 0;
+}
+/* line 605, ../scss/_front.scss */
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px;
+}
+/* line 613, ../scss/_front.scss */
+.rslides_tabs a {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  width: 9px;
+  height: 9px;
+}
+
+/* line 628, ../scss/_front.scss */
+.rslides_here a {
+  background: #222;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 46em) {
+  /* line 634, ../scss/_front.scss */
+  .hide-mobile {
+    display: block;
+  }
+
+  /* line 638, ../scss/_front.scss */
+  .show-mobile {
+    display: none;
+  }
+
+  /* line 648, ../scss/_front.scss */
+  .home--hero--header,
+  .home--library,
+  .home--why,
+  .home--apps,
+  .home--quotes,
+  .home--world,
+  .home--newsletter {
+    padding: 5em 0;
+  }
+
+  /* line 652, ../scss/_front.scss */
+  .home--bar {
+    height: 3px;
+    background: #137cc1;
+    display: inline-block;
+    vertical-align: middle;
+    width: 9em;
+    margin: 0 1em;
+  }
+
+  /* line 661, ../scss/_front.scss */
+  .home--library--video {
+    margin: 15px 20px 15px 0;
+  }
+  /* line 664, ../scss/_front.scss */
+  .home--library--video:last-child {
+    margin-right: 0;
+  }
+
+  /* line 669, ../scss/_front.scss */
+  .tick-scroll {
+    height: 80px;
+    font-size: 3em;
+  }
+  /* line 673, ../scss/_front.scss */
+  .tick-scroll .tick-separator {
+    margin-left: -23px;
+    font-size: 1.5em;
+  }
+  /* line 678, ../scss/_front.scss */
+  .tick-scroll .tick-wheel {
+    width: 50px;
+    margin: 0 8px;
+  }
+  /* line 683, ../scss/_front.scss */
+  .tick-scroll .tick-wheel:first-child, .tick-scroll .tick-wheel:nth-child(5) {
+    margin-right: 40px;
+  }
+  /* line 687, ../scss/_front.scss */
+  .tick-scroll .tick-wheel span {
+    padding: 16px 0;
+  }
+
+  /* line 693, ../scss/_front.scss */
+  .home--why--block {
+    margin-right: 10px;
+  }
+  /* line 696, ../scss/_front.scss */
+  .home--why--block:last-child {
+    margin: 0;
+  }
+
+  /* line 702, ../scss/_front.scss */
+  .home--quotes .home--paragraph {
+    padding: 0 8em;
+    margin-bottom: 1em;
+  }
+
+  /* line 708, ../scss/_front.scss */
+  .home--apps {
+    padding-bottom: 0;
+  }
+
+  /* line 712, ../scss/_front.scss */
+  .home--apps--sun {
+    position: absolute;
+    background: url("../images/apps-sun.png") no-repeat center transparent;
+    width: 80px;
+    height: 79px;
+    top: 30px;
+    right: 100px;
+    z-index: 1;
+  }
+
+  /* line 722, ../scss/_front.scss */
+  .home--apps--clouds {
+    background: url("../images/apps-clouds.png") repeat-x transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15em;
+    height: 161px;
+    z-index: 2;
+  }
+
+  /* line 732, ../scss/_front.scss */
+  .home--apps--bg {
+    background: url("../images/apps-bg.png") no-repeat center center transparent;
+    position: absolute;
+    height: 189px;
+    left: 0;
+    right: 0;
+    bottom: 10em;
+    z-index: 3;
+  }
+
+  /* line 742, ../scss/_front.scss */
+  .home--apps--floor {
+    background: #dcddde;
+    width: 100%;
+    height: 10em;
+  }
+
+  /* line 748, ../scss/_front.scss */
+  .home--apps--scene {
+    margin-top: 4em;
+    height: 270px;
+    position: relative;
+  }
+
+  /* line 754, ../scss/_front.scss */
+  .home--apps--wrapper {
+    position: relative;
+    width: 531px;
+    height: 341px;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  /* line 762, ../scss/_front.scss */
+  .home--apps--devices {
+    background: url("../images/apps-devices.png") no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+
+  /* line 772, ../scss/_front.scss */
+  .home--apps--tablet {
+    background: url("../images/apps-tablet.png") no-repeat 0 152px white;
+    position: absolute;
+    bottom: 33px;
+    left: 16px;
+    width: 117px;
+    height: 152px;
+    z-index: 6;
+  }
+
+  /* line 782, ../scss/_front.scss */
+  .home--apps--desktop {
+    background: url("../images/apps-desktop.png") no-repeat 0 191px white;
+    position: absolute;
+    top: 17px;
+    left: 78px;
+    width: 351px;
+    height: 191px;
+    z-index: 5;
+  }
+
+  /* line 792, ../scss/_front.scss */
+  .home--apps--mobile {
+    background: url("../images/apps-mobile.png") no-repeat 0 55px white;
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+    width: 96px;
+    height: 55px;
+    z-index: 4;
+  }
+}
+@media screen and (min-width: 1030px) {
+  /* line 805, ../scss/_front.scss */
+  .home--hero {
+    text-align: left;
+  }
+
+  /* line 809, ../scss/_front.scss */
+  .home--hero--white-stripe {
+    display: block;
+    padding: 3em 0;
+  }
+  /* line 813, ../scss/_front.scss */
+  .home--hero--white-stripe h4 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+  /* line 818, ../scss/_front.scss */
+  .home--hero--white-stripe p {
+    width: 22em;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-top: 0.25em;
+  }
+
+  /* line 826, ../scss/_front.scss */
+  .home--hero--video {
+    position: absolute;
+    left: 350px;
+    bottom: -335px;
+    margin: 0;
+  }
+
+  /* line 833, ../scss/_front.scss */
+  .home--action.home--action--hero {
+    display: block;
+    padding: 1.5em 0;
+  }
+  /* line 837, ../scss/_front.scss */
+  .home--action.home--action--hero:hover {
+    background: #137cc1;
+  }
+}
+@media screen and (max-width: 1080px) {
+  /* line 845, ../scss/_front.scss */
+  img {
+    max-width: 100%;
+  }
+
+  /* line 850, ../scss/_front.scss */
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  /* line 854, ../scss/_front.scss */
+  .header {
+    padding: 0 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  /* line 860, ../scss/_front.scss */
+  .header ul,
+  .header #search {
+    display: none;
+  }
+  /* line 864, ../scss/_front.scss */
+  .header .responsive-nav {
+    display: block;
+    float: right;
+    margin-top: 1.3em;
+  }
 }

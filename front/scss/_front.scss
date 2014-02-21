@@ -4,8 +4,10 @@ input, textarea {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 65em;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #logo {
@@ -51,6 +53,14 @@ input, textarea {
   padding: 2em 0;
 }
 
+.hide-mobile {
+  display: none;
+}
+
+.show-mobile {
+  display: block;
+}
+
 .block-title {
   @include block-title;
   font-size: 1.15em;
@@ -83,15 +93,15 @@ input, textarea {
 .home--quotes,
 .home--world,
 .home--newsletter {
-  padding: 5em 0;
-}
-
-.home--hero {
-  text-align: left;
+  padding: 3em 0;
 }
 
 .home--hero--header {
   background: url('../images/hero-bg.png') repeat;
+
+  .container {
+    position: relative;
+  }
 
   .home--heading {
     color: $white;
@@ -110,20 +120,56 @@ input, textarea {
   }
 }
 
+.home--hero--video {
+  max-width: 672px;
+  position: relative;
+  margin: 0 auto 2em;
+}
+
+.home--hero--video-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &:hover {
+    .home--hero--video-button {
+      background-color: $orange;
+    }
+  }
+}
+
+.home--hero--video-button {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  padding: 0px 24px;
+  width: 24px;
+  height: 52px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAfUlEQVR42s3OuQ3AMAxDUW+WbB5vprhxaUEHyYTAr9i8YWbj0LO6nJ+Sd+5JYRGQFJYBSWAVEBXWAVFgCBAUhgRBYAxQC8YElWAKUAqmBIVgX4Dm6v4DyIUoQSGIApSCMEElCAPUgiBBEAgCBIV0QBRIBUSFZEASSAQkhexe/7U1ZhVTfkwAAAAASUVORK5CYII=);
+  background-size: 36px 24px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(black, 0.5);
+  @include border-radius(5px);
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -36px;
+}
+
+#video-modal {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
 .home--hero--white-stripe {
-  padding: 3em 0;
-
-  h4 {
-    font-size: 1.2em;
-    margin-bottom: 0;
-  }
-
-  p {
-    width: 22em;
-    font-size: 1.1em;
-    line-height: 1.5em;
-    margin-top: 0.25em;
-  }
+  display: none;
 }
 
 .home--action {
@@ -152,11 +198,7 @@ input, textarea {
   }
 
   &.home--action--hero {
-    padding: 1.5em 0;
-
-    &:hover {
-      background: $logo-blue;
-    }
+    display: none;
   }
 
   a, span {
@@ -170,6 +212,18 @@ input, textarea {
     display: block;
     padding: 2em 1em;
     width: 100%;
+  }
+}
+
+.home--action--arrow {
+  padding-right: 32px;
+
+  &.down {
+    background: url('../images/arrow-down.png') no-repeat right center;
+  }
+
+  &.right {
+    background: url('../images/arrow-right.png') no-repeat right center;
   }
 }
 
@@ -235,11 +289,11 @@ input, textarea {
   color: $text;
 
   &:first-child {
-    border-radius: 5px 0 0 5px;
+    @include border-radius(5px 0 0 5px);
   }
 
   &:last-child {
-    border-radius: 0 5px 5px 0;
+    @include border-radius(0 5px 5px 0);
   }
 
   &.active {
@@ -250,7 +304,7 @@ input, textarea {
 
 .home--library--tab-content {
   display: none;
-  margin: 2em 0 4em;
+  margin: 3em 0;
 
   &.active {
     display: block;
@@ -259,33 +313,16 @@ input, textarea {
 
 .home--library--week {
   font-size: 1.2em;
-  margin: 2em 0 1.5em;
-}
-
-.home--bar {
-  height: 3px;
-  background: $logo-blue;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10em;
-  margin: 0 1em;
-}
-
-.home--library--videos {
-  margin: 15px 0;
+  margin: 1em 0;
 }
 
 .home--library--video {
   @include box-shadow(#08354d 0 4px 0);
-  width: 340px;
-  height: 230px;
+  width: 330px;
+  height: 224px;
   position: relative;
-  margin-right: 15px;
   display: inline-block;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  margin: 10px;
 
   img {
     position: absolute;
@@ -297,6 +334,15 @@ input, textarea {
 
 .home--library--free-label {
   position: absolute;
+  right: -9px;
+  top: -9px;
+  background: url('../images/vid-free.png') no-repeat;
+  height: 34px;
+  width: 78px;
+  z-index: 4;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 2px;
 }
 
 .home--library--video-title {
@@ -319,14 +365,14 @@ input, textarea {
     background: rgba($logo-blue, 0.8);
 
     .home--library--play {
-      background: $orange;
+      background-color: $orange;
     }
   }
 }
 
 .home--library--play {
-  background: #003b58;
-  width: 3em;
+  background: url('../images/arrow-right.png') no-repeat 3.5em center #003b58;
+  width: 3.5em;
   text-align: left;
   margin: 1em auto 0;
   padding: 0 1em;
@@ -361,9 +407,9 @@ input, textarea {
 .tick-scroll {
   overflow: hidden;
   position: relative;
-  height: 80px;
+  height: 40px;
   line-height: 1;
-  font-size: 3em;
+  font-size: 1.5em;
   text-align: center;
   margin-bottom: 0.4em;
 
@@ -371,16 +417,16 @@ input, textarea {
     position: absolute;
     bottom: 0;
     content: ',';
-    margin-left: -23px;
-    font-size: 1.5em;
+    margin-left: -10px;
+    font-size: 1em;
   }
 
   .tick-wheel {
     @include box-shadow(rgb(0,0,0) 0 0 3px);
     position: relative;
     display: inline-block;
-    width: 50px;
-    margin: 0 8px;
+    width: 25px;
+    margin: 0 4px;
     padding: 0 4px;
     color: $logo-blue;
     font-weight: bold;
@@ -388,12 +434,12 @@ input, textarea {
 
     &:first-child,
     &:nth-child(5) {
-      margin-right: 40px;
+      margin-right: 20px;
     }
 
     span {
       display: block;
-      padding: 16px 0;
+      padding: 8px 0;
     }
   }
 }
@@ -417,21 +463,42 @@ input, textarea {
 .home--why--block {
   background: $white;
   border: 5px solid $light-background;
-  border-radius: 5px;
-  width: 337px;
-  margin-right: 15px;
+  @include border-radius(5px);
+  width: 324px;
+  margin-bottom: 15px;
   display: inline-block;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .home--why--image {
-  background: url('../images/thumb.jpg') no-repeat;
-  background-size: contain;
-  height: 300px;
+  height: 264px;
   width: 100%;
+  padding: 2em 0 0;
+  @include border-radius(3px 3px 0 0);
+  margin-bottom: 2em;
+
+  .home--why--experts & {
+    background: url('../images/expert-drop.png') no-repeat center center #54afe2;
+
+    &:hover {
+      background-image: url('../images/expert-hover.png');
+    }
+  }
+
+  .home--why--learning & {
+    background: url('../images/learning-drop.png') no-repeat center center #91e5b3;
+
+    &:hover {
+      background-image: url('../images/learning-hover.png');
+    }
+  }
+
+  .home--why--lullabot & {
+    background: url('../images/lullabot-drop.png') no-repeat center center #f99348;
+
+    &:hover {
+      background-image: url('../images/lullabot-hover.png');
+    }
+  }
 }
 
 .home--why--title {
@@ -441,54 +508,11 @@ input, textarea {
 
 .home--why--paragraph {
   margin: 0;
-  padding: 0.5em 2em 2em;
+  padding: 0.5em 1.5em 2em;
 }
 
 .home--apps {
   background: $light-background;
-  position: relative;
-  padding-bottom: 0;
-}
-
-.home--apps--sun {
-  position: absolute;
-  background: url('../images/apps-sun.png') no-repeat center transparent;
-  width: 80px;
-  height: 79px;
-  top: 30px;
-  right: 100px;
-  z-index: 1;
-}
-
-.home--apps--clouds {
-  background: url("../images/apps-clouds.png") repeat-x transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 15em;
-  height: 161px;
-  z-index: 2;
-}
-
-.home--apps--bg {
-  background: url('../images/apps-bg.png') no-repeat center bottom transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
-.home--apps--floor {
-  background: #dcddde;
-  width: 100%;
-  height: 10em;
-}
-
-.home--apps--scene {
-  margin-top: 4em;
-  height: 270px;
   position: relative;
 }
 
@@ -498,7 +522,6 @@ input, textarea {
 
 .home--quotes {
   .home--paragraph {
-    padding: 0 8em;
     margin-bottom: 1em;
   }
 }
@@ -508,6 +531,10 @@ input, textarea {
 }
 
 .home--newsletter {
+  .block-title {
+    margin-top: 0;
+  }
+
   .home--paragraph {
     margin-bottom: 2em;
   }
@@ -520,7 +547,7 @@ input, textarea {
   font-weight: normal;
   background: $light-background;
   border: 0;
-  border-radius: 5px;
+  @include border-radius(5px);
   height: 42px;
   margin-right: 1em;
   width: 15em;
@@ -535,4 +562,309 @@ input, textarea {
 
 .home--newsletter--submit {
   @include button;
+}
+
+/*! http://responsiveslides.com v1.54 by @viljamis */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &:first-child {
+      position: relative;
+      display: block;
+      float: left;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+  }
+}
+
+.rslides_tabs {
+  margin: 2em 0 0;
+  text-align: center;
+  padding: 0;
+
+  li {
+    display: inline;
+    float: none;
+    _float: left;
+    *float: left;
+    margin-right: 5px;
+  }
+
+  a {
+    @include border-radius(15px);
+    @include box-shadow(inset 0 0 2px 0 rgba(0, 0, 0, 0.3));
+    text-indent: -9999px;
+    overflow: hidden;
+    background: #ccc;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    _display: block;
+    *display: block;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.rslides_here a {
+  background: #222;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 46em) {
+  .hide-mobile {
+    display: block;
+  }
+
+  .show-mobile {
+    display: none;
+  }
+
+  .home--hero--header,
+  .home--library,
+  .home--why,
+  .home--apps,
+  .home--quotes,
+  .home--world,
+  .home--newsletter {
+    padding: 5em 0;
+  }
+
+  .home--bar {
+    height: 3px;
+    background: $logo-blue;
+    display: inline-block;
+    vertical-align: middle;
+    width: 9em;
+    margin: 0 1em;
+  }
+
+  .home--library--video {
+    margin: 15px 20px 15px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .tick-scroll {
+    height: 80px;
+    font-size: 3em;
+
+    .tick-separator {
+      margin-left: -23px;
+      font-size: 1.5em;
+    }
+
+    .tick-wheel {
+      width: 50px;
+      margin: 0 8px;
+
+      &:first-child,
+      &:nth-child(5) {
+        margin-right: 40px;
+      }
+
+      span {
+        padding: 16px 0;
+      }
+    }
+  }
+
+  .home--why--block {
+    margin-right: 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .home--quotes {
+    .home--paragraph {
+      padding: 0 8em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .home--apps {
+    padding-bottom: 0;
+  }
+
+  .home--apps--sun {
+    position: absolute;
+    background: url('../images/apps-sun.png') no-repeat center transparent;
+    width: 80px;
+    height: 79px;
+    top: 30px;
+    right: 100px;
+    z-index: 1;
+  }
+
+  .home--apps--clouds {
+    background: url("../images/apps-clouds.png") repeat-x transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15em;
+    height: 161px;
+    z-index: 2;
+  }
+
+  .home--apps--bg {
+    background: url('../images/apps-bg.png') no-repeat center center transparent;
+    position: absolute;
+    height: 189px;
+    left: 0;
+    right: 0;
+    bottom: 10em;
+    z-index: 3;
+  }
+
+  .home--apps--floor {
+    background: #dcddde;
+    width: 100%;
+    height: 10em;
+  }
+
+  .home--apps--scene {
+    margin-top: 4em;
+    height: 270px;
+    position: relative;
+  }
+
+  .home--apps--wrapper {
+    position: relative;
+    width: 531px;
+    height: 341px;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  .home--apps--devices {
+    background: url('../images/apps-devices.png') no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+
+  .home--apps--tablet {
+    background: url('../images/apps-tablet.png') no-repeat 0 152px $white;
+    position: absolute;
+    bottom: 33px;
+    left: 16px;
+    width: 117px;
+    height: 152px;
+    z-index: 6;
+  }
+
+  .home--apps--desktop {
+    background: url('../images/apps-desktop.png') no-repeat 0 191px $white;
+    position: absolute;
+    top: 17px;
+    left: 78px;
+    width: 351px;
+    height: 191px;
+    z-index: 5;
+  }
+
+  .home--apps--mobile {
+    background: url('../images/apps-mobile.png') no-repeat 0 55px $white;
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+    width: 96px;
+    height: 55px;
+    z-index: 4;
+  }
+}
+
+// Alters layout for the hero section on larger screens.
+@media screen and (min-width: 1030px) {
+  .home--hero {
+    text-align: left;
+  }
+
+  .home--hero--white-stripe {
+    display: block;
+    padding: 3em 0;
+
+    h4 {
+      font-size: 1.2em;
+      margin-bottom: 0;
+    }
+
+    p {
+      width: 22em;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      margin-top: 0.25em;
+    }
+  }
+
+  .home--hero--video {
+    position: absolute;
+    left: 350px;
+    bottom: -335px;
+    margin: 0;
+  }
+
+  .home--action.home--action--hero {
+    display: block;
+    padding: 1.5em 0;
+
+    &:hover {
+      background: $logo-blue;
+    }
+  }
+}
+
+// Quick and dirty desktop-first responsive design, just for this prototype ;)
+@media screen and (max-width: 1080px) {
+  img {
+    max-width: 100%;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    ul,
+    #search {
+      display: none;
+    }
+
+    .responsive-nav {
+      display: block;
+      float: right;
+      margin-top: 1.3em;
+    }
+  }
 }

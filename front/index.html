@@ -6,6 +6,7 @@
     <title>Drupalize.Me</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="//use.typekit.net/fuf6cds.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -39,10 +40,13 @@
       <div class="home--hero--header">
         <div class="container">
           <h1 id="page-title" class="home--heading">Premium Drupal<br>Video Training</h1>
-          <a href="#" class="home--hero--button">Start learning today!</a>
           <div class="home--hero--video">
-            <iframe>TODO</iframe>
+            <img class="home--hero--laptop" src="images/laptop.png">
+            <a href="https://vimeo.com/83376941" class="home--hero--video-link" title="Drualize.Me Explainer Video">
+              <span class="home--hero--video-button"></span>
+            </a>
           </div>
+          <a href="#" class="home--hero--button">Start learning today!</a>
         </div>
       </div>
 
@@ -57,7 +61,7 @@
 
       <div class="home--action home--action--hero blue">
         <div class="container">
-          <span class="home--action--arrow">Keep scrolling</span>
+          <span class="home--action--arrow down">Keep scrolling</span>
         </div>
       </div>
     </div>
@@ -76,7 +80,7 @@
 
         <div class="home--library--tab-content latest active">
           <div class="home--library--week block-title">
-            <span class="home--bar"></span>Released week of Jan 8th<span class="home--bar"></span>
+            <span class="home--bar hide-mobile"></span>Released week of Jan 8th<span class="home--bar hide-mobile"></span>
           </div>
           <div class="home--library--videos">
             <div class="home--library--video">
@@ -118,7 +122,7 @@
           </div>
 
           <div class="home--library--week block-title">
-            <span class="home--bar"></span>Released week of Jan 15th<span class="home--bar"></span>
+            <span class="home--bar hide-mobile"></span>Released week of Jan 15th<span class="home--bar hide-mobile"></span>
           </div>
           <div class="home--library--videos">
             <div class="home--library--video">
@@ -246,14 +250,16 @@
           </p>
           <p class="tick tick-scroll">7,320,331</p>
           <div class="home--library--minutes">
-            <span class="home--bar"></span><span class="block-title">Minutes</span><span class="home--bar"></span>
+            <span class="home--bar hide-mobile"></span><span class="block-title">Minutes</span><span class="home--bar hide-mobile"></span>
           </div>
         </div>
       </div>
     </div>
 
     <div class="home--action blue">
-      <a href="#" class="home--library-action">Browse our entire video library</a>
+      <a href="#" class="home--library-action">
+        <span class="home--action--arrow right">Browse our entire video library</span>
+      </a>
     </div>
 
     <div class="home--why">
@@ -290,16 +296,17 @@
     </div>
 
     <div class="home--apps">
-      <div class="home--apps--clouds"></div>
+      <div class="home--apps--static show-mobile"></div>
+      <div class="home--apps--clouds hide-mobile"></div>
+      <div class="home--apps--bg hide-mobile"></div>
       <div class="container">
         <h2 class="home--heading">Learn Anytime, Anywhere</h2>
         <p class="home--paragraph">
           Watch Drupalize.Me at your desk or on the go with any mobile device.
         </p>
         <div class="home--apps--scene">
-          <div class="home--apps--sun"></div>
-          <div class="home--apps--bg"></div>
-          <div class="home--apps--wrapper">
+          <div class="home--apps--sun hide-mobile"></div>
+          <div class="home--apps--wrapper hide-mobile">
             <div class="home--apps--devices"></div>
             <div class="home--apps--tablet"></div>
             <div class="home--apps--desktop"></div>
@@ -307,11 +314,13 @@
           </div>
         </div>
       </div>
-      <div class="home--apps--floor"></div>
+      <div class="home--apps--floor hide-mobile"></div>
     </div>
 
     <div class="home--action green">
-      <a href="#" class="home--apps-action">Learn more about our iOS, Android and Roku apps</a>
+      <a href="#" class="home--apps-action">
+        <span class="home--action--arrow right">Learn more about our iOS, Android and Roku apps</span>
+      </a>
     </div>
 
     <div class="home--quotes">
@@ -319,12 +328,33 @@
         <h2 class="home--heading">Straight from our users</h2>
         <div class="home--quotes--left"></div>
         <div class="home--quotes--right"></div>
-        <p class="home--paragraph">
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-        </p>
-        <div class="home--quotes--author">
-          <span>First Lastname</span> // <span>Company Name</span>
-        </div>
+
+        <ul class="rslides">
+          <li>
+            <p class="home--paragraph">
+              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+            </p>
+            <div class="home--quotes--author">
+              <span>Bob</span> // <span>Company A</span>
+            </div>
+          </li>
+          <li>
+            <p class="home--paragraph">
+              "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            </p>
+            <div class="home--quotes--author">
+              <span>Larry</span> // <span>Company B</span>
+            </div>
+          </li>
+          <li>
+            <p class="home--paragraph">
+              "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            </p>
+            <div class="home--quotes--author">
+              <span>Larry</span> // <span>Company B</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -349,7 +379,9 @@
     </div>
 
     <div class="home--action orange">
-      <a href="#" class="home--pricing-action">View our pricing information, and start learning Drupal today!</a>
+      <a href="#" class="home--pricing-action">
+        <span class="home--action--arrow right">View our pricing information, and start learning Drupal today!</span>
+      </a>
     </div>
 
     <div class="footer">
@@ -357,8 +389,11 @@
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.effect.min.js"></script>
+    <script type="text/javascript" src="js/responsiveslides.min.js"></script>
     <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/tick.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
