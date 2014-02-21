@@ -533,6 +533,59 @@ input, textarea {
   background: url('../images/globe.png') no-repeat center bottom #e7e7e8;
 }
 
+.home--world--logos {
+  overflow: hidden;
+  padding: 2em 0 10em;
+  line-height: 149px;
+}
+
+.home--world--logo {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  width: 140px;
+  height: 149px;
+  margin: 0 2em;
+  vertical-align: middle;
+
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+
+ @include transition(all 0.5s);
+
+  &:hover {
+   -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   -o-filter: none;
+   filter: none;
+   filter: none;
+   filter: none;
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    @include transition(all 0.5s);
+  }
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
 .home--quotes {
   .home--paragraph {
     margin-bottom: 1em;

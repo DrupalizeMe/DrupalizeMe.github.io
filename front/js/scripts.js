@@ -70,6 +70,26 @@ $(function() {
     }
   });
 
+  // The list of all of our client logos.
+  var clients = ['fossil', 'ge', 'maxim', 'nasa', 'nbc', 'npr', 'nvidia', 'redhat', 'smithsonian', 'sonypictures', 'ds', 'ebay', 'hhs', 'ky', 'marthastewart'];
+
+  // Helper function to randomnly animate a client logo.
+  function randomizeClients(replace) {
+    var random = Math.floor(Math.random() * (clients.length - 1));
+    var index = replace != null ? replace : Math.floor(Math.random() * 5);
+
+    if ($('.home--world--logo a.' + clients[random]).length > 0) {
+      randomizeClients(replace);
+    }
+    else {
+      $('.home--world--logo').eq(index).find('a').css('background-image', "url('images/client-" + clients[random] + ".png')").removeClass().addClass(clients[random]);
+
+      if (replace == null) {
+        setTimeout(randomizeClients, 3000);
+      }
+    }
+  }
+
   // Sets the interval duration between each call of our animate function.
   // This is in milliseconds. The higher this is, the slower the animations.
   var tick = 20;
@@ -171,5 +191,13 @@ $(function() {
   // Calls our animation function at every tick interval.
   $(window).load(function() {
     animate();
+
+    // Upon page load, randomnly load the initial 5 client logos.
+    for (i=0;i<=4;i++) {
+      randomizeClients(i);
+    }
+
+    // Change a logo every 3 seconds.
+    setTimeout(randomizeClients, 3000);
   });
 });
