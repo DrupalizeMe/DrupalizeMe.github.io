@@ -1,4 +1,20 @@
 $(function() {
+
+  // Plugin to animate an elements background position regardless of browser.
+  jQuery.fn.extend({
+    animateApp: function() {
+      $(this).animate({
+        'border-spacing': 0
+      }, {
+        step: function(now, fx) {
+          $(this).css('background-position', '0 ' + now + 'px');
+        },
+        duration: 750,
+        easing: 'easeOutBounce'
+      });
+    }
+  });
+
   // Initialize the video watched ticket.
   $('.tick').ticker({
     delay: 1000,
@@ -41,21 +57,14 @@ $(function() {
 
       if ((devicesBottom <= docViewBottom) && (devicesTop >= docViewTop)) {
         $('.home--apps--devices').addClass('scroll-processed');
-
-        $('.home--apps--tablet').animate({
-          backgroundPositionY: '0',
-        }, 750, 'easeOutBounce');
+        $('.home--apps--tablet').animateApp();
 
         setTimeout(function() {
-          $('.home--apps--desktop').animate({
-            backgroundPositionY: '0',
-          }, 1000, 'easeOutBounce');
+          $('.home--apps--desktop').animateApp();
         }, 250);
 
         setTimeout(function() {
-          $('.home--apps--mobile').animate({
-            backgroundPositionY: '0',
-          }, 600, 'easeOutBounce');
+          $('.home--apps--mobile').animateApp();
         }, 600);
       }
     }

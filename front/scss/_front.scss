@@ -785,6 +785,7 @@ input, textarea {
 
   .home--apps--tablet {
     background: url('../images/apps-tablet.png') no-repeat 0 152px $white;
+    border-spacing: 152px;
     position: absolute;
     bottom: 33px;
     left: 16px;
@@ -795,6 +796,7 @@ input, textarea {
 
   .home--apps--desktop {
     background: url('../images/apps-desktop.png') no-repeat 0 191px $white;
+    border-spacing: 191px;
     position: absolute;
     top: 17px;
     left: 78px;
@@ -805,6 +807,7 @@ input, textarea {
 
   .home--apps--mobile {
     background: url('../images/apps-mobile.png') no-repeat 0 55px $white;
+    border-spacing: 55px;
     position: absolute;
     bottom: 16px;
     right: 22px;
