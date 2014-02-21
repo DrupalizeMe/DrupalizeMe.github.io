@@ -1517,6 +1517,7 @@ input, textarea {
   padding: .75em 2em;
   text-align: center;
   white-space: nowrap;
+  vertical-align: top;
 }
 /* line 123, ../scss/_mixins.scss */
 .home--newsletter--submit:hover, .home--newsletter--submit:focus {
@@ -1526,7 +1527,7 @@ input, textarea {
 }
 
 /*! http://responsiveslides.com v1.54 by @viljamis */
-/* line 581, ../scss/_front.scss */
+/* line 582, ../scss/_front.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1535,7 +1536,7 @@ input, textarea {
   padding: 0;
   margin: 0;
 }
-/* line 589, ../scss/_front.scss */
+/* line 590, ../scss/_front.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1544,13 +1545,13 @@ input, textarea {
   left: 0;
   top: 0;
 }
-/* line 597, ../scss/_front.scss */
+/* line 598, ../scss/_front.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
-/* line 604, ../scss/_front.scss */
+/* line 605, ../scss/_front.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1559,13 +1560,13 @@ input, textarea {
   border: 0;
 }
 
-/* line 613, ../scss/_front.scss */
+/* line 614, ../scss/_front.scss */
 .rslides_tabs {
   margin: 2em 0 0;
   text-align: center;
   padding: 0;
 }
-/* line 618, ../scss/_front.scss */
+/* line 619, ../scss/_front.scss */
 .rslides_tabs li {
   display: inline;
   float: none;
@@ -1573,7 +1574,7 @@ input, textarea {
   *float: left;
   margin-right: 5px;
 }
-/* line 626, ../scss/_front.scss */
+/* line 627, ../scss/_front.scss */
 .rslides_tabs a {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1594,24 +1595,24 @@ input, textarea {
   height: 9px;
 }
 
-/* line 641, ../scss/_front.scss */
+/* line 642, ../scss/_front.scss */
 .rslides_here a {
   background: #222;
   background: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (min-width: 46em) {
-  /* line 647, ../scss/_front.scss */
+  /* line 648, ../scss/_front.scss */
   .hide-mobile {
     display: block;
   }
 
-  /* line 651, ../scss/_front.scss */
+  /* line 652, ../scss/_front.scss */
   .show-mobile {
     display: none;
   }
 
-  /* line 661, ../scss/_front.scss */
+  /* line 662, ../scss/_front.scss */
   .home--hero--header,
   .home--library,
   .home--why,
@@ -1622,7 +1623,7 @@ input, textarea {
     padding: 5em 0;
   }
 
-  /* line 665, ../scss/_front.scss */
+  /* line 666, ../scss/_front.scss */
   .home--bar {
     height: 3px;
     background: #137cc1;
@@ -1632,60 +1633,60 @@ input, textarea {
     margin: 0 1em;
   }
 
-  /* line 674, ../scss/_front.scss */
+  /* line 675, ../scss/_front.scss */
   .home--library--video {
     margin: 15px 20px 15px 0;
   }
-  /* line 677, ../scss/_front.scss */
+  /* line 678, ../scss/_front.scss */
   .home--library--video:last-child {
     margin-right: 0;
   }
 
-  /* line 682, ../scss/_front.scss */
+  /* line 683, ../scss/_front.scss */
   .tick-scroll {
     height: 80px;
     font-size: 3em;
   }
-  /* line 686, ../scss/_front.scss */
+  /* line 687, ../scss/_front.scss */
   .tick-scroll .tick-separator {
     margin-left: -23px;
     font-size: 1.5em;
   }
-  /* line 691, ../scss/_front.scss */
+  /* line 692, ../scss/_front.scss */
   .tick-scroll .tick-wheel {
     width: 50px;
     margin: 0 8px;
   }
-  /* line 696, ../scss/_front.scss */
+  /* line 697, ../scss/_front.scss */
   .tick-scroll .tick-wheel:first-child, .tick-scroll .tick-wheel:nth-child(5) {
     margin-right: 40px;
   }
-  /* line 700, ../scss/_front.scss */
+  /* line 701, ../scss/_front.scss */
   .tick-scroll .tick-wheel span {
     padding: 16px 0;
   }
 
-  /* line 706, ../scss/_front.scss */
+  /* line 707, ../scss/_front.scss */
   .home--why--block {
     margin-right: 10px;
   }
-  /* line 709, ../scss/_front.scss */
+  /* line 710, ../scss/_front.scss */
   .home--why--block:last-child {
     margin: 0;
   }
 
-  /* line 715, ../scss/_front.scss */
+  /* line 716, ../scss/_front.scss */
   .home--quotes .home--paragraph {
     padding: 0 8em;
     margin-bottom: 1em;
   }
 
-  /* line 721, ../scss/_front.scss */
+  /* line 722, ../scss/_front.scss */
   .home--apps {
     padding-bottom: 0;
   }
 
-  /* line 725, ../scss/_front.scss */
+  /* line 726, ../scss/_front.scss */
   .home--apps--sun {
     position: absolute;
     background: url("../images/apps-sun.png") no-repeat center transparent;
@@ -1696,7 +1697,7 @@ input, textarea {
     z-index: 1;
   }
 
-  /* line 735, ../scss/_front.scss */
+  /* line 736, ../scss/_front.scss */
   .home--apps--clouds {
     background: url("../images/apps-clouds.png") repeat-x transparent;
     position: absolute;
@@ -1707,7 +1708,7 @@ input, textarea {
     z-index: 2;
   }
 
-  /* line 745, ../scss/_front.scss */
+  /* line 746, ../scss/_front.scss */
   .home--apps--bg {
     background: url("../images/apps-bg.png") no-repeat center center transparent;
     position: absolute;
@@ -1718,21 +1719,21 @@ input, textarea {
     z-index: 3;
   }
 
-  /* line 755, ../scss/_front.scss */
+  /* line 756, ../scss/_front.scss */
   .home--apps--floor {
     background: #dcddde;
     width: 100%;
     height: 10em;
   }
 
-  /* line 761, ../scss/_front.scss */
+  /* line 762, ../scss/_front.scss */
   .home--apps--scene {
     margin-top: 4em;
     height: 270px;
     position: relative;
   }
 
-  /* line 767, ../scss/_front.scss */
+  /* line 768, ../scss/_front.scss */
   .home--apps--wrapper {
     position: relative;
     width: 531px;
@@ -1741,7 +1742,7 @@ input, textarea {
     z-index: 3;
   }
 
-  /* line 775, ../scss/_front.scss */
+  /* line 776, ../scss/_front.scss */
   .home--apps--devices {
     background: url("../images/apps-devices.png") no-repeat;
     position: absolute;
@@ -1752,7 +1753,7 @@ input, textarea {
     z-index: 7;
   }
 
-  /* line 785, ../scss/_front.scss */
+  /* line 786, ../scss/_front.scss */
   .home--apps--tablet {
     background: url("../images/apps-tablet.png") no-repeat 0 152px white;
     position: absolute;
@@ -1763,7 +1764,7 @@ input, textarea {
     z-index: 6;
   }
 
-  /* line 795, ../scss/_front.scss */
+  /* line 796, ../scss/_front.scss */
   .home--apps--desktop {
     background: url("../images/apps-desktop.png") no-repeat 0 191px white;
     position: absolute;
@@ -1774,7 +1775,7 @@ input, textarea {
     z-index: 5;
   }
 
-  /* line 805, ../scss/_front.scss */
+  /* line 806, ../scss/_front.scss */
   .home--apps--mobile {
     background: url("../images/apps-mobile.png") no-repeat 0 55px white;
     position: absolute;
@@ -1786,22 +1787,22 @@ input, textarea {
   }
 }
 @media screen and (min-width: 1030px) {
-  /* line 818, ../scss/_front.scss */
+  /* line 819, ../scss/_front.scss */
   .home--hero {
     text-align: left;
   }
 
-  /* line 822, ../scss/_front.scss */
+  /* line 823, ../scss/_front.scss */
   .home--hero--white-stripe {
     display: block;
     padding: 2.75em 0;
   }
-  /* line 826, ../scss/_front.scss */
+  /* line 827, ../scss/_front.scss */
   .home--hero--white-stripe h4 {
     font-size: 1.2em;
     margin-bottom: 0;
   }
-  /* line 831, ../scss/_front.scss */
+  /* line 832, ../scss/_front.scss */
   .home--hero--white-stripe p {
     width: 19em;
     font-size: 1.1em;
@@ -1809,7 +1810,7 @@ input, textarea {
     margin-top: 0.25em;
   }
 
-  /* line 839, ../scss/_front.scss */
+  /* line 840, ../scss/_front.scss */
   .home--hero--video {
     position: absolute;
     left: 350px;
@@ -1817,41 +1818,41 @@ input, textarea {
     margin: 0;
   }
 
-  /* line 846, ../scss/_front.scss */
+  /* line 847, ../scss/_front.scss */
   .home--action.home--action--hero {
     padding: 1.5em 0;
     margin: 0;
     height: auto;
   }
-  /* line 851, ../scss/_front.scss */
+  /* line 852, ../scss/_front.scss */
   .home--action.home--action--hero span {
     display: inline;
   }
 }
 @media screen and (max-width: 1080px) {
-  /* line 859, ../scss/_front.scss */
+  /* line 860, ../scss/_front.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 864, ../scss/_front.scss */
+  /* line 865, ../scss/_front.scss */
   .content,
   .sidebar {
     width: 100%;
   }
 
-  /* line 868, ../scss/_front.scss */
+  /* line 869, ../scss/_front.scss */
   .header {
     padding: 0 1em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
-  /* line 874, ../scss/_front.scss */
+  /* line 875, ../scss/_front.scss */
   .header ul,
   .header #search {
     display: none;
   }
-  /* line 878, ../scss/_front.scss */
+  /* line 879, ../scss/_front.scss */
   .header .responsive-nav {
     display: block;
     float: right;
