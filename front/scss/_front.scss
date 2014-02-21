@@ -530,7 +530,7 @@ input, textarea {
 }
 
 .home--world {
-  background: #e7e7e8;
+  background: url('../images/globe.png') no-repeat center bottom #e7e7e8;
 }
 
 .home--quotes {
@@ -787,8 +787,8 @@ input, textarea {
     position: absolute;
     bottom: 33px;
     left: 16px;
-    width: 117px;
-    height: 152px;
+    width: 118px;
+    height: 154px;
     z-index: 6;
   }
 
@@ -797,8 +797,8 @@ input, textarea {
     position: absolute;
     top: 17px;
     left: 78px;
-    width: 351px;
-    height: 191px;
+    width: 353px;
+    height: 193px;
     z-index: 5;
   }
 
@@ -807,8 +807,8 @@ input, textarea {
     position: absolute;
     bottom: 16px;
     right: 22px;
-    width: 96px;
-    height: 55px;
+    width: 98px;
+    height: 56px;
     z-index: 4;
   }
 }
@@ -821,7 +821,7 @@ input, textarea {
 
   .home--hero--white-stripe {
     display: block;
-    padding: 3em 0;
+    padding: 2.75em 0;
 
     h4 {
       font-size: 1.2em;

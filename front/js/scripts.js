@@ -32,11 +32,10 @@ $(function() {
 
   // When the app devices element scrolls entirely into view, scroll up the
   // individual device images.
-  var devicesTop = $('.home--apps--devices').offset().top;
-  var devicesBottom = devicesTop + $('.home--apps--devices').height();
-
   $(window).scroll(function() {
     if ($('.home--apps--devices.scroll-processed').length === 0) {
+      var devicesTop = $('.home--apps--devices').offset().top;
+      var devicesBottom = devicesTop + $('.home--apps--devices').height();
       var docViewTop = $(window).scrollTop();
       var docViewBottom = docViewTop + $(window).height();
 
