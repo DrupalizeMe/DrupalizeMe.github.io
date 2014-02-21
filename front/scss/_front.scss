@@ -575,6 +575,7 @@ input, textarea {
 
 .home--newsletter--submit {
   @include button;
+  vertical-align: top;
 }
 
 /*! http://responsiveslides.com v1.54 by @viljamis */
