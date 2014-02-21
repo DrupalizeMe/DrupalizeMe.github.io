@@ -177,7 +177,7 @@ input, textarea {
     background: $logo-blue;
 
     &:hover {
-      background: rgba($logo-blue, 0.95);
+      background: rgba($logo-blue, 0.9);
     }
   }
 
@@ -185,7 +185,7 @@ input, textarea {
     background: $green;
 
     &:hover {
-      background: rgba($green, 0.95);
+      background: rgba($green, 0.9);
     }
   }
 
@@ -193,12 +193,22 @@ input, textarea {
     background: $orange;
 
     &:hover {
-      background: rgba($orange, 0.95);
+      background: rgba($orange, 0.9);
     }
   }
 
   &.home--action--hero {
-    display: none;
+    background: #0062a3;
+    margin-top: -12em;
+    height: 12em;
+
+    &:hover {
+      background: #0062a3;
+    }
+
+    span {
+      display: none;
+    }
   }
 
   a, span {
@@ -274,6 +284,8 @@ input, textarea {
 .home--library--tabs {
   @include box-shadow(#08354d 0 4px 0);
   display: inline-block;
+  position: relative;
+  z-index: 10;
 }
 
 .home--library--tab {
@@ -371,6 +383,7 @@ input, textarea {
 }
 
 .home--library--play {
+  @include border-radius(5px);
   background: url('../images/arrow-right.png') no-repeat 3.5em center #003b58;
   width: 3.5em;
   text-align: left;
@@ -831,11 +844,12 @@ input, textarea {
   }
 
   .home--action.home--action--hero {
-    display: block;
     padding: 1.5em 0;
+    margin: 0;
+    height: auto;
 
-    &:hover {
-      background: $logo-blue;
+    span {
+      display: inline;
     }
   }
 }
