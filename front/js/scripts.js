@@ -1,5 +1,19 @@
 $(function() {
 
+  // Helper function to preload a given array of images.
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+      $('<img/>')[0].src = this;
+    });
+  }
+
+  // Preload the JWPlayer dock icon image states.
+  preload([
+    "images/expert-hover.png",
+    "images/learning-hover.png",
+    "images/lullabot-hover.png",
+  ]);
+
   // Plugin to animate an elements background position regardless of browser.
   jQuery.fn.extend({
     animateApp: function() {
