@@ -76,7 +76,7 @@ input, textarea {
 }
 
 .home--heading {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0 0 0.25em;
 }
 
@@ -295,7 +295,7 @@ input, textarea {
   display: inline-block;
   font-weight: bold;
   padding: 0.25em 0;
-  width: 9em;
+  width: 7em;
   text-align: center;
   white-space: nowrap;
   color: $text;
@@ -330,11 +330,11 @@ input, textarea {
 
 .home--library--video {
   @include box-shadow(#08354d 0 4px 0);
-  width: 330px;
-  height: 224px;
+  width: 280px;
+  height: 190px;
   position: relative;
   display: inline-block;
-  margin: 10px;
+  margin: 10px 0;
 
   img {
     position: absolute;
@@ -477,9 +477,10 @@ input, textarea {
   background: $white;
   border: 5px solid $light-background;
   @include border-radius(5px);
-  width: 324px;
+  width: 270px;
   margin-bottom: 15px;
   display: inline-block;
+  vertical-align: top;
 }
 
 .home--why--image {
@@ -696,7 +697,11 @@ input, textarea {
   background: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (min-width: 46em) {
+@media screen and (min-width: 48em) {
+  .home--heading {
+    font-size: 3em;
+  }
+
   .hide-mobile {
     display: block;
   }
@@ -715,6 +720,10 @@ input, textarea {
     padding: 5em 0;
   }
 
+  .home--library--tab {
+    width: 9em;
+  }
+
   .home--bar {
     height: 3px;
     background: $logo-blue;
@@ -726,6 +735,8 @@ input, textarea {
 
   .home--library--video {
     margin: 15px 20px 15px 0;
+    width: 330px;
+    height: 224px;
 
     &:last-child {
       margin-right: 0;
@@ -758,6 +769,7 @@ input, textarea {
 
   .home--why--block {
     margin-right: 10px;
+    width: 324px;
 
     &:last-child {
       margin: 0;

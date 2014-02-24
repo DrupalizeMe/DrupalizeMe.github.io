@@ -112,8 +112,7 @@ $(function() {
   // Set our default animation values.
   var vidIconCount = 1;
   var vidIconTickCount = 0;
-  var bgTIckCount = 0;
-  var headerY = 0;
+  var bgTickCount = 0;
   var cloudsX = 0;
 
   function createVidIcon() {
@@ -143,23 +142,21 @@ $(function() {
   function animate() {
     // Increment tick counters.
     vidIconTickCount++;
-    bgTIckCount++;
+    bgTickCount++;
 
-    if (bgTIckCount == bgAnimateTicks) {
+    // Determine if we should animate background clouds.
+    if (bgTickCount == bgAnimateTicks) {
       // Reset tick counter.
-      bgTIckCount = 0;
+      bgTickCount = 0;
 
-      // Decrement scrolling animation position values.
-      headerY++;
+      // Decrement scrolling cloud animation position value.
       cloudsX--;
-
-      // Vertically move the header background to simulate scrolling.
-      $('div.home--hero--header').css("background-position", '0 ' + headerY + 'px');
 
       // Horizontally move the clouds to simulate scrolling.
       $('div.home--apps--clouds').css('background-position', cloudsX + 'px 0');
     }
 
+    // Determine whether a new video icon should be spawned.
     if (vidIconTickCount == vidIconSpawnTicks) {
       // Reset tick counter.
       vidIconTickCount = 0;
@@ -185,6 +182,7 @@ $(function() {
       }
     });
 
+    // This provides better performance than using setInterval().
     setTimeout(animate, tick);
   }
 
