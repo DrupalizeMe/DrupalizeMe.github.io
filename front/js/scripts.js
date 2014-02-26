@@ -167,7 +167,7 @@ $(function() {
       cloudsX--;
 
       // Horizontally move the clouds to simulate scrolling.
-      $('div.home--apps--clouds').css('background-position', cloudsX + 'px 0');
+      $('.home--apps--clouds').css('background-position', cloudsX + 'px 0');
     }
 
     // Determine whether a new video icon should be spawned.
