@@ -830,7 +830,7 @@ blockquote {
 
 /* line 218, icon2x/*.png */
 .icon2x-sprite {
-  background: url('../images/icon2x-s68f563c170.png') no-repeat;
+  background: url('../images/icon2x-sa7c58a7980.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -949,128 +949,128 @@ blockquote {
 }
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  /* line 25, ../scss/style.scss */
-  .icon-all-retina-sprites, .icon-check-big, .icon-check, .icon-description-blue, .icon-description-orange, .icon-description-white, .icon-download-blue, .icon-download-orange, .icon-facebook, .icon-google, .icon-play, .icon-queue-cross-grey, .icon-queue-cross-red, .icon-queue-plus-green, .icon-queue-plus-grey, .icon-quiz-blue, .icon-quiz-orange, .icon-quiz-white, .icon-share-blue, .icon-share-grey, .icon-star-blue, .icon-star-orange, .icon-star-white, .icon-twitter {
-    background-image: url('../images/icon2x-s68f563c170.png');
-    -webkit-background-size: 27px auto;
-    -moz-background-size: 27px auto;
-    -o-background-size: 27px auto;
-    background-size: 27px auto;
+  /* line 24, ../scss/style.scss */
+  .icon-all-retina-sprites, .icon-check-big, .icon-check, .icon-description-blue, .icon-description-orange, .icon-description-white, .icon-download-blue, .icon-download-orange, .icon-facebook, .icon-google, .icon-play, .icon-queue-cross-grey, .icon-queue-cross-red, .icon-queue-plus-green, .icon-queue-plus-grey, .icon-quiz-blue, .icon-quiz-orange, .icon-quiz-white, .icon-share-blue, .icon-share-grey, .icon-star-blue, .icon-star-orange, .icon-star-white, .icon-twitter, .playlist-content ul li a.active .count, #page-title .watched, .share-link .icon, .share-link:hover .icon, .queue-link .icon, .queue-link:hover .icon, .queue-link.active .icon, .queue-link.active:hover .icon, .resources li a, .resources li a:hover {
+    background-image: url('../images/icon2x-sa7c58a7980.png');
+    -webkit-background-size: 32px auto;
+    -moz-background-size: 32px auto;
+    -o-background-size: 32px auto;
+    background-size: 32px auto;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-check-big {
     background-position: 0 0;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-check {
-    background-position: 0 -152px;
-  }
-
-  /* line 31, ../scss/style.scss */
-  .icon-description-blue {
-    background-position: 0 -364px;
-  }
-
-  /* line 31, ../scss/style.scss */
-  .icon-description-orange {
-    background-position: 0 -384px;
-  }
-
-  /* line 31, ../scss/style.scss */
-  .icon-description-white {
-    background-position: 0 -404px;
-  }
-
-  /* line 31, ../scss/style.scss */
-  .icon-download-blue {
     background-position: 0 -200px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
+  .icon-description-blue {
+    background-position: 0 -412px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .icon-description-orange {
+    background-position: 0 -432px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .icon-description-white {
+    background-position: 0 -452px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .icon-download-blue {
+    background-position: 0 -248px;
+  }
+
+  /* line 30, ../scss/style.scss */
   .icon-download-orange {
-    background-position: 0 -222px;
+    background-position: 0 -270px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-facebook {
-    background-position: 0 -348px;
+    background-position: 0 -380px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-google {
     background-position: 0 -24px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-play {
-    background-position: 0 -244px;
+    background-position: 0 -292px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-queue-cross-grey {
-    background-position: 0 -96px;
+    background-position: 0 -144px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-queue-cross-red {
-    background-position: 0 -80px;
+    background-position: 0 -128px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-queue-plus-green {
-    background-position: 0 -184px;
+    background-position: 0 -232px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-queue-plus-grey {
-    background-position: 0 -168px;
+    background-position: 0 -216px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-quiz-blue {
-    background-position: 0 -112px;
+    background-position: 0 -160px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-quiz-orange {
-    background-position: 0 -132px;
+    background-position: 0 -180px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-quiz-white {
-    background-position: 0 -260px;
+    background-position: 0 -308px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-share-blue {
-    background-position: 0 -316px;
+    background-position: 0 -348px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-share-grey {
-    background-position: 0 -332px;
+    background-position: 0 -364px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-star-blue {
-    background-position: 0 -40px;
+    background-position: 0 -88px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-star-orange {
-    background-position: 0 -60px;
+    background-position: 0 -108px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-star-white {
-    background-position: 0 -280px;
+    background-position: 0 -328px;
   }
 
-  /* line 31, ../scss/style.scss */
+  /* line 30, ../scss/style.scss */
   .icon-twitter {
-    background-position: 0 -300px;
+    background-position: 0 -56px;
   }
 }
 /* line 1, ../scss/_videos.scss */
@@ -1424,6 +1424,12 @@ input, textarea {
   text-align: left;
   background-position: 0 -292px;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 258, ../scss/_videos.scss */
+  .playlist-content ul li a.active .count {
+    background-position: 0 -292px;
+  }
+}
 /* line 267, ../scss/_videos.scss */
 .playlist-content ul li a.active .duration {
   color: white;
@@ -1575,6 +1581,12 @@ input, textarea {
   vertical-align: middle;
   margin-left: 0.25em;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 423, ../scss/_videos.scss */
+  #page-title .watched {
+    background-position: 0 0;
+  }
+}
 
 /* line 434, ../scss/_videos.scss */
 .meta--wrapper {
@@ -1625,9 +1637,21 @@ input, textarea {
 .share-link .icon {
   background-position: 0 -344px;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 479, ../scss/_videos.scss */
+  .share-link .icon {
+    background-position: 0 -364px;
+  }
+}
 /* line 484, ../scss/_videos.scss */
 .share-link:hover .icon {
   background-position: 0 -328px;
+}
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 484, ../scss/_videos.scss */
+  .share-link:hover .icon {
+    background-position: 0 -348px;
+  }
 }
 
 /* line 490, ../scss/_videos.scss */
@@ -1638,17 +1662,41 @@ input, textarea {
 .queue-link .icon {
   background-position: 0 -184px;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 493, ../scss/_videos.scss */
+  .queue-link .icon {
+    background-position: 0 -216px;
+  }
+}
 /* line 498, ../scss/_videos.scss */
 .queue-link:hover .icon {
   background-position: 0 -216px;
+}
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 498, ../scss/_videos.scss */
+  .queue-link:hover .icon {
+    background-position: 0 -232px;
+  }
 }
 /* line 504, ../scss/_videos.scss */
 .queue-link.active .icon {
   background-position: 0 -200px;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 504, ../scss/_videos.scss */
+  .queue-link.active .icon {
+    background-position: 0 -144px;
+  }
+}
 /* line 509, ../scss/_videos.scss */
 .queue-link.active:hover .icon {
   background-position: 0 -128px;
+}
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 509, ../scss/_videos.scss */
+  .queue-link.active:hover .icon {
+    background-position: 0 -128px;
+  }
 }
 
 /* line 516, ../scss/_videos.scss */
@@ -1858,9 +1906,21 @@ textarea {
   margin-bottom: 0.5em;
   background-position: 0 -248px;
 }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 694, ../scss/_videos.scss */
+  .resources li a {
+    background-position: 0 -248px;
+  }
+}
 /* line 702, ../scss/_videos.scss */
 .resources li a:hover {
   background-position: 0 -270px;
+}
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 702, ../scss/_videos.scss */
+  .resources li a:hover {
+    background-position: 0 -270px;
+  }
 }
 
 /* line 709, ../scss/_videos.scss */
@@ -2037,7 +2097,7 @@ textarea {
 
   /* line 842, ../scss/_videos.scss */
   .js-tabs {
-    padding: 1em 0 0 1em;
+    padding: 1em 0 0 0.5em;
     margin: 0;
     background: whitesmoke;
     border-bottom: 1px solid #e6e6e6;
@@ -2050,7 +2110,7 @@ textarea {
     border: 1px solid #e6e6e6;
     border-bottom: 0;
     border-radius: 5px 5px 0 0;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.75em;
     margin-right: 0.5em;
   }
   /* line 859, ../scss/_videos.scss */

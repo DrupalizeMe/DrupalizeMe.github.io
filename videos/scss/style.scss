@@ -11,7 +11,6 @@
 @import "icon/*.png";
 @import "icon2x/*.png";
 @include all-icon-sprites;
-// @include all-icon2x-sprites;
 
 @mixin all-retina-sprites($map, $map2x) {
   @media (min--moz-device-pixel-ratio: 1.5),
@@ -40,5 +39,21 @@
 }
 
 @include all-retina-sprites($icon-sprites, $icon2x-sprites);
+
+@mixin icon-retina($sprite) {
+  @include icon-sprite($sprite);
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-o-min-device-pixel-ratio: 3/2),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx) {
+      $base-class: sprite-map-name($icon-sprites);
+
+      @extend .#{$base-class}-all-retina-sprites;
+      $position: sprite-position($icon2x-sprites, $sprite);
+      background-position: nth($position, 1) nth($position, 2) / 2;
+  }
+}
 
 @import "videos";

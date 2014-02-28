@@ -261,7 +261,7 @@ input, textarea {
             height: 16px;
             top: 1.25em;
             text-align: left;
-            @include icon-sprite(play);
+            @include icon-retina(play);
           }
 
           .duration {
@@ -421,7 +421,7 @@ input, textarea {
   margin-top: 1em;
 
   .watched {
-    @include icon-sprite(check-big);
+    @include icon-retina(check-big);
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -477,12 +477,12 @@ input, textarea {
 
 .share-link {
   .icon {
-    @include icon-sprite(share-grey);
+    @include icon-retina(share-grey);
   }
 
   &:hover {
     .icon {
-      @include icon-sprite(share-blue);
+      @include icon-retina(share-blue);
     }
   }
 }
@@ -491,23 +491,23 @@ input, textarea {
   margin-right: 1em;
 
   .icon {
-    @include icon-sprite(queue-plus-grey);
+    @include icon-retina(queue-plus-grey);
   }
 
   &:hover {
     .icon {
-      @include icon-sprite(queue-plus-green);
+      @include icon-retina(queue-plus-green);
     }
   }
 
   &.active {
     .icon {
-      @include icon-sprite(queue-cross-grey);
+      @include icon-retina(queue-cross-grey);
     }
 
     &:hover {
       .icon {
-        @include icon-sprite(queue-cross-red);
+        @include icon-retina(queue-cross-red);
       }
     }
   }
@@ -697,10 +697,10 @@ textarea {
       display: block;
       line-height: 22px;
       margin-bottom: 0.5em;
-      @include icon-sprite(download-blue);
+      @include icon-retina(download-blue);
 
       &:hover {
-        @include icon-sprite(download-orange);
+        @include icon-retina(download-orange);
       }
     }
   }
@@ -840,7 +840,7 @@ textarea {
   }
 
   .js-tabs {
-    padding: 1em 0 0 1em;
+    padding: 1em 0 0 0.5em;
     margin: 0;
     background: $light-background;
     border-bottom: 1px solid $light-border;
@@ -853,7 +853,7 @@ textarea {
         border: 1px solid $light-border;
         border-bottom: 0;
         border-radius: 5px 5px 0 0;
-        padding: 0.5em 1em;
+        padding: 0.5em 0.75em;
         margin-right: 0.5em;
 
         &.active {
