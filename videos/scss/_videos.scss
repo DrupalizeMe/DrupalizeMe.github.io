@@ -105,6 +105,11 @@ input, textarea {
       button {
         height: 32px;
         margin-bottom: 8px;
+
+        div {
+          background-size: 20px 20px;
+          background-position: center center;
+        }
       }
 
       .capLeft,
@@ -371,7 +376,7 @@ input, textarea {
 
 .reviews {
   span {
-    @include icon-retina(reviews-blue);
+    @include icon-retina(reviews-white);
   }
 
   &:hover {
@@ -379,16 +384,28 @@ input, textarea {
       @include icon-retina(reviews-orange);
     }
   }
+
+  &.active {
+    span {
+      @include icon-retina(reviews-blue);
+    }
+  }
 }
 
 .quiz-tab {
   span {
-    @include icon-retina(quiz-blue);
+    @include icon-retina(quiz-white);
   }
 
   &:hover {
     span {
       @include icon-retina(quiz-orange);
+    }
+  }
+
+  &.active {
+    span {
+      @include icon-retina(quiz-blue);
     }
   }
 }
