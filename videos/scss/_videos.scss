@@ -353,54 +353,42 @@ input, textarea {
 
 .description {
   span {
-    @include icon-sprite(description-white);
+    @include icon-retina(description-white);
   }
 
   &:hover {
     span {
-      @include icon-sprite(description-orange);
+      @include icon-retina(description-orange);
     }
   }
 
   &.active {
     span {
-      @include icon-sprite(description-blue);
+      @include icon-retina(description-blue);
     }
   }
 }
 
 .reviews {
   span {
-    @include icon-sprite(star-white);
+    @include icon-retina(reviews-blue);
   }
 
   &:hover {
     span {
-      @include icon-sprite(star-orange);
-    }
-  }
-
-  &.active {
-    span {
-      @include icon-sprite(star-blue);
+      @include icon-retina(reviews-orange);
     }
   }
 }
 
 .quiz-tab {
   span {
-    @include icon-sprite(quiz-white);
+    @include icon-retina(quiz-blue);
   }
 
   &:hover {
     span {
-      @include icon-sprite(quiz-orange);
-    }
-  }
-
-  &.active {
-    span {
-      @include icon-sprite(quiz-blue);
+      @include icon-retina(quiz-orange);
     }
   }
 }
@@ -859,25 +847,11 @@ textarea {
         &.active {
           border-top: 1px solid $light-border;
         }
+
+        span {
+          display: none;
+        }
       }
-    }
-  }
-
-  .description {
-    span {
-      @include icon-sprite-position(description-blue);
-    }
-  }
-
-  .reviews {
-    span {
-      @include icon-sprite-position(star-blue);
-    }
-  }
-
-  .quiz-tab {
-    span {
-      @include icon-sprite-position(quiz-blue);
     }
   }
 
@@ -903,11 +877,5 @@ textarea {
   .sidebar {
     border-left: 0;
     border-top: 1px solid $light-border;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .js-tabs li a span {
-    display: none;
   }
 }
