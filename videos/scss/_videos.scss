@@ -1,3 +1,35 @@
+@mixin hero-stacked {
+  .hero-sidebar,
+  .playlist-header,
+  .transcript {
+    width: 100%;
+  }
+
+  .video-player {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    font-size: 0;
+  }
+
+  .playlist-header {
+    display: block;
+    vertical-align: middle;
+    height: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .playlist-content {
+    border-bottom: 1px solid $light-border;
+  }
+}
+
+@include hero-stacked;
+
 input, textarea {
   font-family: $sans-serif;
   font-size: 0.875em;
@@ -778,6 +810,10 @@ textarea {
   .footer {
     border-top: 1px solid $light-border;
   }
+}
+
+@media screen and (min-width: 1080px) {
+
 }
 
 // Quick and dirty desktop-first responsive design, just for this prototype ;)
