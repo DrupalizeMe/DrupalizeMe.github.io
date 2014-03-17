@@ -828,6 +828,11 @@ blockquote {
   background: url('../images/team-sef5d6a67bb.png') no-repeat;
 }
 
+/* line 106, team2x/*.png */
+.team2x-sprite {
+  background: url('../images/team2x-s9698bb5208.png') no-repeat;
+}
+
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .team-accordian {
   background-position: 0 -1211px;
@@ -873,6 +878,61 @@ blockquote {
   background-position: 0 -1110px;
 }
 
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  /* line 24, ../scss/style.scss */
+  .team-all-retina-sprites, .team-accordian, .team-arrow, .team-beer, .team-bees, .team-books, .team-plane, .team-shoe, .team-skuba, .team-snowboard {
+    background-image: url('../images/team2x-s9698bb5208.png');
+    -webkit-background-size: 519px auto;
+    -moz-background-size: 519px auto;
+    -o-background-size: 519px auto;
+    background-size: 519px auto;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-accordian {
+    background-position: 0 -1459px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-arrow {
+    background-position: 0 -1652px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-beer {
+    background-position: 0 -1197px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-bees {
+    background-position: 0 -896px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-books {
+    background-position: 0 -592px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-plane {
+    background-position: 0 0;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-shoe {
+    background-position: 0 -1411px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-skuba {
+    background-position: 0 -258px;
+  }
+
+  /* line 30, ../scss/style.scss */
+  .team-snowboard {
+    background-position: 0 -1096px;
+  }
+}
 /* line 1, ../scss/_about.scss */
 input, textarea {
   font-family: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;

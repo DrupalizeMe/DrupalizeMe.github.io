@@ -5,8 +5,55 @@
 @import "typography";
 
 @import "compass/utilities/sprites";
-@import "team/*.png";
-@include all-team-sprites;
 @import "compass/css3/images";
+@import "compass/css3/background-size";
+
+@import "team/*.png";
+@import "team2x/*.png";
+@include all-team-sprites;
+
+@mixin all-retina-sprites($map, $map2x) {
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-o-min-device-pixel-ratio: 3/2),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx) {
+
+    $base-class: sprite-map-name($map);
+
+    .#{$base-class}-all-retina-sprites {
+      background-image: sprite-url($map2x);
+      @include background-size(ceil(image-width(sprite-path($map2x)) / 2) auto);
+    }
+
+    @each $sprite in sprite-names($map) {
+      .#{$base-class}-#{$sprite} {
+        @extend .#{$base-class}-all-retina-sprites;
+
+        $position: sprite-position($map2x, $sprite);
+        background-position: nth($position, 1) nth($position, 2) / 2;
+      }
+    }
+
+  }
+}
+
+@include all-retina-sprites($team-sprites, $team2x-sprites);
+
+@mixin icon-retina($sprite) {
+  @include icon-sprite($sprite);
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-o-min-device-pixel-ratio: 3/2),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx) {
+      $base-class: sprite-map-name($icon-sprites);
+
+      @extend .#{$base-class}-all-retina-sprites;
+      $position: sprite-position($icon2x-sprites, $sprite);
+      background-position: nth($position, 1) nth($position, 2) / 2;
+  }
+}
 
 @import "about";
