@@ -29,7 +29,6 @@
     @each $sprite in sprite-names($map) {
       .#{$base-class}-#{$sprite} {
         @extend .#{$base-class}-all-retina-sprites;
-
         $position: sprite-position($map2x, $sprite);
         background-position: nth($position, 1) nth($position, 2) / 2;
       }

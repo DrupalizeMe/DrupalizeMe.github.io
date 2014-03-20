@@ -830,7 +830,7 @@ blockquote {
 
 /* line 106, team2x/*.png */
 .team2x-sprite {
-  background: url('../images/team2x-s9698bb5208.png') no-repeat;
+  background: url('../images/team2x-sa60f45c205.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -881,7 +881,7 @@ blockquote {
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   /* line 24, ../scss/style.scss */
   .team-all-retina-sprites, .team-accordian, .team-arrow, .team-beer, .team-bees, .team-books, .team-plane, .team-shoe, .team-skuba, .team-snowboard {
-    background-image: url('../images/team2x-s9698bb5208.png');
+    background-image: url('../images/team2x-sa60f45c205.png');
     -webkit-background-size: 519px auto;
     -moz-background-size: 519px auto;
     -o-background-size: 519px auto;
@@ -890,12 +890,12 @@ blockquote {
 
   /* line 30, ../scss/style.scss */
   .team-accordian {
-    background-position: 0 -1459px;
+    background-position: 0 -1534px;
   }
 
   /* line 30, ../scss/style.scss */
   .team-arrow {
-    background-position: 0 -1652px;
+    background-position: 0 -1411px;
   }
 
   /* line 30, ../scss/style.scss */
@@ -920,7 +920,7 @@ blockquote {
 
   /* line 30, ../scss/style.scss */
   .team-shoe {
-    background-position: 0 -1411px;
+    background-position: 0 -1486px;
   }
 
   /* line 30, ../scss/style.scss */

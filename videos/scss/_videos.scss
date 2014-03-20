@@ -28,7 +28,9 @@
   }
 }
 
-@include hero-stacked;
+img {
+  max-width: 100%;
+}
 
 input, textarea {
   font-family: $sans-serif;
@@ -77,10 +79,8 @@ input, textarea {
 }
 
 .hero {
-  background: #093a54;
   width: 100%;
   overflow: hidden;
-  padding-top: 2em;
 
   &.stacked {
     @include hero-stacked;
@@ -91,9 +91,6 @@ input, textarea {
   position: relative;
   overflow: hidden;
   height: 100%;
-  -webkit-box-shadow: #08354d 8px 8px 0;
-  -moz-box-shadow: #08354d 8px 8px 0;
-  box-shadow: #08354d 8px 8px 0;
 }
 
 .video-player {
@@ -138,6 +135,10 @@ input, textarea {
         height: 32px;
         margin-bottom: 8px;
 
+        &:first-child {
+          display: none;
+        }
+
         div {
           background-size: 20px 20px;
           background-position: center center;
@@ -147,6 +148,11 @@ input, textarea {
       .capLeft,
       .capRight,
       .divider {
+        display: none;
+      }
+
+      // Hides the first dock button on mobile.
+      .capRight + .divider + button {
         display: none;
       }
     }
@@ -175,9 +181,11 @@ input, textarea {
 
 .transcript {
   display: none;
-  position: absolute;
+  position: relative;
+  border-bottom: 1px solid $light-border;
+  border-top: 1px solid $light-border;
   width: 320px;
-  height: 100%;
+  height: 428px;
   top: 0;
   right: 0;
   background: $light-background;
@@ -257,7 +265,7 @@ input, textarea {
 
 .playlist-content {
   background: white;
-  height: 344px;
+  height: auto;
   overflow-y: auto;
   font-weight: bold;
   font-size: .85em;
@@ -353,31 +361,37 @@ input, textarea {
 }
 
 .js-tabs {
-  padding: 0;
-  margin: 2em 0 0;
-  overflow: hidden;
+  padding: 1em 0 0 0.5em;
+  margin: 0;
+  background: $light-background;
+  border-bottom: 1px solid $light-border;
+  height: 44px;
+  overflow: visible;
 
   li {
     list-style: none;
     float: left;
 
     a {
+      @include border-radius(5px 5px 0 0);
       display: block;
-      padding: .5em 1.5em;
-      color: white;
-      border-top: 5px solid transparent;
       font-weight: bold;
+      color: $text;
+      border: 1px solid $light-border;
+      border-bottom: 0;
+      padding: 0.5em 0.75em;
+      margin-right: 0.5em;
       background-position: 1.5em center;
       background-repeat: no-repeat;
 
       &.active {
+        border-top: 1px solid $light-border;
         background-color: white;
         color: $text;
-        border-top: 5px solid $button-background;
       }
 
       span {
-        display: inline-block;
+        display: none;
         margin-top: -2px;
         margin-right: .5em;
         width: 20px;
@@ -449,7 +463,6 @@ input, textarea {
 .content {
   float: left;
   width: 730px;
-  padding-right: 30px;
   position: relative;
   padding-bottom: 3em;
 }
@@ -487,6 +500,10 @@ input, textarea {
 }
 
 .meta--actions {
+  float: left;
+  margin: 0.5em 0;
+  clear: both;
+
   a {
     float: right;
     font-weight: bold;
@@ -625,6 +642,13 @@ input, textarea {
   display: none;
 }
 
+.loading,
+.node,
+.comments,
+.quiz {
+  clear: left;
+}
+
 .review-average-wrapper {
   border-bottom: 1px solid $light-border;
   padding-bottom: 2em;
@@ -641,9 +665,7 @@ input, textarea {
   border-bottom: 1px solid $light-border;
 
   >img {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: static;
   }
 }
 
@@ -663,7 +685,7 @@ textarea {
 
 .sidebar {
   background: $light-background;
-  border-left: 1px solid $light-border;
+  border-top: 1px solid $light-border;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 320px;
@@ -813,17 +835,84 @@ textarea {
 }
 
 @media screen and (min-width: 1080px) {
+  .hero {
+    background: #093a54;
+    padding-top: 2em;
+  }
 
+  .hero-shadow {
+    @include box-shadow(#08354d 8px 8px 0);
+  }
+
+  .jwcontrols {
+    #video_dock {
+      .jwdockbuttons {
+        .capRight + .divider + button {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .playlist-content {
+    height: 344px;
+  }
+
+  .transcript {
+    height: 100%;
+    position: absolute;
+    border: none;
+  }
+
+  .js-tabs {
+    border-bottom: none;
+    padding: 0;
+    margin: 2em 0 0;
+    overflow: hidden;
+    background: none;
+    height: auto;
+
+    li {
+      a {
+        @include border-radius(0px);
+        padding: .5em 1.5em;
+        color: white;
+        border: none;
+        border-top: 5px solid transparent;
+
+        &.active {
+          border-top: 5px solid $button-background;
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .meta--actions {
+    float: none;
+    margin: 0;
+    clear: none;
+  }
+
+  .comment {
+    >img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .sidebar {
+    border-left: 1px solid $light-border;
+    border-top: 0;
+  }
 }
 
 // Quick and dirty desktop-first responsive design, just for this prototype ;)
 @media screen and (max-width: 1080px) {
-  @include hero-stacked;
-
-  img {
-    max-width: 100%;
-  }
-
   .content,
   .sidebar {
     width: 100%;
@@ -846,89 +935,12 @@ textarea {
     }
   }
 
-  .hero {
-    background: none;
-    padding-top: 0;
-  }
-
-  .hero-shadow {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .jwdockbuttons {
-    button:first-child {
-      display: none;
-    }
-  }
-
-  .transcript {
-    height: 428px;
-    position: relative;
-    border-bottom: 1px solid $light-border;
-    border-top: 1px solid $light-border;
-  }
-
-  .playlist-content {
-    height: auto;
-  }
-
-  .meta--actions {
-    float: left;
-    margin: 0.5em 0;
-    clear: both;
-  }
-
-  .js-tabs {
-    padding: 1em 0 0 0.5em;
-    margin: 0;
-    background: $light-background;
-    border-bottom: 1px solid $light-border;
-    height: 44px;
-    overflow: visible;
-
-    li {
-      a {
-        color: $text;
-        border: 1px solid $light-border;
-        border-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        padding: 0.5em 0.75em;
-        margin-right: 0.5em;
-
-        &.active {
-          border-top: 1px solid $light-border;
-        }
-
-        span {
-          display: none;
-        }
-      }
-    }
-  }
-
   .content {
     padding: 0 2em 2em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
 
-  .comment {
-    >img {
-      position: static;
-    }
-  }
-
-  .loading,
-  .node,
-  .comments,
-  .quiz {
-    clear: left;
-  }
-
-  .sidebar {
-    border-left: 0;
-    border-top: 1px solid $light-border;
-  }
+  // required for production.
+  @include hero-stacked;
 }
